@@ -1,6 +1,6 @@
 <?php
 /*
- * This file is part of library-template.
+ * This file is part of Tree library.
  *
  * (c) 2013 Nicolò Martini
  *
@@ -8,6 +8,8 @@
  * file that was distributed with this source code.
  */
 namespace Tree\Node;
+
+use Tree\Visitor\Visitor;
 
 /**
  * Interface for tree nodes
@@ -80,4 +82,12 @@ interface NodeInterface
      * @return bool
      */
     public function isLeaf();
+
+    /**
+     * Accept method for the visitor pattern (see http://en.wikipedia.org/wiki/Visitor_pattern)
+     *
+     * @param Visitor $visitor
+     * @return void
+     */
+    public function accept(Visitor $visitor);
 }

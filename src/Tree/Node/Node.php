@@ -10,6 +10,8 @@
 
 namespace Tree\Node;
 
+use Tree\Visitor\Visitor;
+
 /**
  * Class Node
  */
@@ -116,4 +118,11 @@ class Node implements NodeInterface
         return count($this->children) == 0;
     }
 
+    /**
+     * {@inheritdoc}
+     */
+    public function accept(Visitor $visitor)
+    {
+        $visitor->visit($this);
+    }
 }
