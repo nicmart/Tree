@@ -90,7 +90,8 @@ $node->isLeaf();
 
 ## The Builder
 
-The builder provides a convenient way to build trees.
+The builder provides a convenient way to build trees. It is provided by the ```Builder``` class,
+ but you can implement your own builder making an implementation of the ```BuilderInterface```class.  
 
 ### Example
 Let's see how to build the following tree, where the nodes label are represents nodes values:
