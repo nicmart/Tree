@@ -139,3 +139,8 @@ i.e. make the builder go one level up.
 
 ### Builder::getNode()
 Returns the current node.
+
+# Tests
+```
+phpunit
+```
