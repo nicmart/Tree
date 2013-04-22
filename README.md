@@ -1,36 +1,6 @@
-# Tree
+# Tree [![Build Status](https://travis-ci.org/nicmart/Tree.png?branch=master)](https://travis-ci.org/nicmart/Tree)
 
 In Tree you can find a basic but flexible tree data structure for php together with and an handful Builder class, that enables you to build tree in a fluent way.
-
-[![Build Status](https://travis-ci.org/nicmart/Tree.png?branch=master)](https://travis-ci.org/nicmart/Tree)
-
-## Install
-
-The best way to install Tree is [through composer](http://getcomposer.org).
-
-Just create a composer.json file for your project:
-
-```JSON
-{
-    "require": {
-        "nicmart/tree": "dev-master"
-    }
-}
-```
-
-Then you can run these two commands to install it:
-
-    $ curl -s http://getcomposer.org/installer | php
-    $ php composer.phar install
-
-or simply run `composer install` if you have have already [installed the composer globally](http://getcomposer.org/doc/00-intro.md#globally).
-
-Then you can include the autoloader, and you will have access to the library classes:
-
-```php
-<?php
-require 'vendor/autoload.php';
-```
 
 ## The tree data structure
 The `Tree\NodeInterface` interface abstracts the concept of a tree node. In `Tree` a Node has essentially two things: 
@@ -117,7 +87,7 @@ $builder
             ->leaf('H')
             ->end()
         ->leaf('E')
-        ->leaf('F)
+        ->leaf('F')
         ->end()
 ;
 
@@ -140,6 +110,34 @@ i.e. make the builder go one level up.
 
 ### Builder::getNode()
 Returns the current node.
+
+## Install
+
+The best way to install Tree is [through composer](http://getcomposer.org).
+
+Just create a composer.json file for your project:
+
+```JSON
+{
+    "require": {
+        "nicmart/tree": "dev-master"
+    }
+}
+```
+
+Then you can run these two commands to install it:
+
+    $ curl -s http://getcomposer.org/installer | php
+    $ php composer.phar install
+
+or simply run `composer install` if you have have already [installed the composer globally](http://getcomposer.org/doc/00-intro.md#globally).
+
+Then you can include the autoloader, and you will have access to the library classes:
+
+```php
+<?php
+require 'vendor/autoload.php';
+```
 
 # Tests
 ```
