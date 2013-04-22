@@ -87,7 +87,7 @@ $builder
             ->leaf('H')
             ->end()
         ->leaf('E')
-        ->leaf('F)
+        ->leaf('F')
         ->end()
 ;
 
