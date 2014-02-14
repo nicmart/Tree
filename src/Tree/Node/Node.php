@@ -23,6 +23,14 @@ class Node implements NodeInterface
     private $value;
 
     /**
+     * parent
+     *
+     * @var NodeInterface
+     * @access private
+     */
+    private $parent;
+
+    /**
      * @var array[NodeInterface]
      */
     private $children = array();
@@ -60,6 +68,7 @@ class Node implements NodeInterface
      */
     public function addChild(NodeInterface $child)
     {
+        $child->setParent($this);
         $this->children[] = $child;
 
         return $this;
@@ -71,8 +80,9 @@ class Node implements NodeInterface
     public function removeChild(NodeInterface $child)
     {
         foreach ($this->children as $key => $myChild) {
-            if ($child == $myChild)
+            if ($child == $myChild) {
                 unset($this->children[$key]);
+            }
         }
 
         $this->children = array_values($this->children);
@@ -108,6 +118,52 @@ class Node implements NodeInterface
         }
 
         return $this;
+    }
+
+
+
+    /**
+     * {@inheritdoc}
+     */
+    public function setParent(NodeInterface $parent)
+    {
+        $this->parent = $parent;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getParent()
+    {
+        return $this->parent;
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getParents()
+    {
+        $parents = [$this];
+        $node = $this;
+        while ($parent = $node->getParent()) {
+            array_unshift($parents, $parent);
+            $node = $parent;
+        }
+
+        return $parents;
+    }
+
+    public function getNeighbors()
+    {
+        $neighbors = $this->getParent()->getChildren();
+        $current = $this;
+
+        return array_filter(
+            $neighbors,
+            function ($item) use ($current) {
+                return $item != $current;
+            }
+        );
     }
 
     /**

@@ -77,6 +77,31 @@ interface NodeInterface
     public function setChildren(array $children);
 
     /**
+     * setParent
+     *
+     * @param NodeInterface $parent
+     * @access public
+     * @return void
+     */
+    public function setParent(NodeInterface $parent);
+
+    /**
+     * getParent
+     *
+     * @access public
+     * @return NodeInterface
+     */
+    public function getParent();
+
+    /**
+     * getParents
+     *
+     * @access public
+     * @return array
+     */
+    public function getParents();
+
+    /**
      * Return true if the node has no children, false otherwise
      *
      * @return bool
