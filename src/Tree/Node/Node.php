@@ -87,6 +87,8 @@ class Node implements NodeInterface
 
         $this->children = array_values($this->children);
 
+        $child->setParent(null);
+
         return $this;
     }
 
@@ -125,7 +127,7 @@ class Node implements NodeInterface
     /**
      * {@inheritdoc}
      */
-    public function setParent(NodeInterface $parent)
+    public function setParent(NodeInterface $parent = null)
     {
         $this->parent = $parent;
     }
@@ -141,9 +143,9 @@ class Node implements NodeInterface
     /**
      * {@inheritdoc}
      */
-    public function getParents()
+    public function getAncestors()
     {
-        $parents = [$this];
+        $parents = array($this);
         $node = $this;
         while ($parent = $node->getParent()) {
             array_unshift($parents, $parent);
@@ -153,6 +155,9 @@ class Node implements NodeInterface
         return $parents;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function getNeighbors()
     {
         $neighbors = $this->getParent()->getChildren();
