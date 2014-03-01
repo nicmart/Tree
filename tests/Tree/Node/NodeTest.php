@@ -47,6 +47,28 @@ class NodeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(array($child1, $child2, $child3), $root->getChildren());
     }
 
+    public function testAddChildSetParent()
+    {
+        $root = new Node;
+        $root
+            ->addChild($child1 = new Node('child1'))
+            ->addChild($child2 = new Node('child2'))
+        ;
+
+        $this->assertEquals($root, $child1->getParent());
+        $this->assertEquals($root, $child2->getParent());
+    }
+
+    public function testSetAndGetParent()
+    {
+        $root = new Node;
+        $child = new Node('foo');
+
+        $child->setParent($root);
+
+        $this->assertEquals($root, $child->getParent());
+    }
+
     public function testSetChildren()
     {
         $children = array(new Node('child1'), new Node('child2'), new Node('child3'));
@@ -57,6 +79,18 @@ class NodeTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals($children, $root->getChildren());
     }
+
+    public function testSetChildrenSetParentsReferences()
+     {
+         $root = new Node;
+         $root
+             ->addChild($child1 = new Node('child1'))
+             ->addChild($child2 = new Node('child2'))
+         ;
+
+         $this->assertEquals($root, $child1->getParent());
+         $this->assertEquals($root, $child2->getParent());
+     }
 
     public function testRemoveChild()
     {
@@ -69,6 +103,28 @@ class NodeTest extends \PHPUnit_Framework_TestCase
         ;
 
         $this->assertEquals(array($child1, $child3), $root->getChildren());
+    }
+
+    public function testRemoveChildRemoveParentReference()
+    {
+        $root = new Node;
+        $root
+            ->addChild($child1 = new Node('child1'))
+            ->removeChild($child1)
+        ;
+
+        $this->assertNull($child1->getParent());
+    }
+
+    public function testRemoveAllChildrenRemoveParentReferences()
+    {
+        $root = new Node;
+        $root
+            ->addChild($child1 = new Node('child1'))
+            ->removeAllChildren()
+        ;
+
+        $this->assertNull($child1->getParent());
     }
 
     public function testRemoveAllChildren()

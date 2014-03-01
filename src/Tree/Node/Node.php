@@ -97,7 +97,7 @@ class Node implements NodeInterface
      */
     public function removeAllChildren()
     {
-        $this->children = array();
+        $this->setChildren(array());
 
         return $this;
     }
@@ -115,14 +115,15 @@ class Node implements NodeInterface
      */
     public function setChildren(array $children)
     {
+        $this->removeParentFromChildren();
+        $this->children = array();
+
         foreach ($children as $child) {
             $this->addChild($child);
         }
 
         return $this;
     }
-
-
 
     /**
      * {@inheritdoc}
@@ -185,5 +186,11 @@ class Node implements NodeInterface
     public function accept(Visitor $visitor)
     {
         $visitor->visit($this);
+    }
+
+    private function removeParentFromChildren()
+    {
+        foreach ($this->getChildren() as $child)
+            $child->setParent(null);
     }
 }
