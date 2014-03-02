@@ -21,7 +21,7 @@ interface Visitor
 {
     /**
      * @param NodeInterface $node
-     * @return void
+     * @return mixed
      */
     public function visit(NodeInterface $node);
 }

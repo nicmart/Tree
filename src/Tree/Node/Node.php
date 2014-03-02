@@ -185,7 +185,7 @@ class Node implements NodeInterface
      */
     public function accept(Visitor $visitor)
     {
-        $visitor->visit($this);
+        return $visitor->visit($this);
     }
 
     private function removeParentFromChildren()

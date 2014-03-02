@@ -2,6 +2,10 @@
 
 In Tree you can find a basic but flexible tree data structure for php together with and an handful Builder class, that enables you to build tree in a fluent way.
 
+## Changelog
+ - 0.1.2 Added YieldVisitor, to get the yield of the tree
+ - 0.1.1 Parent and neighbors methods (thanks to https://github.com/jdeniau)
+
 ## The tree data structure
 The `Tree\NodeInterface` interface abstracts the concept of a tree node. In `Tree` a Node has essentially two things: 
 a set of children (that implements the same `NodeInterface` interface) and a value.
@@ -138,6 +142,18 @@ i.e. make the builder go one level up.
 
 ### Builder::getNode()
 Returns the current node.
+
+## Yield of a tree
+You can obtain the yield of a tree (i.e. the list of leaves in a preorder traversal) using
+the YieldVisitor.
+For example, if `$node` is the tree builded above, then
+ ```php
+ use Tree\Visitor\YieldVisitor;
+ $visitor = new YieldVisitor;
+
+ $yield = $node->accept($visitor);
+ // $yield will contain nodes B, G, H, E, F
+ ```
 
 ## Install
 
