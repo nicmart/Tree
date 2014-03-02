@@ -58,6 +58,34 @@ A leaf is a node with no children.
 $node->isLeaf();
 ```
 
+### Getting the parent of a node
+Reference to the parent node is automatically managed by child-modifiers methods
+```php
+$root->addChild($node = new Node('child'));
+$node->getParent(); // Returns $root
+```
+
+### Getting the ancestors of a node
+```php
+$root = (new Node('root'))
+    ->addChild($child = new Node('child'))
+    ->addChild($grandChild = new Node('grandchild'))
+;
+
+$grandchild->getAncestors(); // Returns [$root, $child]
+```
+
+### Getting the neighbors of a node
+```php
+$root = (new Node('root'))
+    ->addChild($child1 = new Node('child1'))
+    ->addChild($child2 = new Node('child2'))
+    ->addChild($child3 = new Node('child3'))
+;
+
+$root->getNeighbors(); // Returns [$child1, $child3]
+```
+
 ## The Builder
 
 The builder provides a convenient way to build trees. It is provided by the ```Builder``` class,
