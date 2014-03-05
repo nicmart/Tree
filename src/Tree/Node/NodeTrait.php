@@ -30,13 +30,13 @@ trait NodeTrait
     /**
      * @var array[NodeInterface]
      */
-    private $children = array();
+    private $children = [];
 
     /**
      * @param mixed $value
      * @param array[NodeInterface] $children
      */
-    public function __construct($value = null, array $children = array())
+    public function __construct($value = null, array $children = [])
     {
         $this->setValue($value);
         $this->setChildren($children);
@@ -94,7 +94,7 @@ trait NodeTrait
      */
     public function removeAllChildren()
     {
-        $this->setChildren(array());
+        $this->setChildren([]);
 
         return $this;
     }
@@ -113,7 +113,7 @@ trait NodeTrait
     public function setChildren(array $children)
     {
         $this->removeParentFromChildren();
-        $this->children = array();
+        $this->children = [];
 
         foreach ($children as $child) {
             $this->addChild($child);
@@ -143,7 +143,7 @@ trait NodeTrait
      */
     public function getAncestors()
     {
-        $parents = array($this);
+        $parents = [$this];
         $node = $this;
         while ($parent = $node->getParent()) {
             array_unshift($parents, $parent);

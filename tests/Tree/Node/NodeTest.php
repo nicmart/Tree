@@ -44,7 +44,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
             ->addChild($child3 = new Node('child3'))
         ;
 
-        $this->assertEquals(array($child1, $child2, $child3), $root->getChildren());
+        $this->assertEquals([$child1, $child2, $child3], $root->getChildren());
     }
 
     public function testAddChildSetParent()
@@ -71,7 +71,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
 
     public function testSetChildren()
     {
-        $children = array(new Node('child1'), new Node('child2'), new Node('child3'));
+        $children = [new Node('child1'), new Node('child2'), new Node('child3')];
 
         $root = new Node;
 
@@ -102,7 +102,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
             ->removeChild($child2)
         ;
 
-        $this->assertEquals(array($child1, $child3), $root->getChildren());
+        $this->assertEquals([$child1, $child3], $root->getChildren());
     }
 
     public function testRemoveChildRemoveParentReference()

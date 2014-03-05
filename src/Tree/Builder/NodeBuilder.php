@@ -22,7 +22,7 @@ class NodeBuilder implements NodeBuilderInterface
     /**
      * @var array[NodeInterface]
      */
-    private $nodeStack = array();
+    private $nodeStack = [];
 
     /**
      * @param NodeInterface $node
@@ -117,7 +117,7 @@ class NodeBuilder implements NodeBuilderInterface
 
     private function emptyStack()
     {
-        $this->nodeStack = array();
+        $this->nodeStack = [];
 
         return $this;
     }

@@ -26,10 +26,10 @@ class YieldVisitor implements Visitor
     public function visit(NodeInterface $node)
     {
         if ($node->isLeaf()) {
-            return array($node);
+            return [$node];
         }
 
-        $yield = array();
+        $yield = [];
 
         foreach ($node->getChildren() as $child) {
             $yield = array_merge($yield, $child->accept($this));
