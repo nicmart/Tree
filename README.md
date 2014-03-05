@@ -165,7 +165,7 @@ Just create a composer.json file for your project:
 ```JSON
 {
     "require": {
-        "nicmart/tree": "~0.1"
+        "nicmart/tree": "~0.2"
     }
 }
 ```
