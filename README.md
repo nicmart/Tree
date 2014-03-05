@@ -3,6 +3,7 @@
 In Tree you can find a basic but flexible tree data structure for php together with and an handful Builder class, that enables you to build tree in a fluent way.
 
 ## Changelog
+ - 0.2.1 root() and isRoot() methods
  - 0.2.0 Dropped php 5.3 support. Node implemented as a trait.
  - 0.1.2 Added YieldVisitor, to get the yield of the tree
  - 0.1.1 Parent and neighbors methods (thanks to https://github.com/jdeniau)
@@ -78,6 +79,11 @@ $root = (new Node('root'))
 ;
 
 $grandchild->getAncestors(); // Returns [$root, $child]
+```
+
+### Getting the root of a node
+```php
+$root = $node->root();
 ```
 
 ### Getting the neighbors of a node

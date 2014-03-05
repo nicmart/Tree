@@ -178,6 +178,29 @@ trait NodeTrait
     }
 
     /**
+     * @return bool
+     */
+    public function isRoot()
+    {
+        return $this->getParent() === null;
+    }
+
+    /**
+     * Find the root of the node
+     *
+     * @return NodeInterface
+     */
+    public function root()
+    {
+        $node = $this;
+
+        while ($parent = $node->getParent())
+            $node = $parent;
+
+        return $node;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function accept(Visitor $visitor)
