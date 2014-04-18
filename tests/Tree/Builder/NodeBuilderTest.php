@@ -68,6 +68,23 @@ class NodeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals('b', $children[1]->getValue());
     }
 
+    public function testTreeAddNewNodeAsChildOfTheParentNode()
+    {
+        $this->builder
+            ->value('root')
+            ->tree('a')
+                ->tree('b')->end()
+                ->leaf('c')
+            ->end()
+        ;
+
+        $node = $this->builder->getNode();
+        $this->assertEquals(array('a'), $this->childrenValues($node->getChildren()));
+
+        $subtree = $node->getChildren()[0];
+        $this->assertEquals(array('b', 'c'), $this->childrenValues($subtree->getChildren()));
+    }
+
     public function testTree()
     {
         $this->builder->tree('a')->tree('b');
@@ -106,5 +123,16 @@ class NodeTest extends \PHPUnit_Framework_TestCase
 
         $this->assertEquals('baz', $node->getValue());
         $this->assertInstanceOf('Tree\Node\Node', $node);
+    }
+
+    /**
+     * @param array[Node] $children
+     * @return array
+     */
+    private function childrenValues(array $children)
+    {
+        return array_map(function(Node $node) {
+            return $node->getValue();
+        }, $children);
     }
 }

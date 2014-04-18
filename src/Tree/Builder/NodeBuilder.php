@@ -82,7 +82,9 @@ class NodeBuilder implements NodeBuilderInterface
      */
     public function tree($value = null)
     {
-        $this->pushNode($this->nodeInstanceByValue($value));
+        $node = $this->nodeInstanceByValue($value);
+        $this->getNode()->addChild($node);
+        $this->pushNode($node);
 
         return $this;
     }
