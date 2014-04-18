@@ -94,7 +94,7 @@ $root = (new Node('root'))
     ->addChild($child3 = new Node('child3'))
 ;
 
-$root->getNeighbors(); // Returns [$child1, $child3]
+$child2->getNeighbors(); // Returns [$child1, $child3]
 ```
 
 ## The Builder
