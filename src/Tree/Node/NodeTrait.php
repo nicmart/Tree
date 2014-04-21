@@ -143,7 +143,7 @@ trait NodeTrait
      */
     public function getAncestors()
     {
-        $parents = [$this];
+        $parents = [];
         $node = $this;
         while ($parent = $node->getParent()) {
             array_unshift($parents, $parent);
