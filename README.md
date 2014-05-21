@@ -80,7 +80,7 @@ $root = (new Node('root'))
     ->addChild($grandChild = new Node('grandchild'))
 ;
 
-$grandchild->getAncestors(); // Returns [$root, $child]
+$grandchild->getAncestors(); // Returns [$child, $root]
 ```
 
 ### Getting the root of a node
