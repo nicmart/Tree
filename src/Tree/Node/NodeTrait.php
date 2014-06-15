@@ -202,11 +202,11 @@ trait NodeTrait
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
      */
     public function isLeaf()
     {
-        return count($this->children) == 0;
+        return count($this->children) === 0;
     }
 
     /**
@@ -215,6 +215,14 @@ trait NodeTrait
     public function isRoot()
     {
         return $this->getParent() === null;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isChild()
+    {
+        return $this->getParent() !== null;
     }
 
     /**

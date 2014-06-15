@@ -228,4 +228,13 @@ class NodeTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($root->isRoot());
         $this->assertFalse($child->isRoot());
     }
+
+    public function testIsChild()
+    {
+        $root = new Node('root');
+        $root->addChild($child = new Node('child'));
+
+        $this->assertTrue($child->isChild());
+        $this->assertFalse($root->isChild());
+    }
 }

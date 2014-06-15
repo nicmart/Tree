@@ -141,6 +141,13 @@ interface NodeInterface
     public function isRoot();
 
     /**
+     * Return true if the node is a child, false otherwise.
+     *
+     * @return bool
+     */
+    public function isChild();
+
+    /**
      * Return true if the node has no children, false otherwise
      *
      * @return bool
