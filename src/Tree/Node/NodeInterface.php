@@ -92,11 +92,18 @@ interface NodeInterface
     public function getParent();
 
     /**
-     * getAncestors
+     * Retrieves all ancestors of node excluding current node.
      *
      * @return array
      */
     public function getAncestors();
+
+    /**
+     * Retrieves all ancestors of node as well as the node itself.
+     *
+     * @return Node[]
+     */
+    public function getAncestorsAndSelf();
 
     /**
      * getNeighbors

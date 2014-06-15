@@ -154,6 +154,14 @@ trait NodeTrait
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function getAncestorsAndSelf()
+    {
+        return array_merge($this->getAncestors(), [$this]);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function getNeighbors()
