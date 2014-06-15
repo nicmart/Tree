@@ -134,6 +134,13 @@ interface NodeInterface
     public function getNeighborsAndSelf();
 
     /**
+     * Return true if the node is the root, false otherwise
+     *
+     * @return bool
+     */
+    public function isRoot();
+
+    /**
      * Return true if the node has no children, false otherwise
      *
      * @return bool
