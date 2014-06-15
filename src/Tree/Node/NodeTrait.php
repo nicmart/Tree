@@ -182,11 +182,14 @@ trait NodeTrait
         $neighbors = $this->getParent()->getChildren();
         $current = $this;
 
-        return array_filter(
-            $neighbors,
-            function ($item) use ($current) {
-                return $item != $current;
-            }
+        // Uses array_values to reset indexes after filter.
+        return array_values(
+            array_filter(
+                $neighbors,
+                function ($item) use ($current) {
+                    return $item != $current;
+                }
+            )
         );
     }
 
