@@ -162,6 +162,14 @@ trait NodeTrait
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function getAncestorsAndSelfWithoutRoot()
+    {
+        return array_slice($this->getAncestorsAndSelf(), 1);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function getNeighbors()
