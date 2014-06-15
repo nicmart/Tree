@@ -120,11 +120,18 @@ interface NodeInterface
     public function getAncestorsAndSelfWithoutRoot();
 
     /**
-     * getNeighbors
+     * Retrieves all neighboring nodes, excluding the current node.
      *
      * @return array
      */
     public function getNeighbors();
+
+    /**
+     * Returns all neighboring nodes, including the current node.
+     *
+     * @return Node[]
+     */
+    public function getNeighborsAndSelf();
 
     /**
      * Return true if the node has no children, false otherwise

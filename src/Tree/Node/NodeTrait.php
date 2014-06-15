@@ -194,6 +194,14 @@ trait NodeTrait
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function getNeighborsAndSelf()
+    {
+        return $this->getParent()->getChildren();
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function isLeaf()
