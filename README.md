@@ -66,6 +66,12 @@ A leaf is a node with no children.
 $node->isLeaf();
 ```
 
+### Getting if the node is a child or not
+A child is a node that has a parent.
+```php
+$node->isChild();
+```
+
 ### Getting the parent of a node
 Reference to the parent node is automatically managed by child-modifiers methods
 ```php
@@ -74,6 +80,7 @@ $node->getParent(); // Returns $root
 ```
 
 ### Getting the ancestors of a node
+
 ```php
 $root = (new Node('root'))
     ->addChild($child = new Node('child'))
@@ -83,12 +90,19 @@ $root = (new Node('root'))
 $grandchild->getAncestors(); // Returns [$root, $child]
 ```
 
+#### Related Methods
+- `getAncestorsWithoutRoot` retrieves ancestors of a node, excluding the root node.
+- `getAncestorsAndSelf` retrieves ancestors of a node with the current node included.
+- `getAncestorsAndSelfWithoutRoot` retrieves ancestors of a node, including current node, excluding the root node.
+
+
 ### Getting the root of a node
 ```php
 $root = $node->root();
 ```
 
 ### Getting the neighbors of a node
+
 ```php
 $root = (new Node('root'))
     ->addChild($child1 = new Node('child1'))
@@ -98,6 +112,9 @@ $root = (new Node('root'))
 
 $child2->getNeighbors(); // Returns [$child1, $child3]
 ```
+
+#### Related Methods
+- `getNeighborsAndSelf` retrieves neighbors of current node and the node itself.
 
 ## The Builder
 
