@@ -153,6 +153,11 @@ trait NodeTrait
         return $parents;
     }
 
+    public function getAncestorsWithoutRoot()
+    {
+        return array_slice($this->getAncestors(), 1);
+    }
+
     /**
      * {@inheritDoc}
      */

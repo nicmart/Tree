@@ -168,6 +168,15 @@ class NodeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals([$a, $b], $b->getAncestorsAndSelfWithoutRoot());
     }
 
+    public function testGetAncestorsWithoutRoot()
+    {
+        $root = new Node('r');
+        $root->addChild($a = new Node('a'));
+        $a->addChild($b = new Node('b'));
+
+        $this->assertEquals([$a], $b->getAncestorsWithoutRoot());
+    }
+
     public function testIsLeaf()
     {
         $root = new Node;
