@@ -150,6 +150,37 @@ class NodeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals([$root, $a, $b], $c->getAncestors());
     }
 
+    public function testGetAncestorsAndSelf()
+    {
+        $root = new Node('r');
+        $root->addChild($a = new Node('a'));
+        $a->addChild($b = new Node('b'));
+
+        $this->assertEquals([$root, $a, $b], $b->getAncestorsAndSelf());
+    }
+
+    public function testGetNeighbors()
+    {
+        $root = new Node('r');
+        $root
+            ->addChild($a = new Node('a'))
+            ->addChild($b = new Node('b'))
+            ->addChild($c = new Node('c'));
+
+        $this->assertEquals([$b, $c], $a->getNeighbors());
+    }
+
+    public function testGetNeighborsAndSelf()
+    {
+        $root = new Node('r');
+        $root
+            ->addChild($a = new Node('a'))
+            ->addChild($b = new Node('b'))
+            ->addChild($c = new Node('c'));
+
+        $this->assertEquals([$a, $b, $c], $a->getNeighborsAndSelf());
+    }
+
     public function testIsLeaf()
     {
         $root = new Node;
@@ -178,5 +209,14 @@ class NodeTest extends \PHPUnit_Framework_TestCase
 
         $this->assertTrue($root->isRoot());
         $this->assertFalse($child->isRoot());
+    }
+
+    public function testIsChild()
+    {
+        $root = new Node('root');
+        $root->addChild($child = new Node('child'));
+
+        $this->assertTrue($child->isChild());
+        $this->assertFalse($root->isChild());
     }
 }

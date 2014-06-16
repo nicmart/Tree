@@ -154,6 +154,14 @@ trait NodeTrait
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function getAncestorsAndSelf()
+    {
+        return array_merge($this->getAncestors(), [$this]);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function getNeighbors()
@@ -161,20 +169,31 @@ trait NodeTrait
         $neighbors = $this->getParent()->getChildren();
         $current = $this;
 
-        return array_filter(
-            $neighbors,
-            function ($item) use ($current) {
-                return $item != $current;
-            }
+        // Uses array_values to reset indexes after filter.
+        return array_values(
+            array_filter(
+                $neighbors,
+                function ($item) use ($current) {
+                    return $item != $current;
+                }
+            )
         );
     }
 
     /**
-     * {@inheritdoc}
+     * {@inheritDoc}
+     */
+    public function getNeighborsAndSelf()
+    {
+        return $this->getParent()->getChildren();
+    }
+
+    /**
+     * {@inheritDoc}
      */
     public function isLeaf()
     {
-        return count($this->children) == 0;
+        return count($this->children) === 0;
     }
 
     /**
@@ -183,6 +202,14 @@ trait NodeTrait
     public function isRoot()
     {
         return $this->getParent() === null;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function isChild()
+    {
+        return $this->getParent() !== null;
     }
 
     /**
