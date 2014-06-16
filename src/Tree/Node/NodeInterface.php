@@ -99,25 +99,11 @@ interface NodeInterface
     public function getAncestors();
 
     /**
-     * Retrieves all ancestors of node, excluding root.
-     *
-     * @return Node[]
-     */
-    public function getAncestorsWithoutRoot();
-
-    /**
      * Retrieves all ancestors of node as well as the node itself.
      *
      * @return Node[]
      */
     public function getAncestorsAndSelf();
-
-    /**
-     * Retrieves all ancestors, including current node, excluding root.
-     *
-     * @return Node[]
-     */
-    public function getAncestorsAndSelfWithoutRoot();
 
     /**
      * Retrieves all neighboring nodes, excluding the current node.

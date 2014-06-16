@@ -91,10 +91,7 @@ $grandchild->getAncestors(); // Returns [$root, $child]
 ```
 
 #### Related Methods
-- `getAncestorsWithoutRoot` retrieves ancestors of a node, excluding the root node.
 - `getAncestorsAndSelf` retrieves ancestors of a node with the current node included.
-- `getAncestorsAndSelfWithoutRoot` retrieves ancestors of a node, including current node, excluding the root node.
-
 
 ### Getting the root of a node
 ```php

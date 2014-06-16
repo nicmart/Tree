@@ -153,25 +153,12 @@ trait NodeTrait
         return $parents;
     }
 
-    public function getAncestorsWithoutRoot()
-    {
-        return array_slice($this->getAncestors(), 1);
-    }
-
     /**
      * {@inheritDoc}
      */
     public function getAncestorsAndSelf()
     {
         return array_merge($this->getAncestors(), [$this]);
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getAncestorsAndSelfWithoutRoot()
-    {
-        return array_slice($this->getAncestorsAndSelf(), 1);
     }
 
     /**
