@@ -3,6 +3,7 @@
 In Tree you can find a basic but flexible tree data structure for php together with and an handful Builder class, that enables you to build tree in a fluent way.
 
 ## Changelog
+ - 0.2.4 New accessor methods  ([PR 6](https://github.com/nicmart/Tree/pull/6), thanks to [mdwheele](https://github.com/mdwheele))
  - 0.2.3 Node::getAncestors now does not return the current node ([Issue 4](https://github.com/nicmart/Tree/issues/4))
  - 0.2.2 Fixed a bug in the builder ([Issue 3](https://github.com/nicmart/Tree/issues/3))
  - 0.2.1 root() and isRoot() methods
