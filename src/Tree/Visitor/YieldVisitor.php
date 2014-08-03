@@ -10,7 +10,6 @@
 
 namespace Tree\Visitor;
 
-
 use Tree\Node\NodeInterface;
 
 /**
@@ -37,4 +36,4 @@ class YieldVisitor implements Visitor
 
         return $yield;
     }
-} 
+}
