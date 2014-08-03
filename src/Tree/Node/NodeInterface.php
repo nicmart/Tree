@@ -79,7 +79,7 @@ interface NodeInterface
     /**
      * setParent
      *
-     * @param NodeInterface $parent
+     * @param  NodeInterface $parent
      * @return void
      */
     public function setParent(NodeInterface $parent = null);
@@ -143,7 +143,7 @@ interface NodeInterface
     /**
      * Accept method for the visitor pattern (see http://en.wikipedia.org/wiki/Visitor_pattern)
      *
-     * @param Visitor $visitor
+     * @param  Visitor $visitor
      * @return void
      */
     public function accept(Visitor $visitor);

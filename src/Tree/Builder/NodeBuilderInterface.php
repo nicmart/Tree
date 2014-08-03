@@ -88,4 +88,3 @@ interface NodeBuilderInterface
      */
     public function nodeInstanceByValue($value = null);
 }
-

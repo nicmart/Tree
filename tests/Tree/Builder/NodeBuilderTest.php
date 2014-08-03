@@ -15,7 +15,7 @@ use Tree\Builder\NodeBuilder;
 /**
  * Unit tests for class FirstClass
  */
-class NodeTest extends \PHPUnit_Framework_TestCase
+class NodeBuilderTest extends \PHPUnit_Framework_TestCase
 {
     /** @var NodeBuilder */
     protected $builder;
@@ -126,12 +126,12 @@ class NodeTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * @param array[Node] $children
+     * @param  array[Node] $children
      * @return array
      */
     private function childrenValues(array $children)
     {
-        return array_map(function(Node $node) {
+        return array_map(function (Node $node) {
             return $node->getValue();
         }, $children);
     }

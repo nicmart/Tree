@@ -33,7 +33,7 @@ trait NodeTrait
     private $children = [];
 
     /**
-     * @param mixed $value
+     * @param mixed                $value
      * @param array[NodeInterface] $children
      */
     public function __construct($value = null, array $children = [])
@@ -240,4 +240,4 @@ trait NodeTrait
         foreach ($this->getChildren() as $child)
             $child->setParent(null);
     }
-} 
+}
