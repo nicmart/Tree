@@ -12,14 +12,14 @@ In Tree you can find a basic but flexible tree data structure for php together w
  - 0.1.1 Parent and neighbors methods (thanks to https://github.com/jdeniau)
 
 ## The tree data structure
-The `Tree\NodeInterface` interface abstracts the concept of a tree node. In `Tree` a Node has essentially two things: 
+The `Tree\Node\NodeInterface` interface abstracts the concept of a tree node. In `Tree` a Node has essentially two things: 
 a set of children (that implements the same `NodeInterface` interface) and a value.
 
-On the other hand, the `Tree\Node` gives a straight implementation for that interface.
+On the other hand, the `Tree\Node\Node` gives a straight implementation for that interface.
 
 ### Creating a node
 ```php
-use Tree\Node;
+use Tree\Node\Node;
 
 $node = new Node('foo');
 ```
