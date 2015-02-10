@@ -228,6 +228,42 @@ trait NodeTrait
     }
 
     /**
+     * Return the distance from the current node to the root.
+     *
+     * Warning, can be expensive, since each descendant is visited
+     *
+     * @return int
+     */
+    public function getDepth()
+    {
+        if ($this->isRoot()) {
+            return 0;
+        }
+
+        return $this->getParent()->getDepth() + 1;
+    }
+
+    /**
+     * Return the height of the tree whose root is this node
+     *
+     * @return int
+     */
+    public function getHeight()
+    {
+        if ($this->isLeaf()) {
+            return 0;
+        }
+
+        $heights = [];
+
+        foreach ($this->getChildren() as $child) {
+            $heights[] = $child->getHeight();
+        }
+
+        return max($heights) + 1;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function accept(Visitor $visitor)

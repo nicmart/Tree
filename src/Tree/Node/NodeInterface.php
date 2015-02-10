@@ -141,6 +141,20 @@ interface NodeInterface
     public function isLeaf();
 
     /**
+     * Return the distance from the current node to the root
+     *
+     * @return int
+     */
+    public function getDepth();
+
+    /**
+     * Return the height of the tree whose root is this node
+     *
+     * @return int
+     */
+    public function getHeight();
+
+    /**
      * Accept method for the visitor pattern (see http://en.wikipedia.org/wiki/Visitor_pattern)
      *
      * @param Visitor $visitor

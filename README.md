@@ -3,6 +3,7 @@
 In Tree you can find a basic but flexible tree data structure for php together with and an handful Builder class, that enables you to build tree in a fluent way.
 
 ## Changelog
+ - 0.2.5 New getDepth and getHeight methods ([Issue 9](https://github.com/nicmart/Tree/issues/9)
  - 0.2.4 New accessor methods  ([PR 6](https://github.com/nicmart/Tree/pull/6), thanks to [mdwheele](https://github.com/mdwheele))
  - 0.2.3 Node::getAncestors now does not return the current node ([Issue 4](https://github.com/nicmart/Tree/issues/4))
  - 0.2.2 Fixed a bug in the builder ([Issue 3](https://github.com/nicmart/Tree/issues/3))
@@ -113,6 +114,18 @@ $child2->getNeighbors(); // Returns [$child1, $child3]
 
 #### Related Methods
 - `getNeighborsAndSelf` retrieves neighbors of current node and the node itself.
+
+### Getting the depth of a node
+
+```php
+$node->getDepth();
+```
+
+### Getting the height of a node
+
+```php
+$node->getHeight();
+```
 
 ## The Builder
 
