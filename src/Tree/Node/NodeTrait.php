@@ -39,7 +39,9 @@ trait NodeTrait
     public function __construct($value = null, array $children = [])
     {
         $this->setValue($value);
-        $this->setChildren($children);
+        if (!empty($children)) {
+            $this->setChildren($children);
+        }
     }
 
     /**
