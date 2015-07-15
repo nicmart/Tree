@@ -257,4 +257,32 @@ class NodeTest extends \PHPUnit_Framework_TestCase
         $this->assertEquals(2, $root->getHeight());
         $this->assertEquals(1, $child3->getHeight());
     }
+
+
+    public function testGetSize()
+    {
+        $root = new Node;
+        $root
+            ->addChild($child1 = new Node('child1'))
+            ->addChild($child2 = new Node('child2'))
+            ->addChild($child3 = new Node('child3'))
+        ;
+
+        $child3
+            ->addChild(new Node("a"))
+            ->addChild($child4 = new Node("b"))
+        ;
+
+        $child4->addChild($child5 = new Node("c"));
+        $child5
+            ->addChild(new Node("d"))
+            ->addChild(new Node("f"))
+        ;
+
+        $this->assertEquals(9, $root->getSize());
+        $this->assertEquals(3, $child5->getSize());
+        $this->assertEquals(4, $child4->getSize());
+        $this->assertEquals(6, $child3->getSize());
+        $this->assertEquals(1, $child2->getSize());
+    }
 }
