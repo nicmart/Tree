@@ -266,6 +266,20 @@ trait NodeTrait
     }
 
     /**
+     * Return the number of nodes in a tree
+     * @return int
+     */
+    public function getSize()
+    {
+        $size = 1;
+        foreach ($this->getChildren() as $child) {
+            $size += $child->getSize();
+        }
+
+        return $size;
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function accept(Visitor $visitor)
