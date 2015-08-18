@@ -10,7 +10,6 @@
 
 namespace Tree\Builder;
 
-use Tree\Builder\NodeBuilderInterface;
 use Tree\Node\NodeInterface;
 use Tree\Node\Node;
 
