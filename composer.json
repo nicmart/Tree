@@ -14,9 +14,13 @@
         "php": ">=5.4"
     },
     "autoload": {
-        "psr-0": {
-            "Tree": "src/",
-            "Tree\\Test": "tests"
+        "psr-4": {
+            "Tree\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tree\\Test\\": "tests/"
         }
     }
 }
