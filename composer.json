@@ -15,7 +15,11 @@
     },
     "autoload": {
         "psr-4": {
-            "Tree\\": "src/",
+            "Tree\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
             "Tree\\Test\\": "tests/"
         }
     }
