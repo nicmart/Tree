@@ -63,14 +63,14 @@ interface NodeInterface
     /**
      * Return the array of children
      *
-     * @return array[NodeInterface]
+     * @return NodeInterface[]
      */
     public function getChildren();
 
     /**
      * Replace the children set with the given one
      *
-     * @param array[NodeInterface] $children
+     * @param NodeInterface[] $children
      *
      * @return mixed
      */

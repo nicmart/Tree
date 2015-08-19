@@ -28,13 +28,13 @@ trait NodeTrait
     private $parent;
 
     /**
-     * @var array[NodeInterface]
+     * @var NodeInterface[]
      */
     private $children = [];
 
     /**
      * @param mixed $value
-     * @param array[NodeInterface] $children
+     * @param NodeInterface[] $children
      */
     public function __construct($value = null, array $children = [])
     {
