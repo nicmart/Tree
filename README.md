@@ -1,4 +1,9 @@
-# Tree [![Packagist](https://img.shields.io/packagist/dt/nicmart/tree.svg)]() [![Packagist](https://img.shields.io/packagist/dm/nicmart/tree.svg)]() [![Build Status](https://travis-ci.org/nicmart/Tree.svg?branch=master)](https://travis-ci.org/nicmart/Tree)
+# Tree 
+
+[![Build Status](https://travis-ci.org/nicmart/Tree.svg?branch=master)](https://travis-ci.org/nicmart/Tree)
+[![Latest Stable Version](https://poser.pugx.org/nicmart/tree/v/stable)](https://packagist.org/packages/nicmart/tree) 
+[![Total Downloads](https://poser.pugx.org/nicmart/tree/downloads)](https://packagist.org/packages/nicmart/tree) 
+[![License](https://poser.pugx.org/nicmart/tree/license)](https://packagist.org/packages/nicmart/tree)
 
 In Tree you can find a basic but flexible tree data structure for php together with and an handful Builder class, that enables you to build tree in a fluent way.
 
