@@ -27,12 +27,12 @@ class NodeTest extends \PHPUnit_Framework_TestCase
 
         $node->setValue('string value');
 
-        $this->assertEquals('string value', $node->getValue());
+        $this->assertSame('string value', $node->getValue());
 
         $node->setValue($object = new \stdClass());
         $object->foo = 'bar';
 
-        $this->assertEquals($object, $node->getValue());
+        $this->assertSame($object, $node->getValue());
     }
 
     public function testAddAndGetChildren()
@@ -44,7 +44,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
             ->addChild($child3 = new Node('child3'))
         ;
 
-        $this->assertEquals([$child1, $child2, $child3], $root->getChildren());
+        $this->assertSame([$child1, $child2, $child3], $root->getChildren());
     }
 
     public function testAddChildSetParent()
@@ -55,8 +55,8 @@ class NodeTest extends \PHPUnit_Framework_TestCase
             ->addChild($child2 = new Node('child2'))
         ;
 
-        $this->assertEquals($root, $child1->getParent());
-        $this->assertEquals($root, $child2->getParent());
+        $this->assertSame($root, $child1->getParent());
+        $this->assertSame($root, $child2->getParent());
     }
 
     public function testSetAndGetParent()
@@ -66,7 +66,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
 
         $child->setParent($root);
 
-        $this->assertEquals($root, $child->getParent());
+        $this->assertSame($root, $child->getParent());
     }
 
     public function testSetChildren()
@@ -77,7 +77,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
 
         $root->setChildren($children);
 
-        $this->assertEquals($children, $root->getChildren());
+        $this->assertSame($children, $root->getChildren());
     }
 
     public function testSetChildrenSetParentsReferences()
@@ -88,8 +88,8 @@ class NodeTest extends \PHPUnit_Framework_TestCase
              ->addChild($child2 = new Node('child2'))
          ;
 
-         $this->assertEquals($root, $child1->getParent());
-         $this->assertEquals($root, $child2->getParent());
+         $this->assertSame($root, $child1->getParent());
+         $this->assertSame($root, $child2->getParent());
      }
 
     public function testRemoveChild()
@@ -102,7 +102,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
             ->removeChild($child2)
         ;
 
-        $this->assertEquals([$child1, $child3], $root->getChildren());
+        $this->assertSame([$child1, $child3], $root->getChildren());
     }
 
     public function testRemoveChildRemoveParentReference()
@@ -147,7 +147,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
         $a->addChild($b = new Node('b'));
         $b->addChild($c = new Node('c'));
 
-        $this->assertEquals([$root, $a, $b], $c->getAncestors());
+        $this->assertSame([$root, $a, $b], $c->getAncestors());
     }
 
     public function testGetAncestorsAndSelf()
@@ -156,7 +156,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
         $root->addChild($a = new Node('a'));
         $a->addChild($b = new Node('b'));
 
-        $this->assertEquals([$root, $a, $b], $b->getAncestorsAndSelf());
+        $this->assertSame([$root, $a, $b], $b->getAncestorsAndSelf());
     }
 
     public function testGetNeighbors()
@@ -167,7 +167,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
             ->addChild($b = new Node('b'))
             ->addChild($c = new Node('c'));
 
-        $this->assertEquals([$b, $c], $a->getNeighbors());
+        $this->assertSame([$b, $c], $a->getNeighbors());
     }
 
     public function testGetNeighborsAndSelf()
@@ -178,7 +178,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
             ->addChild($b = new Node('b'))
             ->addChild($c = new Node('c'));
 
-        $this->assertEquals([$a, $b, $c], $a->getNeighborsAndSelf());
+        $this->assertSame([$a, $b, $c], $a->getNeighborsAndSelf());
     }
 
     public function testIsLeaf()
@@ -234,9 +234,9 @@ class NodeTest extends \PHPUnit_Framework_TestCase
             ->addChild(new Node("b"))
         ;
 
-        $this->assertEquals(1, $child1->getDepth());
-        $this->assertEquals(0, $root->getDepth());
-        $this->assertEquals(2, $child4->getDepth());
+        $this->assertSame(1, $child1->getDepth());
+        $this->assertSame(0, $root->getDepth());
+        $this->assertSame(2, $child4->getDepth());
     }
 
     public function testGetHeight()
@@ -253,9 +253,9 @@ class NodeTest extends \PHPUnit_Framework_TestCase
             ->addChild(new Node("b"))
         ;
 
-        $this->assertEquals(0, $child1->getHeight());
-        $this->assertEquals(2, $root->getHeight());
-        $this->assertEquals(1, $child3->getHeight());
+        $this->assertSame(0, $child1->getHeight());
+        $this->assertSame(2, $root->getHeight());
+        $this->assertSame(1, $child3->getHeight());
     }
 
 
@@ -279,10 +279,10 @@ class NodeTest extends \PHPUnit_Framework_TestCase
             ->addChild(new Node("f"))
         ;
 
-        $this->assertEquals(9, $root->getSize());
-        $this->assertEquals(3, $child5->getSize());
-        $this->assertEquals(4, $child4->getSize());
-        $this->assertEquals(6, $child3->getSize());
-        $this->assertEquals(1, $child2->getSize());
+        $this->assertSame(9, $root->getSize());
+        $this->assertSame(3, $child5->getSize());
+        $this->assertSame(4, $child4->getSize());
+        $this->assertSame(6, $child3->getSize());
+        $this->assertSame(1, $child2->getSize());
     }
 }
