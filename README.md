@@ -68,6 +68,12 @@ $node->setChildren([new Node('foo'), new Node('bar')]);
 $node->removeAllChildren();
 ```
 
+### Getting if the node is a tree or not
+A tree is a node with one or more children.
+```php
+$node->isTree();
+```
+
 ### Getting if the node is a leaf or not
 A leaf is a node with no children.
 ```php

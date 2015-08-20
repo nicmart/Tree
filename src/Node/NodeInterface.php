@@ -141,6 +141,13 @@ interface NodeInterface
     public function isLeaf();
 
     /**
+     * Return true if the node has children, false otherwise
+     *
+     * @return bool
+     */
+    public function isTree();
+
+    /**
      * Return the distance from the current node to the root
      *
      * @return int

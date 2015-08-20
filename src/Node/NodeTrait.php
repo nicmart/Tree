@@ -199,6 +199,14 @@ trait NodeTrait
     }
 
     /**
+     * {@inheritDoc}
+     */
+    public function isTree()
+    {
+        return count($this->children) > 0;
+    }
+
+    /**
      * @return bool
      */
     public function isRoot()
