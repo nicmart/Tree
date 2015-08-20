@@ -16,11 +16,6 @@ use Tree\Node\Node;
  */
 class NodeTest extends \PHPUnit_Framework_TestCase
 {
-    public function setUp()
-    {
-
-    }
-
     public function testSetValue()
     {
         $node = new Node;
