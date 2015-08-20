@@ -1,4 +1,14 @@
 <?php
+
+/*
+ * This file is part of Tree.
+ *
+ * (c) 2013-2015 Nicolò Martini
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 /**
  * This file is part of Tree
  *
@@ -223,8 +233,9 @@ trait NodeTrait
     {
         $node = $this;
 
-        while ($parent = $node->getParent())
+        while ($parent = $node->getParent()) {
             $node = $parent;
+        }
 
         return $node;
     }
@@ -289,7 +300,8 @@ trait NodeTrait
 
     private function removeParentFromChildren()
     {
-        foreach ($this->getChildren() as $child)
+        foreach ($this->getChildren() as $child) {
             $child->setParent(null);
+        }
     }
-} 
+}

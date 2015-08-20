@@ -1,12 +1,14 @@
 <?php
+
 /*
  * This file is part of Tree.
  *
- * (c) 2013 Nicolò Martini
+ * (c) 2013-2015 Nicolò Martini
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace Tree\Test\Tree;
 
 use Tree\Node\Node;
@@ -18,7 +20,6 @@ class NodeTest extends \PHPUnit_Framework_TestCase
 {
     public function setUp()
     {
-
     }
 
     public function testSetValue()
@@ -81,16 +82,16 @@ class NodeTest extends \PHPUnit_Framework_TestCase
     }
 
     public function testSetChildrenSetParentsReferences()
-     {
-         $root = new Node;
-         $root
+    {
+        $root = new Node;
+        $root
              ->addChild($child1 = new Node('child1'))
              ->addChild($child2 = new Node('child2'))
          ;
 
-         $this->assertEquals($root, $child1->getParent());
-         $this->assertEquals($root, $child2->getParent());
-     }
+        $this->assertEquals($root, $child1->getParent());
+        $this->assertEquals($root, $child2->getParent());
+    }
 
     public function testRemoveChild()
     {

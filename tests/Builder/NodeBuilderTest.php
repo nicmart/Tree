@@ -1,12 +1,14 @@
 <?php
+
 /*
  * This file is part of Tree.
  *
- * (c) 2013 Nicolò Martini
+ * (c) 2013-2015 Nicolò Martini
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace Tree\Test\Builder;
 
 use Tree\Node\Node;
@@ -15,7 +17,7 @@ use Tree\Builder\NodeBuilder;
 /**
  * Unit tests for class FirstClass
  */
-class NodeTest extends \PHPUnit_Framework_TestCase
+class NodeBuilderTest extends \PHPUnit_Framework_TestCase
 {
     /** @var NodeBuilder */
     protected $builder;
@@ -131,7 +133,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
      */
     private function childrenValues(array $children)
     {
-        return array_map(function(Node $node) {
+        return array_map(function (Node $node) {
             return $node->getValue();
         }, $children);
     }

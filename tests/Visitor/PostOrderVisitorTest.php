@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Tree.
+ *
+ * (c) 2013-2015 Nicolò Martini
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Tree\Test\Visitor;
 
 use Tree\Node\Node;
