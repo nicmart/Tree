@@ -8,6 +8,7 @@
 In Tree you can find a basic but flexible tree data structure for php together with and an handful Builder class, that enables you to build tree in a fluent way.
 
 ## Changelog
+ - 0.2.7 Pre-order and post-order visitors ([PR 24](https://github.com/nicmart/Tree/pull/24)), thanks to [localheinz](https://github.com/localheinz)
  - 0.2.6 New getSize method ([PR 17](https://github.com/nicmart/Tree/pull/17)), thanks to  [djuki](https://github.com/Djuki)
  - 0.2.5 New getDepth and getHeight methods ([Issue 9](https://github.com/nicmart/Tree/issues/9))
  - 0.2.4 New accessor methods  ([PR 6](https://github.com/nicmart/Tree/pull/6), thanks to [mdwheele](https://github.com/mdwheele))
