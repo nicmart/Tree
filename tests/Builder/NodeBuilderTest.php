@@ -36,16 +36,16 @@ class NodeTest extends \PHPUnit_Framework_TestCase
     {
         $builder = new NodeBuilder($node = new Node('node'));
 
-        $this->assertEquals($node, $builder->getNode());
+        $this->assertSame($node, $builder->getNode());
     }
 
     public function testSetNodeAndGetNode()
     {
         $this->builder->setNode($node1 = new Node('node1'));
-        $this->assertEquals($node1, $this->builder->getNode());
+        $this->assertSame($node1, $this->builder->getNode());
 
         $this->builder->setNode($node2 = new Node('node2'));
-        $this->assertEquals($node2, $this->builder->getNode());
+        $this->assertSame($node2, $this->builder->getNode());
     }
 
     public function testLeaf()
@@ -54,8 +54,8 @@ class NodeTest extends \PHPUnit_Framework_TestCase
 
         $children = $this->builder->getNode()->getChildren();
 
-        $this->assertEquals('a', $children[0]->getValue());
-        $this->assertEquals('b', $children[1]->getValue());
+        $this->assertSame('a', $children[0]->getValue());
+        $this->assertSame('b', $children[1]->getValue());
     }
 
     public function testLeafs()
@@ -64,8 +64,8 @@ class NodeTest extends \PHPUnit_Framework_TestCase
 
         $children = $this->builder->getNode()->getChildren();
 
-        $this->assertEquals('a', $children[0]->getValue());
-        $this->assertEquals('b', $children[1]->getValue());
+        $this->assertSame('a', $children[0]->getValue());
+        $this->assertSame('b', $children[1]->getValue());
     }
 
     public function testTreeAddNewNodeAsChildOfTheParentNode()
@@ -79,17 +79,17 @@ class NodeTest extends \PHPUnit_Framework_TestCase
         ;
 
         $node = $this->builder->getNode();
-        $this->assertEquals(array('a'), $this->childrenValues($node->getChildren()));
+        $this->assertSame(array('a'), $this->childrenValues($node->getChildren()));
 
         $subtree = $node->getChildren()[0];
-        $this->assertEquals(array('b', 'c'), $this->childrenValues($subtree->getChildren()));
+        $this->assertSame(array('b', 'c'), $this->childrenValues($subtree->getChildren()));
     }
 
     public function testTree()
     {
         $this->builder->tree('a')->tree('b');
 
-        $this->assertEquals('b', $this->builder->getNode()->getValue());
+        $this->assertSame('b', $this->builder->getNode()->getValue());
     }
 
     public function testEnd()
@@ -101,27 +101,27 @@ class NodeTest extends \PHPUnit_Framework_TestCase
                     ->tree('c')
                     ->end();
 
-        $this->assertEquals('b', $this->builder->getNode()->getValue());
+        $this->assertSame('b', $this->builder->getNode()->getValue());
 
         $this->builder->end();
-        $this->assertEquals('a', $this->builder->getNode()->getValue());
+        $this->assertSame('a', $this->builder->getNode()->getValue());
 
         $this->builder->end();
-        $this->assertEquals('root', $this->builder->getNode()->getValue());
+        $this->assertSame('root', $this->builder->getNode()->getValue());
     }
 
     public function testValue()
     {
         $this->builder->value('foo')->value('bar');
 
-        $this->assertEquals('bar', $this->builder->getNode()->getValue());
+        $this->assertSame('bar', $this->builder->getNode()->getValue());
     }
 
     public function testNodeInstanceByValue()
     {
         $node = $this->builder->nodeInstanceByValue('baz');
 
-        $this->assertEquals('baz', $node->getValue());
+        $this->assertSame('baz', $node->getValue());
         $this->assertInstanceOf('Tree\Node\Node', $node);
     }
 
