@@ -201,9 +201,9 @@ trait NodeTrait
     /**
      * {@inheritDoc}
      */
-    public function isTree()
+    public function isInternalNode()
     {
-        return count($this->children) > 0;
+        return !$this->isRoot() && !$this->isLeaf();
     }
 
     /**
@@ -300,4 +300,4 @@ trait NodeTrait
         foreach ($this->getChildren() as $child)
             $child->setParent(null);
     }
-} 
+}

@@ -145,7 +145,7 @@ interface NodeInterface
      *
      * @return bool
      */
-    public function isTree();
+    public function isInternalNode();
 
     /**
      * Return the distance from the current node to the root
