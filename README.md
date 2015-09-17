@@ -77,6 +77,12 @@ $node->setChildren([new Node('foo'), new Node('bar')]);
 $node->removeAllChildren();
 ```
 
+### Getting if the node is an internal node (sub-tree) or not
+An internal node is root or a non-leaf node.
+```php
+$node->isInternalNode();
+```
+
 ### Getting if the node is a leaf or not
 
 A leaf is a node with no children.

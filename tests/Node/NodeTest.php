@@ -180,11 +180,11 @@ class NodeTest extends \PHPUnit_Framework_TestCase
     {
         $root = new Node;
 
-        $this->assertTrue($root->isLeaf());
-
-        $root->addChild(new Node('child'));
-
         $this->assertFalse($root->isLeaf());
+
+        $root->addChild($child = new Node('child'));
+
+        $this->asserttrue($child->isLeaf());
     }
 
     public function testRoot()
@@ -213,6 +213,22 @@ class NodeTest extends \PHPUnit_Framework_TestCase
 
         $this->assertTrue($child->isChild());
         $this->assertFalse($root->isChild());
+    }
+
+    public function testIsInternalNode()
+    {
+        $root = new Node('root');
+
+        $this->assertTrue($root->isInternalNode(), "A root without children is still an internal node");
+
+        $subTree = new Node('subTree');
+        $subTree->addChild($child = new Node('child'));
+
+        $root->addChild($subTree);
+
+        $this->assertTrue($subTree->isInternalNode(), "A sub-tree is an internal node");
+        $this->assertFalse($child->isInternalNode(), "An empty sub-node (a leaf) is not an internal node");
+        $this->assertFalse($subTree->isLeaf(), "An internal node is not a leaf");
     }
 
     public function testGetDepth()

@@ -44,7 +44,8 @@ class YieldVisitorTest extends \PHPUnit_Framework_TestCase
 
     public function testTheYieldOfALeafNodeIsTheNodeItself()
     {
-        $node = new Node('node');
+        $root = new Node('root');
+        $root->addChild($node = new Node('node'));
         $visitor = new YieldVisitor;
 
         $this->assertSame([$node], $node->accept($visitor));

@@ -141,6 +141,13 @@ interface NodeInterface
     public function isLeaf();
 
     /**
+     * Return true if the node is not a leaf, false otherwise
+     *
+     * @return bool
+     */
+    public function isInternalNode();
+
+    /**
      * Return the distance from the current node to the root
      *
      * @return int
