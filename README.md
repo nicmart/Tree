@@ -69,7 +69,7 @@ $node->removeAllChildren();
 ```
 
 ### Getting if the node is an internal node (sub-tree) or not
-An internal node is a non-root node with one or more children.
+An internal node is root or a non-leaf node.
 ```php
 $node->isInternalNode();
 ```

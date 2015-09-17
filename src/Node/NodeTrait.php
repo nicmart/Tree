@@ -195,7 +195,7 @@ trait NodeTrait
      */
     public function isLeaf()
     {
-        return count($this->children) === 0;
+        return !$this->isRoot() && count($this->children) === 0;
     }
 
     /**
@@ -203,7 +203,7 @@ trait NodeTrait
      */
     public function isInternalNode()
     {
-        return !$this->isRoot() && !$this->isLeaf();
+        return !$this->isLeaf();
     }
 
     /**

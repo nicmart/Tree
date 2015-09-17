@@ -185,11 +185,11 @@ class NodeTest extends \PHPUnit_Framework_TestCase
     {
         $root = new Node;
 
-        $this->assertTrue($root->isLeaf());
-
-        $root->addChild(new Node('child'));
-
         $this->assertFalse($root->isLeaf());
+
+        $root->addChild($child = new Node('child'));
+
+        $this->asserttrue($child->isLeaf());
     }
 
     public function testRoot()
@@ -224,7 +224,7 @@ class NodeTest extends \PHPUnit_Framework_TestCase
     {
         $root = new Node('root');
 
-        $this->assertFalse($root->isInternalNode(), "A root without children is an external node");
+        $this->assertTrue($root->isInternalNode(), "A root without children is still an internal node");
 
         $subTree = new Node('subTree');
         $subTree->addChild($child = new Node('child'));

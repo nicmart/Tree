@@ -141,7 +141,7 @@ interface NodeInterface
     public function isLeaf();
 
     /**
-     * Return true if the node has children, false otherwise
+     * Return true if the node is not a leaf, false otherwise
      *
      * @return bool
      */
