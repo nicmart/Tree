@@ -33,18 +33,6 @@ trait NodeTrait
     private $children = [];
 
     /**
-     * @param mixed $value
-     * @param NodeInterface[] $children
-     */
-    public function __construct($value = null, array $children = [])
-    {
-        $this->setValue($value);
-        if (!empty($children)) {
-            $this->setChildren($children);
-        }
-    }
-
-    /**
      * {@inheritdoc}
      */
     public function setValue($value)
