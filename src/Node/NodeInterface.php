@@ -158,7 +158,7 @@ interface NodeInterface
      * Accept method for the visitor pattern (see http://en.wikipedia.org/wiki/Visitor_pattern)
      *
      * @param Visitor $visitor
-     * @return void
+     * @return array
      */
     public function accept(Visitor $visitor);
 }

@@ -6,6 +6,9 @@ use Tree\Node\NodeInterface;
 
 class PostOrderVisitor implements Visitor
 {
+    /**
+     * {@inheritdoc}
+     */
     public function visit(NodeInterface $node)
     {
         $nodes = [];
