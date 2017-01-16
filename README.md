@@ -110,7 +110,7 @@ $root = (new Node('root'))
     ->addChild($grandChild = new Node('grandchild'))
 ;
 
-$grandchild->getAncestors(); // Returns [$root, $child]
+$grandchild->getAncestors(); // Returns [$child, $root]
 ```
 
 #### Related Methods
