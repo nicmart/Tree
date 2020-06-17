@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`0.2.7...master`][0.2.7...master].
 
+### Changed
+
+* Dropped support for HHVM ([#35]), by [@localheinz]
+
 ## [`0.2.7`][0.2.7]
 
 For a full diff see [`0.2.6...0.2.7`][0.2.6...0.2.7].
