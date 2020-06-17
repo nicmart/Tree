@@ -122,6 +122,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#9]: https://github.com/nicmart/Tree/issues/9
 [#17]: https://github.com/nicmart/Tree/pull/17
 [#24]: https://github.com/nicmart/Tree/pull/24
+[#35]: https://github.com/nicmart/Tree/pull/35
 
 [@Djuki]: https://github.com/Djuki
 [@jdeniau]: https://github.com/jdeniau
