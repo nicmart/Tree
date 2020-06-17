@@ -1,6 +1,6 @@
 # Tree
 
-[![Build Status](https://travis-ci.org/nicmart/Tree.svg?branch=master)](https://travis-ci.org/nicmart/Tree)
+[![Integrate](https://github.com/nicmart/Tree/workflows/Integrate/badge.svg?branch=master)](https://github.com/nicmart/Tree/actions)
 [![Latest Stable Version](https://poser.pugx.org/nicmart/tree/v/stable)](https://packagist.org/packages/nicmart/tree)
 [![Total Downloads](https://poser.pugx.org/nicmart/tree/downloads)](https://packagist.org/packages/nicmart/tree)
 [![License](https://poser.pugx.org/nicmart/tree/license)](https://packagist.org/packages/nicmart/tree)
@@ -161,7 +161,7 @@ Let's see how to build the following tree, where the nodes label are represents 
         /|\
        D E F
       /|
-     G H   
+     G H
 ```
 
 And here is the code:
