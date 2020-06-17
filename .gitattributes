@@ -1,0 +1,9 @@
+/.github/               export-ignore
+/tests/                 export-ignore
+/.codeclimate.yml       export-ignore
+/.gitattributes         export-ignore
+/.gitignore             export-ignore
+/.php_cs                export-ignore
+/infection.json         export-ignore
+/Makefile               export-ignore
+/phpunit.xml.dist       export-ignore
