@@ -12,6 +12,10 @@ For a full diff see [`0.3.0...master`][0.3.0...master].
 
 For a full diff see [`0.2.7...0.3.0`][0.2.7...0.3.0].
 
+### Added
+
+* Added support for PHP 7.1 ([#47]), by [@localheinz]
+
 ### Changed
 
 * Dropped support for HHVM ([#35]), by [@localheinz]
@@ -108,6 +112,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [0.2.5]: https://github.com/nicmart/Tree/releases/tag/v0.2.5
 [0.2.6]: https://github.com/nicmart/Tree/releases/tag/v0.2.6
 [0.2.7]: https://github.com/nicmart/Tree/releases/tag/v0.2.7
+[0.3.0]: https://github.com/nicmart/Tree/releases/tag/v0.3.0
 
 [fcfd14e...0.1.1]: https://github.com/nicmart/Tree/compare/fcfd14e...v0.1.1
 [0.1.1...0.1.2]: https://github.com/nicmart/Tree/compare/v0.1.1...v0.1.2
@@ -130,6 +135,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#24]: https://github.com/nicmart/Tree/pull/24
 [#30]: https://github.com/nicmart/Tree/pull/30
 [#35]: https://github.com/nicmart/Tree/pull/35
+[#47]: https://github.com/nicmart/Tree/pull/47
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
