@@ -15,6 +15,7 @@ For a full diff see [`0.2.7...0.3.0`][0.2.7...0.3.0].
 ### Added
 
 * Added support for PHP 7.1 ([#47]), by [@localheinz]
+* Added support for PHP 7.2 ([#48]), by [@localheinz]
 
 ### Changed
 
@@ -136,6 +137,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#30]: https://github.com/nicmart/Tree/pull/30
 [#35]: https://github.com/nicmart/Tree/pull/35
 [#47]: https://github.com/nicmart/Tree/pull/47
+[#48]: https://github.com/nicmart/Tree/pull/48
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
