@@ -27,5 +27,8 @@
         "platform": {
             "php": "5.4.45"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8"
     }
 }
