@@ -7,6 +7,18 @@ For details, take a look at the following workflow configuration files:
 - [`workflows/integrate.yaml`](workflows/integrate.yaml)
 - [`workflows/release.yaml`](workflows/release.yaml)
 
+## Coding Standards
+
+We are using [`ergebnis/composer-normalize`](https://github.com/ergebnis/composer-normalize) to normalize `composer.json`.
+
+Run
+
+```
+$ make coding-standards
+```
+
+to automatically fix coding standard violations.
+
 ## Tests
 
 We are using [`phpunit/phpunit`](https://github.com/sebastianbergmann/phpunit) to drive the development.
@@ -27,7 +39,7 @@ Run
 $ make
 ```
 
-to run tests!
+to enforce coding standards and run tests!
 
 ## Help
 

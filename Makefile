@@ -1,5 +1,9 @@
 .PHONY: it
-it: tests ## Runs the tests target
+it: coding-standards tests ## Runs the coding-standards and tests target
+
+.PHONY: coding-standards
+coding-standards: vendor ## Normalizes composer.json with ergebnis/composer-normalize
+	docker run --interactive --rm --tty --workdir=/app --volume ${PWD}:/app ergebnis/composer-normalize-action:0.8.0
 
 .PHONY: help
 help: ## Displays this list of targets with descriptions

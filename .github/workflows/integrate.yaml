@@ -32,6 +32,11 @@ jobs:
       - name: "Validate composer.json and composer.lock"
         run: "composer validate --strict"
 
+      - name: "Run ergebnis/composer-normalize"
+        uses: "docker://ergebnis/composer-normalize-action:0.8.0"
+        with:
+          args: "--dry-run"
+
   tests:
     name: "Tests"
 
