@@ -22,6 +22,10 @@
         "psr-4": {
             "Tree\\Test\\": "tests/"
         }
+    },
+    "config": {
+        "platform": {
+            "php": "5.4.45"
+        }
     }
 }
-
