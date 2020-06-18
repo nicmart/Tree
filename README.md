@@ -1,6 +1,7 @@
 # Tree
 
 [![Integrate](https://github.com/nicmart/Tree/workflows/Integrate/badge.svg?branch=master)](https://github.com/nicmart/Tree/actions)
+[![Release](https://github.com/nicmart/Tree/workflows/Release/badge.svg?branch=master)](https://github.com/nicmart/Tree/actions)
 [![Latest Stable Version](https://poser.pugx.org/nicmart/tree/v/stable)](https://packagist.org/packages/nicmart/tree)
 [![Total Downloads](https://poser.pugx.org/nicmart/tree/downloads)](https://packagist.org/packages/nicmart/tree)
 [![License](https://poser.pugx.org/nicmart/tree/license)](https://packagist.org/packages/nicmart/tree)
