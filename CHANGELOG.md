@@ -6,11 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`0.2.7...master`][0.2.7...master].
+For a full diff see [`0.3.0...master`][0.3.0...master].
+
+## [`0.3.0`][0.3.0]
+
+For a full diff see [`0.2.7...0.3.0`][0.2.7...0.3.0].
 
 ### Changed
 
 * Dropped support for HHVM ([#35]), by [@localheinz]
+* Moved constructor from `NodeTrait` to `Node` ([#30]), by [@asalazar-pley]
 
 ## [`0.2.7`][0.2.7]
 
@@ -114,7 +119,8 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [0.2.4...0.2.5]: https://github.com/nicmart/Tree/compare/v0.2.4...v0.2.5
 [0.2.5...0.2.6]: https://github.com/nicmart/Tree/compare/v0.2.5...v0.2.6
 [0.2.6...0.2.7]: https://github.com/nicmart/Tree/compare/v0.2.6...v0.2.7
-[0.2.7...master]: https://github.com/nicmart/Tree/compare/v0.2.7...master
+[0.2.7...0.3.0]: https://github.com/nicmart/Tree/compare/v0.2.7...0.3.0
+[0.3.0...master]: https://github.com/nicmart/Tree/compare/0.3.0...master
 
 [#3]: https://github.com/nicmart/Tree/issues/3
 [#4]: https://github.com/nicmart/Tree/issues/4
@@ -122,8 +128,10 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#9]: https://github.com/nicmart/Tree/issues/9
 [#17]: https://github.com/nicmart/Tree/pull/17
 [#24]: https://github.com/nicmart/Tree/pull/24
+[#30]: https://github.com/nicmart/Tree/pull/30
 [#35]: https://github.com/nicmart/Tree/pull/35
 
+[@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
 [@jdeniau]: https://github.com/jdeniau
 [@localheinz]: https://github.com/localheinz
