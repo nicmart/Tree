@@ -12,6 +12,7 @@ For a full diff see [`0.3.0...master`][0.3.0...master].
 
 * Dropped support for PHP 5.4 ([#55]), by [@localheinz]
 * Dropped support for PHP 5.5 ([#57]), by [@localheinz]
+* Dropped support for PHP 5.6 ([#58]), by [@localheinz]
 
 ## [`0.3.0`][0.3.0]
 
@@ -149,6 +150,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#50]: https://github.com/nicmart/Tree/pull/50
 [#55]: https://github.com/nicmart/Tree/pull/55
 [#57]: https://github.com/nicmart/Tree/pull/57
+[#58]: https://github.com/nicmart/Tree/pull/58
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
