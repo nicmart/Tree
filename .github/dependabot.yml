@@ -13,6 +13,7 @@ updates:
     package-ecosystem: "composer"
     schedule:
       interval: "daily"
+    versioning-strategy: "increase"
 
   - commit-message:
       include: "scope"
