@@ -101,7 +101,8 @@ jobs:
         github.event.action == 'reopened' ||
         github.event.action == 'synchronize'
       ) && (
-        (github.actor == 'dependabot[bot]' && startsWith(github.event.pull_request.title, 'Build(deps-dev)'))
+        (github.actor == 'dependabot[bot]' && startsWith(github.event.pull_request.title, 'composer(deps-dev)')) ||
+        (github.actor == 'dependabot[bot]' && startsWith(github.event.pull_request.title, 'github-actions(deps)'))
       )
 
     steps:
