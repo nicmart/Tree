@@ -15,7 +15,7 @@
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.5.1",
-        "phpunit/phpunit": "^4.8"
+        "phpunit/phpunit": "^7.5.20"
     },
     "config": {
         "platform": {

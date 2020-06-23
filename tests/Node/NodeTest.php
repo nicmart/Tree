@@ -9,12 +9,13 @@
  */
 namespace Tree\Test\Tree;
 
+use PHPUnit\Framework;
 use Tree\Node\Node;
 
 /**
  * Unit tests for class FirstClass
  */
-class NodeTest extends \PHPUnit_Framework_TestCase
+class NodeTest extends Framework\TestCase
 {
     public function testSetValue()
     {

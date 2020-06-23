@@ -9,13 +9,14 @@
  */
 namespace Tree\Test\Builder;
 
+use PHPUnit\Framework;
 use Tree\Node\Node;
 use Tree\Builder\NodeBuilder;
 
 /**
  * Unit tests for class FirstClass
  */
-class NodeTest extends \PHPUnit_Framework_TestCase
+class NodeTest extends Framework\TestCase
 {
     /** @var NodeBuilder */
     protected $builder;

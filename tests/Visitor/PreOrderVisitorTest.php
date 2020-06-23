@@ -2,10 +2,11 @@
 
 namespace Tree\Test\Visitor;
 
+use PHPUnit\Framework;
 use Tree\Node\Node;
 use Tree\Visitor\PreOrderVisitor;
 
-class PreOrderVisitorTest extends \PHPUnit_Framework_TestCase
+class PreOrderVisitorTest extends Framework\TestCase
 {
     public function testImplementsInterface()
     {

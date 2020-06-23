@@ -10,10 +10,11 @@
 
 namespace Tree\Test\Visitor;
 
+use PHPUnit\Framework;
 use Tree\Node\Node;
 use Tree\Visitor\YieldVisitor;
 
-class YieldVisitorTest extends \PHPUnit_Framework_TestCase
+class YieldVisitorTest extends Framework\TestCase
 {
     /**
      *              root
