@@ -16,7 +16,7 @@ use Tree\Node\NodeInterface;
 /**
  * Interface that allows a fluent tree building.
  *
- * @author     Nicolò Martini <nicmartnic@gmail.com>
+ * @author Nicolò Martini <nicmartnic@gmail.com>
  */
 interface NodeBuilderInterface
 {

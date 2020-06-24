@@ -16,7 +16,7 @@ use Tree\Visitor\Visitor;
 /**
  * Interface for tree nodes.
  *
- * @author     Nicolò Martini <nicmartnic@gmail.com>
+ * @author Nicolò Martini <nicmartnic@gmail.com>
  */
 interface NodeInterface
 {
@@ -78,14 +78,14 @@ interface NodeInterface
     public function setChildren(array $children);
 
     /**
-     * setParent.
+     * Set the parent node.
      *
      * @param NodeInterface $parent
      */
     public function setParent(?self $parent = null);
 
     /**
-     * getParent.
+     * Return the parent node.
      *
      * @return NodeInterface
      */
