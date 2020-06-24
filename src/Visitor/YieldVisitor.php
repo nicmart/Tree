@@ -13,14 +13,8 @@ namespace Tree\Visitor;
 
 use Tree\Node\NodeInterface;
 
-/**
- * Class YieldVisitor.
- */
 class YieldVisitor implements Visitor
 {
-    /**
-     * {@inheritdoc}
-     */
     public function visit(NodeInterface $node)
     {
         if ($node->isLeaf()) {

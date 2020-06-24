@@ -16,8 +16,6 @@ use Tree\Builder\NodeBuilder;
 use Tree\Node\Node;
 
 /**
- * Unit tests for class FirstClass.
- *
  * @internal
  *
  * @covers \Tree\Builder\NodeBuilder

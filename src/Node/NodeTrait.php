@@ -32,9 +32,6 @@ trait NodeTrait
      */
     private $children = [];
 
-    /**
-     * {@inheritdoc}
-     */
     public function setValue($value)
     {
         $this->value = $value;
@@ -42,17 +39,11 @@ trait NodeTrait
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getValue()
     {
         return $this->value;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function addChild(NodeInterface $child)
     {
         $child->setParent($this);
@@ -61,9 +52,6 @@ trait NodeTrait
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function removeChild(NodeInterface $child)
     {
         foreach ($this->children as $key => $myChild) {
@@ -79,9 +67,6 @@ trait NodeTrait
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function removeAllChildren()
     {
         $this->setChildren([]);
@@ -89,17 +74,11 @@ trait NodeTrait
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getChildren()
     {
         return $this->children;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function setChildren(array $children)
     {
         $this->removeParentFromChildren();
@@ -112,25 +91,16 @@ trait NodeTrait
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function setParent(?NodeInterface $parent = null)
     {
         $this->parent = $parent;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getParent()
     {
         return $this->parent;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAncestors()
     {
         $parents = [];
@@ -144,23 +114,16 @@ trait NodeTrait
         return $parents;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAncestorsAndSelf()
     {
         return \array_merge($this->getAncestors(), [$this]);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getNeighbors()
     {
         $neighbors = $this->getParent()->getChildren();
         $current = $this;
 
-        // Uses array_values to reset indexes after filter.
         return \array_values(
             \array_filter(
                 $neighbors,
@@ -171,17 +134,11 @@ trait NodeTrait
         );
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getNeighborsAndSelf()
     {
         return $this->getParent()->getChildren();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function isLeaf()
     {
         return 0 === \count($this->children);
@@ -195,9 +152,6 @@ trait NodeTrait
         return null === $this->getParent();
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function isChild()
     {
         return null !== $this->getParent();
@@ -271,9 +225,6 @@ trait NodeTrait
         return $size;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function accept(Visitor $visitor)
     {
         return $visitor->visit($this);

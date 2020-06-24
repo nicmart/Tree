@@ -15,8 +15,6 @@ use PHPUnit\Framework;
 use Tree\Node\Node;
 
 /**
- * Unit tests for class FirstClass.
- *
  * @internal
  *
  * @covers \Tree\Node\Node

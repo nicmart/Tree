@@ -24,17 +24,11 @@ class NodeBuilder implements NodeBuilderInterface
      */
     private $nodeStack = [];
 
-    /**
-     * @param NodeInterface $node
-     */
     public function __construct(?NodeInterface $node = null)
     {
         $this->setNode($node ?: $this->nodeInstanceByValue());
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function setNode(NodeInterface $node)
     {
         $this
@@ -44,17 +38,11 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getNode()
     {
         return $this->nodeStack[\count($this->nodeStack) - 1];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function leaf($value = null)
     {
         $this->getNode()->addChild(
@@ -64,9 +52,6 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function leafs($value1 /*,  $value2, ... */)
     {
         foreach (\func_get_args() as $value) {
@@ -76,9 +61,6 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function tree($value = null)
     {
         $node = $this->nodeInstanceByValue($value);
@@ -88,9 +70,6 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function end()
     {
         $this->popNode();
@@ -98,17 +77,11 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function nodeInstanceByValue($value = null)
     {
         return new Node($value);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function value($value)
     {
         $this->getNode()->setValue($value);
