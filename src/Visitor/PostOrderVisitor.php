@@ -1,5 +1,14 @@
 <?php
 
+/*
+ * This file is part of Tree.
+ *
+ * (c) 2013 Nicolò Martini
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Tree\Visitor;
 
 use Tree\Node\NodeInterface;
@@ -11,7 +20,7 @@ class PostOrderVisitor implements Visitor
         $nodes = [];
 
         foreach ($node->getChildren() as $child) {
-            $nodes = array_merge(
+            $nodes = \array_merge(
                 $nodes,
                 $child->accept($this)
             );

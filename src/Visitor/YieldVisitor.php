@@ -1,22 +1,20 @@
 <?php
-/**
- * This file is part of Tree
+
+/*
+ * This file is part of Tree.
+ *
+ * (c) 2013 Nicolò Martini
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- *
- * @author Nicolò Martini <nicmartnic@gmail.com>
  */
 
 namespace Tree\Visitor;
 
-
 use Tree\Node\NodeInterface;
 
 /**
- * Class YieldVisitor
- *
- * @package Tree\Visitor
+ * Class YieldVisitor.
  */
 class YieldVisitor implements Visitor
 {
@@ -32,9 +30,9 @@ class YieldVisitor implements Visitor
         $yield = [];
 
         foreach ($node->getChildren() as $child) {
-            $yield = array_merge($yield, $child->accept($this));
+            $yield = \array_merge($yield, $child->accept($this));
         }
 
         return $yield;
     }
-} 
+}

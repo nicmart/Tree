@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This file is part of Tree.
  *
@@ -7,133 +8,130 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace Tree\Test\Tree;
 
 use PHPUnit\Framework;
 use Tree\Node\Node;
 
 /**
- * Unit tests for class FirstClass
+ * Unit tests for class FirstClass.
+ *
+ * @internal
+ * @coversNothing
  */
-class NodeTest extends Framework\TestCase
+final class NodeTest extends Framework\TestCase
 {
     public function testSetValue()
     {
-        $node = new Node;
+        $node = new Node();
 
         $node->setValue('string value');
 
-        $this->assertSame('string value', $node->getValue());
+        self::assertSame('string value', $node->getValue());
 
         $node->setValue($object = new \stdClass());
         $object->foo = 'bar';
 
-        $this->assertSame($object, $node->getValue());
+        self::assertSame($object, $node->getValue());
     }
 
     public function testAddAndGetChildren()
     {
-        $root = new Node;
+        $root = new Node();
         $root
             ->addChild($child1 = new Node('child1'))
             ->addChild($child2 = new Node('child2'))
-            ->addChild($child3 = new Node('child3'))
-        ;
+            ->addChild($child3 = new Node('child3'));
 
-        $this->assertSame([$child1, $child2, $child3], $root->getChildren());
+        self::assertSame([$child1, $child2, $child3], $root->getChildren());
     }
 
     public function testAddChildSetParent()
     {
-        $root = new Node;
+        $root = new Node();
         $root
             ->addChild($child1 = new Node('child1'))
-            ->addChild($child2 = new Node('child2'))
-        ;
+            ->addChild($child2 = new Node('child2'));
 
-        $this->assertSame($root, $child1->getParent());
-        $this->assertSame($root, $child2->getParent());
+        self::assertSame($root, $child1->getParent());
+        self::assertSame($root, $child2->getParent());
     }
 
     public function testSetAndGetParent()
     {
-        $root = new Node;
+        $root = new Node();
         $child = new Node('foo');
 
         $child->setParent($root);
 
-        $this->assertSame($root, $child->getParent());
+        self::assertSame($root, $child->getParent());
     }
 
     public function testSetChildren()
     {
         $children = [new Node('child1'), new Node('child2'), new Node('child3')];
 
-        $root = new Node;
+        $root = new Node();
 
         $root->setChildren($children);
 
-        $this->assertSame($children, $root->getChildren());
+        self::assertSame($children, $root->getChildren());
     }
 
     public function testSetChildrenSetParentsReferences()
-     {
-         $root = new Node;
-         $root
-             ->addChild($child1 = new Node('child1'))
-             ->addChild($child2 = new Node('child2'))
-         ;
+    {
+        $root = new Node();
+        $root
+            ->addChild($child1 = new Node('child1'))
+            ->addChild($child2 = new Node('child2'));
 
-         $this->assertSame($root, $child1->getParent());
-         $this->assertSame($root, $child2->getParent());
-     }
+        self::assertSame($root, $child1->getParent());
+        self::assertSame($root, $child2->getParent());
+    }
 
     public function testRemoveChild()
     {
-        $root = new Node;
+        $root = new Node();
         $root
             ->addChild($child1 = new Node('child1'))
             ->addChild($child2 = new Node('child2'))
             ->addChild($child3 = new Node('child3'))
-            ->removeChild($child2)
-        ;
+            ->removeChild($child2);
 
-        $this->assertSame([$child1, $child3], $root->getChildren());
+        self::assertSame([$child1, $child3], $root->getChildren());
     }
 
     public function testRemoveChildRemoveParentReference()
     {
-        $root = new Node;
+        $root = new Node();
         $root
             ->addChild($child1 = new Node('child1'))
-            ->removeChild($child1)
-        ;
+            ->removeChild($child1);
 
-        $this->assertNull($child1->getParent());
+        self::assertNull($child1->getParent());
     }
 
     public function testRemoveAllChildrenRemoveParentReferences()
     {
-        $root = new Node;
+        $root = new Node();
         $root
             ->addChild($child1 = new Node('child1'))
-            ->removeAllChildren()
-        ;
+            ->removeAllChildren();
 
-        $this->assertNull($child1->getParent());
+        self::assertNull($child1->getParent());
     }
 
     public function testRemoveAllChildren()
     {
-        $root = new Node;
+        $root = new Node();
         $root
             ->addChild($child1 = new Node('child1'))
             ->addChild($child2 = new Node('child2'))
             ->addChild($child3 = new Node('child3'))
-            ->removeAllChildren()
-        ;
+            ->removeAllChildren();
 
-        $this->assertEmpty($root->getChildren());
+        self::assertEmpty($root->getChildren());
     }
 
     public function testGetAncestors()
@@ -143,7 +141,7 @@ class NodeTest extends Framework\TestCase
         $a->addChild($b = new Node('b'));
         $b->addChild($c = new Node('c'));
 
-        $this->assertSame([$root, $a, $b], $c->getAncestors());
+        self::assertSame([$root, $a, $b], $c->getAncestors());
     }
 
     public function testGetAncestorsAndSelf()
@@ -152,7 +150,7 @@ class NodeTest extends Framework\TestCase
         $root->addChild($a = new Node('a'));
         $a->addChild($b = new Node('b'));
 
-        $this->assertSame([$root, $a, $b], $b->getAncestorsAndSelf());
+        self::assertSame([$root, $a, $b], $b->getAncestorsAndSelf());
     }
 
     public function testGetNeighbors()
@@ -163,7 +161,7 @@ class NodeTest extends Framework\TestCase
             ->addChild($b = new Node('b'))
             ->addChild($c = new Node('c'));
 
-        $this->assertSame([$b, $c], $a->getNeighbors());
+        self::assertSame([$b, $c], $a->getNeighbors());
     }
 
     public function testGetNeighborsAndSelf()
@@ -174,18 +172,18 @@ class NodeTest extends Framework\TestCase
             ->addChild($b = new Node('b'))
             ->addChild($c = new Node('c'));
 
-        $this->assertSame([$a, $b, $c], $a->getNeighborsAndSelf());
+        self::assertSame([$a, $b, $c], $a->getNeighborsAndSelf());
     }
 
     public function testIsLeaf()
     {
-        $root = new Node;
+        $root = new Node();
 
-        $this->assertTrue($root->isLeaf());
+        self::assertTrue($root->isLeaf());
 
         $root->addChild(new Node('child'));
 
-        $this->assertFalse($root->isLeaf());
+        self::assertFalse($root->isLeaf());
     }
 
     public function testRoot()
@@ -195,7 +193,7 @@ class NodeTest extends Framework\TestCase
                 (new Node('child'))->addChild($grandchild = new Node('grandchild'))
             );
 
-        $this->assertSame($root, $grandchild->root());
+        self::assertSame($root, $grandchild->root());
     }
 
     public function testIsRoot()
@@ -203,8 +201,8 @@ class NodeTest extends Framework\TestCase
         $root = new Node('root');
         $root->addChild($child = new Node('child'));
 
-        $this->assertTrue($root->isRoot());
-        $this->assertFalse($child->isRoot());
+        self::assertTrue($root->isRoot());
+        self::assertFalse($child->isRoot());
     }
 
     public function testIsChild()
@@ -212,73 +210,65 @@ class NodeTest extends Framework\TestCase
         $root = new Node('root');
         $root->addChild($child = new Node('child'));
 
-        $this->assertTrue($child->isChild());
-        $this->assertFalse($root->isChild());
+        self::assertTrue($child->isChild());
+        self::assertFalse($root->isChild());
     }
 
     public function testGetDepth()
     {
-        $root = new Node;
+        $root = new Node();
         $root
             ->addChild($child1 = new Node('child1'))
             ->addChild($child2 = new Node('child2'))
-            ->addChild($child3 = new Node('child3'))
-        ;
+            ->addChild($child3 = new Node('child3'));
 
         $child3
-            ->addChild($child4 = new Node("a"))
-            ->addChild(new Node("b"))
-        ;
+            ->addChild($child4 = new Node('a'))
+            ->addChild(new Node('b'));
 
-        $this->assertSame(1, $child1->getDepth());
-        $this->assertSame(0, $root->getDepth());
-        $this->assertSame(2, $child4->getDepth());
+        self::assertSame(1, $child1->getDepth());
+        self::assertSame(0, $root->getDepth());
+        self::assertSame(2, $child4->getDepth());
     }
 
     public function testGetHeight()
     {
-        $root = new Node;
+        $root = new Node();
         $root
             ->addChild($child1 = new Node('child1'))
             ->addChild($child2 = new Node('child2'))
-            ->addChild($child3 = new Node('child3'))
-        ;
+            ->addChild($child3 = new Node('child3'));
 
         $child3
-            ->addChild(new Node("a"))
-            ->addChild(new Node("b"))
-        ;
+            ->addChild(new Node('a'))
+            ->addChild(new Node('b'));
 
-        $this->assertSame(0, $child1->getHeight());
-        $this->assertSame(2, $root->getHeight());
-        $this->assertSame(1, $child3->getHeight());
+        self::assertSame(0, $child1->getHeight());
+        self::assertSame(2, $root->getHeight());
+        self::assertSame(1, $child3->getHeight());
     }
-
 
     public function testGetSize()
     {
-        $root = new Node;
+        $root = new Node();
         $root
             ->addChild($child1 = new Node('child1'))
             ->addChild($child2 = new Node('child2'))
-            ->addChild($child3 = new Node('child3'))
-        ;
+            ->addChild($child3 = new Node('child3'));
 
         $child3
-            ->addChild(new Node("a"))
-            ->addChild($child4 = new Node("b"))
-        ;
+            ->addChild(new Node('a'))
+            ->addChild($child4 = new Node('b'));
 
-        $child4->addChild($child5 = new Node("c"));
+        $child4->addChild($child5 = new Node('c'));
         $child5
-            ->addChild(new Node("d"))
-            ->addChild(new Node("f"))
-        ;
+            ->addChild(new Node('d'))
+            ->addChild(new Node('f'));
 
-        $this->assertSame(9, $root->getSize());
-        $this->assertSame(3, $child5->getSize());
-        $this->assertSame(4, $child4->getSize());
-        $this->assertSame(6, $child3->getSize());
-        $this->assertSame(1, $child2->getSize());
+        self::assertSame(9, $root->getSize());
+        self::assertSame(3, $child5->getSize());
+        self::assertSame(4, $child4->getSize());
+        self::assertSame(6, $child3->getSize());
+        self::assertSame(1, $child2->getSize());
     }
 }

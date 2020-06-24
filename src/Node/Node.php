@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This file is part of Tree.
  *
@@ -11,19 +12,20 @@
 namespace Tree\Node;
 
 /**
- * Class Node
+ * Class Node.
  */
 class Node implements NodeInterface
 {
     use NodeTrait;
 
     /**
-     * @param mixed $value
+     * @param mixed           $value
      * @param NodeInterface[] $children
      */
     public function __construct($value = null, array $children = [])
     {
         $this->setValue($value);
+
         if (!empty($children)) {
             $this->setChildren($children);
         }

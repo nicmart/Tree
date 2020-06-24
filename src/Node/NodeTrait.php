@@ -1,11 +1,12 @@
 <?php
-/**
- * This file is part of Tree
+
+/*
+ * This file is part of Tree.
+ *
+ * (c) 2013 Nicolò Martini
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- *
- * @author Nicolò Martini <nicmartnic@gmail.com>
  */
 
 namespace Tree\Node;
@@ -20,10 +21,9 @@ trait NodeTrait
     private $value;
 
     /**
-     * parent
+     * parent.
      *
      * @var NodeInterface
-     * @access private
      */
     private $parent;
 
@@ -67,12 +67,12 @@ trait NodeTrait
     public function removeChild(NodeInterface $child)
     {
         foreach ($this->children as $key => $myChild) {
-            if ($child == $myChild) {
+            if ($child === $myChild) {
                 unset($this->children[$key]);
             }
         }
 
-        $this->children = array_values($this->children);
+        $this->children = \array_values($this->children);
 
         $child->setParent(null);
 
@@ -115,7 +115,7 @@ trait NodeTrait
     /**
      * {@inheritdoc}
      */
-    public function setParent(NodeInterface $parent = null)
+    public function setParent(?NodeInterface $parent = null)
     {
         $this->parent = $parent;
     }
@@ -135,8 +135,9 @@ trait NodeTrait
     {
         $parents = [];
         $node = $this;
+
         while ($parent = $node->getParent()) {
-            array_unshift($parents, $parent);
+            \array_unshift($parents, $parent);
             $node = $parent;
         }
 
@@ -144,11 +145,11 @@ trait NodeTrait
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getAncestorsAndSelf()
     {
-        return array_merge($this->getAncestors(), [$this]);
+        return \array_merge($this->getAncestors(), [$this]);
     }
 
     /**
@@ -160,18 +161,18 @@ trait NodeTrait
         $current = $this;
 
         // Uses array_values to reset indexes after filter.
-        return array_values(
-            array_filter(
+        return \array_values(
+            \array_filter(
                 $neighbors,
-                function ($item) use ($current) {
-                    return $item != $current;
+                static function ($item) use ($current) {
+                    return $item !== $current;
                 }
             )
         );
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function getNeighborsAndSelf()
     {
@@ -179,11 +180,11 @@ trait NodeTrait
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function isLeaf()
     {
-        return count($this->children) === 0;
+        return 0 === \count($this->children);
     }
 
     /**
@@ -191,19 +192,19 @@ trait NodeTrait
      */
     public function isRoot()
     {
-        return $this->getParent() === null;
+        return null === $this->getParent();
     }
 
     /**
-     * {@inheritDoc}
+     * {@inheritdoc}
      */
     public function isChild()
     {
-        return $this->getParent() !== null;
+        return null !== $this->getParent();
     }
 
     /**
-     * Find the root of the node
+     * Find the root of the node.
      *
      * @return NodeInterface
      */
@@ -211,8 +212,9 @@ trait NodeTrait
     {
         $node = $this;
 
-        while ($parent = $node->getParent())
+        while ($parent = $node->getParent()) {
             $node = $parent;
+        }
 
         return $node;
     }
@@ -234,7 +236,7 @@ trait NodeTrait
     }
 
     /**
-     * Return the height of the tree whose root is this node
+     * Return the height of the tree whose root is this node.
      *
      * @return int
      */
@@ -250,16 +252,18 @@ trait NodeTrait
             $heights[] = $child->getHeight();
         }
 
-        return max($heights) + 1;
+        return \max($heights) + 1;
     }
 
     /**
-     * Return the number of nodes in a tree
+     * Return the number of nodes in a tree.
+     *
      * @return int
      */
     public function getSize()
     {
         $size = 1;
+
         foreach ($this->getChildren() as $child) {
             $size += $child->getSize();
         }
@@ -277,7 +281,8 @@ trait NodeTrait
 
     private function removeParentFromChildren()
     {
-        foreach ($this->getChildren() as $child)
+        foreach ($this->getChildren() as $child) {
             $child->setParent(null);
+        }
     }
-} 
+}

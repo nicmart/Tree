@@ -1,22 +1,35 @@
 <?php
 
+/*
+ * This file is part of Tree.
+ *
+ * (c) 2013 Nicolò Martini
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
 namespace Tree\Test\Visitor;
 
 use PHPUnit\Framework;
 use Tree\Node\Node;
 use Tree\Visitor\PostOrderVisitor;
 
-class PostOrderVisitorTest extends Framework\TestCase
+/**
+ * @internal
+ * @coversNothing
+ */
+final class PostOrderVisitorTest extends Framework\TestCase
 {
     public function testImplementsInterface()
     {
         $visitor = new PostOrderVisitor();
 
-        $this->assertInstanceOf('Tree\Visitor\Visitor', $visitor);
+        self::assertInstanceOf('Tree\Visitor\Visitor', $visitor);
     }
 
     /**
-     * root
+     * root.
      */
     public function testWalkTreeWithOneNode()
     {
@@ -28,13 +41,13 @@ class PostOrderVisitorTest extends Framework\TestCase
             $root,
         ];
 
-        $this->assertSame($expected, $visitor->visit($root));
+        self::assertSame($expected, $visitor->visit($root));
     }
 
     /**
      * root
      *  |
-     *  a
+     *  a.
      */
     public function testWalkTreeWithTwoNodes()
     {
@@ -51,7 +64,7 @@ class PostOrderVisitorTest extends Framework\TestCase
             $root,
         ];
 
-        $this->assertSame($expected, $visitor->visit($root));
+        self::assertSame($expected, $visitor->visit($root));
     }
 
     /**
@@ -59,7 +72,7 @@ class PostOrderVisitorTest extends Framework\TestCase
      *    /|\
      *   a b c
      *  /| |
-     * d e f
+     * d e f.
      */
     public function testWalkTreeWithMoreNodes()
     {
@@ -93,7 +106,7 @@ class PostOrderVisitorTest extends Framework\TestCase
             $root,
         ];
 
-        $this->assertSame($expected, $visitor->visit($root));
+        self::assertSame($expected, $visitor->visit($root));
     }
 
     /**
@@ -101,7 +114,7 @@ class PostOrderVisitorTest extends Framework\TestCase
      *    /|\
      *   a b c
      *  /| |
-     * d e f
+     * d e f.
      */
     public function testWalkSubTree()
     {
@@ -131,6 +144,6 @@ class PostOrderVisitorTest extends Framework\TestCase
             $a,
         ];
 
-        $this->assertSame($expected, $visitor->visit($a));
+        self::assertSame($expected, $visitor->visit($a));
     }
 }

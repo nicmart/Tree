@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This file is part of Tree.
  *
@@ -10,11 +11,11 @@
 
 namespace Tree\Builder;
 
-use Tree\Node\NodeInterface;
 use Tree\Node\Node;
+use Tree\Node\NodeInterface;
 
 /**
- * Main implementation of the NodeBuilderInterface
+ * Main implementation of the NodeBuilderInterface.
  */
 class NodeBuilder implements NodeBuilderInterface
 {
@@ -26,7 +27,7 @@ class NodeBuilder implements NodeBuilderInterface
     /**
      * @param NodeInterface $node
      */
-    public function __construct(NodeInterface $node = null)
+    public function __construct(?NodeInterface $node = null)
     {
         $this->setNode($node ?: $this->nodeInstanceByValue());
     }
@@ -38,8 +39,7 @@ class NodeBuilder implements NodeBuilderInterface
     {
         $this
             ->emptyStack()
-            ->pushNode($node)
-        ;
+            ->pushNode($node);
 
         return $this;
     }
@@ -49,7 +49,7 @@ class NodeBuilder implements NodeBuilderInterface
      */
     public function getNode()
     {
-        return $this->nodeStack[count($this->nodeStack) - 1];
+        return $this->nodeStack[\count($this->nodeStack) - 1];
     }
 
     /**
@@ -69,7 +69,7 @@ class NodeBuilder implements NodeBuilderInterface
      */
     public function leafs($value1 /*,  $value2, ... */)
     {
-        foreach (func_get_args() as $value) {
+        foreach (\func_get_args() as $value) {
             $this->leaf($value);
         }
 
@@ -125,13 +125,13 @@ class NodeBuilder implements NodeBuilderInterface
 
     private function pushNode(NodeInterface $node)
     {
-        array_push($this->nodeStack, $node);
+        \array_push($this->nodeStack, $node);
 
         return $this;
     }
 
     private function popNode()
     {
-        return array_pop($this->nodeStack);
+        return \array_pop($this->nodeStack);
     }
 }
