@@ -290,3 +290,9 @@ phpunit
 ## Changelog
 
 Please have a look at [`CHANGELOG.md`](CHANGELOG.md).
+
+## License
+
+This package is licensed using the MIT License.
+
+Please have a look at [`LICENSE.md`](LICENSE.md).
