@@ -18,7 +18,8 @@ use Tree\Node\Node;
  * Unit tests for class FirstClass.
  *
  * @internal
- * @coversNothing
+ *
+ * @covers \Tree\Node\Node
  */
 final class NodeTest extends Framework\TestCase
 {

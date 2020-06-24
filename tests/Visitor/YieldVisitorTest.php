@@ -17,7 +17,8 @@ use Tree\Visitor\YieldVisitor;
 
 /**
  * @internal
- * @coversNothing
+ *
+ * @covers \Tree\Visitor\YieldVisitor
  */
 final class YieldVisitorTest extends Framework\TestCase
 {

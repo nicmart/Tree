@@ -17,7 +17,8 @@ use Tree\Visitor\PostOrderVisitor;
 
 /**
  * @internal
- * @coversNothing
+ *
+ * @covers \Tree\Visitor\PostOrderVisitor
  */
 final class PostOrderVisitorTest extends Framework\TestCase
 {

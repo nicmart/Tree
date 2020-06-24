@@ -17,7 +17,8 @@ use Tree\Visitor\PreOrderVisitor;
 
 /**
  * @internal
- * @coversNothing
+ *
+ * @covers \Tree\Visitor\PreOrderVisitor
  */
 final class PreOrderVisitorTest extends Framework\TestCase
 {
