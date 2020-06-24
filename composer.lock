@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a8e8d1a70ab829cb400dcb2463a32ffd",
+    "content-hash": "5bca8365d321c192cfdfe347ecff156a",
     "packages": [],
     "packages-dev": [
         {
@@ -540,6 +540,82 @@
                 "printer"
             ],
             "time": "2019-12-19T14:42:54+00:00"
+        },
+        {
+            "name": "ergebnis/license",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ergebnis/license.git",
+                "reference": "d36cbe3a4ca62c9df902e4133f0a84307a75034a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ergebnis/license/zipball/d36cbe3a4ca62c9df902e4133f0a84307a75034a",
+                "reference": "d36cbe3a4ca62c9df902e4133f0a84307a75034a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-filter": "*",
+                "php": "^7.1"
+            },
+            "require-dev": {
+                "ergebnis/composer-normalize": "^2.5.1",
+                "ergebnis/php-cs-fixer-config": "~2.1.2",
+                "ergebnis/phpstan-rules": "~0.14.4",
+                "ergebnis/test-util": "~1.0.0",
+                "infection/infection": "~0.13.6",
+                "jangregor/phpstan-prophecy": "~0.6.2",
+                "phpstan/extension-installer": "^1.0.4",
+                "phpstan/phpstan": "~0.12.22",
+                "phpstan/phpstan-deprecation-rules": "~0.12.2",
+                "phpstan/phpstan-phpunit": "~0.12.8",
+                "phpstan/phpstan-strict-rules": "~0.12.2",
+                "phpunit/phpunit": "^7.5.20",
+                "psalm/plugin-phpunit": "~0.10.0",
+                "symfony/filesystem": "^4.4.8",
+                "vimeo/psalm": "^3.11.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Ergebnis\\License\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Möller",
+                    "email": "am@localheinz.com"
+                }
+            ],
+            "description": "Provides an abstraction of an open-source license.",
+            "homepage": "https://github.com/ergebnis/license",
+            "keywords": [
+                "license"
+            ],
+            "funding": [
+                {
+                    "url": "https://paypal.me/localheinz",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.amazon.de/hz/wishlist/ls/2NCHMSJ4BC1OW",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://www.buymeacoffee.com/localheinz",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/localheinz",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-05-04T17:36:52+00:00"
         },
         {
             "name": "ergebnis/php-cs-fixer-config",
