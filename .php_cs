@@ -1,35 +1,32 @@
 <?php
 
-/*
- * This file is part of Tree.
+/**
+ * Copyright (c) 2013-2020 Nicolò Martini
  *
- * (c) 2013 Nicolò Martini
+ * For the full copyright and license information, please view
+ * the LICENSE file that was distributed with this source code.
  *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+ * @see https://github.com/nicmart/Tree
  */
 
+use Ergebnis\License;
 use Ergebnis\PhpCsFixer;
-use PhpCsFixer\Fixer;
 
-$header = <<<'TXT'
-This file is part of Tree.
+$license = License\Type\MIT::text(
+    __DIR__ . '/LICENSE',
+    License\Range::since(
+        License\Year::fromString('2013'),
+        new \DateTimeZone('UTC')
+    ),
+    License\Holder::fromString('Nicolò Martini'),
+    License\Url::fromString('https://github.com/nicmart/Tree')
+);
 
-(c) 2013 Nicolò Martini
+$license->save();
 
-For the full copyright and license information, please view the LICENSE
-file that was distributed with this source code.
-TXT;
-
-$config = PhpCsFixer\Config\Factory::fromRuleSet(new PhpCsFixer\Config\RuleSet\Php71(), [
+$config = PhpCsFixer\Config\Factory::fromRuleSet(new PhpCsFixer\Config\RuleSet\Php71($license->header()), [
     'declare_strict_types' => false,
     'final_class' => false,
-    'header_comment' => [
-        'comment_type' => Fixer\Comment\HeaderCommentFixer::HEADER_COMMENT,
-        'header' => \trim($header),
-        'location' => 'after_declare_strict',
-        'separate' => 'both',
-    ],
     'void_return' => false,
 ]);
 
