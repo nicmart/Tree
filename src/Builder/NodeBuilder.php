@@ -1,4 +1,5 @@
 <?php
+
 /*
  * This file is part of Tree.
  *
@@ -10,11 +11,11 @@
 
 namespace Tree\Builder;
 
-use Tree\Node\NodeInterface;
 use Tree\Node\Node;
+use Tree\Node\NodeInterface;
 
 /**
- * Main implementation of the NodeBuilderInterface
+ * Main implementation of the NodeBuilderInterface.
  */
 class NodeBuilder implements NodeBuilderInterface
 {
@@ -23,38 +24,25 @@ class NodeBuilder implements NodeBuilderInterface
      */
     private $nodeStack = [];
 
-    /**
-     * @param NodeInterface $node
-     */
-    public function __construct(NodeInterface $node = null)
+    public function __construct(?NodeInterface $node = null)
     {
         $this->setNode($node ?: $this->nodeInstanceByValue());
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function setNode(NodeInterface $node)
     {
         $this
             ->emptyStack()
-            ->pushNode($node)
-        ;
+            ->pushNode($node);
 
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getNode()
     {
-        return $this->nodeStack[count($this->nodeStack) - 1];
+        return $this->nodeStack[\count($this->nodeStack) - 1];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function leaf($value = null)
     {
         $this->getNode()->addChild(
@@ -64,21 +52,15 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function leafs($value1 /*,  $value2, ... */)
     {
-        foreach (func_get_args() as $value) {
+        foreach (\func_get_args() as $value) {
             $this->leaf($value);
         }
 
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function tree($value = null)
     {
         $node = $this->nodeInstanceByValue($value);
@@ -88,9 +70,6 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function end()
     {
         $this->popNode();
@@ -98,17 +77,11 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function nodeInstanceByValue($value = null)
     {
         return new Node($value);
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function value($value)
     {
         $this->getNode()->setValue($value);
@@ -125,13 +98,13 @@ class NodeBuilder implements NodeBuilderInterface
 
     private function pushNode(NodeInterface $node)
     {
-        array_push($this->nodeStack, $node);
+        \array_push($this->nodeStack, $node);
 
         return $this;
     }
 
     private function popNode()
     {
-        return array_pop($this->nodeStack);
+        return \array_pop($this->nodeStack);
     }
 }

@@ -1,11 +1,12 @@
 <?php
-/**
- * This file is part of Tree
+
+/*
+ * This file is part of Tree.
+ *
+ * (c) 2013 Nicolò Martini
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- *
- * @author Nicolò Martini <nicmartnic@gmail.com>
  */
 
 namespace Tree\Test\Visitor;
@@ -14,7 +15,12 @@ use PHPUnit\Framework;
 use Tree\Node\Node;
 use Tree\Visitor\YieldVisitor;
 
-class YieldVisitorTest extends Framework\TestCase
+/**
+ * @internal
+ *
+ * @covers \Tree\Visitor\YieldVisitor
+ */
+final class YieldVisitorTest extends Framework\TestCase
 {
     /**
      *              root
@@ -23,7 +29,7 @@ class YieldVisitorTest extends Framework\TestCase
      *            / \
      *           C   D
      *               |
-     *               E
+     *               E.
      */
     public function testGetYield()
     {
@@ -40,14 +46,14 @@ class YieldVisitorTest extends Framework\TestCase
 
         $yield = $root->accept($visitor);
 
-        $this->assertSame([$c, $e, $b], $yield);
+        self::assertSame([$c, $e, $b], $yield);
     }
 
     public function testTheYieldOfALeafNodeIsTheNodeItself()
     {
         $node = new Node('node');
-        $visitor = new YieldVisitor;
+        $visitor = new YieldVisitor();
 
-        $this->assertSame([$node], $node->accept($visitor));
+        self::assertSame([$node], $node->accept($visitor));
     }
 }

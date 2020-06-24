@@ -1,26 +1,27 @@
 <?php
+
 /*
- * This file is part of Tree library.
+ * This file is part of Tree.
  *
  * (c) 2013 Nicolò Martini
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
+
 namespace Tree\Node;
 
 use Tree\Visitor\Visitor;
 
 /**
- * Interface for tree nodes
+ * Interface for tree nodes.
  *
- * @package    Tree
- * @author     Nicolò Martini <nicmartnic@gmail.com>
+ * @author Nicolò Martini <nicmartnic@gmail.com>
  */
 interface NodeInterface
 {
     /**
-     * Set the value of the current node
+     * Set the value of the current node.
      *
      * @param mixed $value
      *
@@ -29,46 +30,46 @@ interface NodeInterface
     public function setValue($value);
 
     /**
-     * Get the current node value
+     * Get the current node value.
      *
      * @return mixed
      */
     public function getValue();
 
     /**
-     * Add a child
+     * Add a child.
      *
      * @param NodeInterface $child
      *
      * @return mixed
      */
-    public function addChild(NodeInterface $child);
+    public function addChild(self $child);
 
     /**
-     * Remove a node from children
+     * Remove a node from children.
      *
      * @param NodeInterface $child
      *
      * @return NodeInterface the current instance
      */
-    public function removeChild(NodeInterface $child);
+    public function removeChild(self $child);
 
     /**
-     * Remove all children
+     * Remove all children.
      *
      * @return NodeInterface The current instance
      */
     public function removeAllChildren();
 
     /**
-     * Return the array of children
+     * Return the array of children.
      *
      * @return NodeInterface[]
      */
     public function getChildren();
 
     /**
-     * Replace the children set with the given one
+     * Replace the children set with the given one.
      *
      * @param NodeInterface[] $children
      *
@@ -77,15 +78,14 @@ interface NodeInterface
     public function setChildren(array $children);
 
     /**
-     * setParent
+     * Set the parent node.
      *
      * @param NodeInterface $parent
-     * @return void
      */
-    public function setParent(NodeInterface $parent = null);
+    public function setParent(?self $parent = null);
 
     /**
-     * getParent
+     * Return the parent node.
      *
      * @return NodeInterface
      */
@@ -120,7 +120,7 @@ interface NodeInterface
     public function getNeighborsAndSelf();
 
     /**
-     * Return true if the node is the root, false otherwise
+     * Return true if the node is the root, false otherwise.
      *
      * @return bool
      */
@@ -134,31 +134,30 @@ interface NodeInterface
     public function isChild();
 
     /**
-     * Return true if the node has no children, false otherwise
+     * Return true if the node has no children, false otherwise.
      *
      * @return bool
      */
     public function isLeaf();
 
     /**
-     * Return the distance from the current node to the root
+     * Return the distance from the current node to the root.
      *
      * @return int
      */
     public function getDepth();
 
     /**
-     * Return the height of the tree whose root is this node
+     * Return the height of the tree whose root is this node.
      *
      * @return int
      */
     public function getHeight();
 
     /**
-     * Accept method for the visitor pattern (see http://en.wikipedia.org/wiki/Visitor_pattern)
+     * Accept method for the visitor pattern (see http://en.wikipedia.org/wiki/Visitor_pattern).
      *
      * @param Visitor $visitor
-     * @return void
      */
     public function accept(Visitor $visitor);
 }

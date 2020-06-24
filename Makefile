@@ -2,8 +2,10 @@
 it: coding-standards tests ## Runs the coding-standards and tests target
 
 .PHONY: coding-standards
-coding-standards: vendor ## Normalizes composer.json with ergebnis/composer-normalize
+coding-standards: vendor ## Normalizes composer.json with ergebnis/composer-normalize and fixes code style issues with friendsofphp/php-cs-fixer
 	composer normalize
+	mkdir -p .build/php-cs-fixer
+	vendor/bin/php-cs-fixer fix --config=.php_cs --diff --diff-format=udiff --verbose
 
 .PHONY: help
 help: ## Displays this list of targets with descriptions
