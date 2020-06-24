@@ -20,7 +20,8 @@
     "config": {
         "platform": {
             "php": "7.1.33"
-        }
+        },
+        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
