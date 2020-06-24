@@ -4,7 +4,7 @@
  * Copyright (c) 2013-2020 Nicolò Martini
  *
  * For the full copyright and license information, please view
- * the LICENSE file that was distributed with this source code.
+ * the LICENSE.md file that was distributed with this source code.
  *
  * @see https://github.com/nicmart/Tree
  */

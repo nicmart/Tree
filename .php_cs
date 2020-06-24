@@ -4,7 +4,7 @@
  * Copyright (c) 2013-2020 Nicolò Martini
  *
  * For the full copyright and license information, please view
- * the LICENSE file that was distributed with this source code.
+ * the LICENSE.md file that was distributed with this source code.
  *
  * @see https://github.com/nicmart/Tree
  */
@@ -12,8 +12,8 @@
 use Ergebnis\License;
 use Ergebnis\PhpCsFixer;
 
-$license = License\Type\MIT::text(
-    __DIR__ . '/LICENSE',
+$license = License\Type\MIT::markdown(
+    __DIR__ . '/LICENSE.md',
     License\Range::since(
         License\Year::fromString('2013'),
         new \DateTimeZone('UTC')
