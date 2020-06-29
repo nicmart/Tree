@@ -16,7 +16,7 @@
     "require-dev": {
         "ergebnis/composer-normalize": "^2.5.1",
         "ergebnis/license": "^1.0.0",
-        "ergebnis/php-cs-fixer-config": "^2.2.0",
+        "ergebnis/php-cs-fixer-config": "^2.2.1",
         "phpunit/phpunit": "^7.5.20"
     },
     "config": {
