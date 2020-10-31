@@ -6,7 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`0.3.0...master`][0.3.0...master].
+For a full diff see [`0.3.1...master`][0.3.1...master].
+
+## [`0.3.1`][0.3.1]
+
+For a full diff see [`0.3.0...0.3.1`][0.3.0...0.3.1].
+
+### Added
+
+* Added support for PHP 8.0 ([#79]), by [@pascalbaljet]
 
 ### Changed
 
@@ -123,6 +131,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [0.2.6]: https://github.com/nicmart/Tree/releases/tag/v0.2.6
 [0.2.7]: https://github.com/nicmart/Tree/releases/tag/v0.2.7
 [0.3.0]: https://github.com/nicmart/Tree/releases/tag/v0.3.0
+[0.3.1]: https://github.com/nicmart/Tree/releases/tag/0.3.1
 
 [fcfd14e...0.1.1]: https://github.com/nicmart/Tree/compare/fcfd14e...v0.1.1
 [0.1.1...0.1.2]: https://github.com/nicmart/Tree/compare/v0.1.1...v0.1.2
@@ -135,7 +144,8 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [0.2.5...0.2.6]: https://github.com/nicmart/Tree/compare/v0.2.5...v0.2.6
 [0.2.6...0.2.7]: https://github.com/nicmart/Tree/compare/v0.2.6...v0.2.7
 [0.2.7...0.3.0]: https://github.com/nicmart/Tree/compare/v0.2.7...0.3.0
-[0.3.0...master]: https://github.com/nicmart/Tree/compare/0.3.0...master
+[0.3.0...0.3.1]: https://github.com/nicmart/Tree/compare/0.3.0...0.3.1
+[0.3.1...master]: https://github.com/nicmart/Tree/compare/0.3.1...master
 
 [#3]: https://github.com/nicmart/Tree/issues/3
 [#4]: https://github.com/nicmart/Tree/issues/4
@@ -153,6 +163,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#57]: https://github.com/nicmart/Tree/pull/57
 [#58]: https://github.com/nicmart/Tree/pull/58
 [#59]: https://github.com/nicmart/Tree/pull/59
+[#79]: https://github.com/nicmart/Tree/pull/79
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
@@ -160,3 +171,4 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [@localheinz]: https://github.com/localheinz
 [@mdwheele]: https://github.com/mdwheele
 [@nicmart]: https://github.com/nicmart
+[@pascalbaljet]: https://github.com/pascalbaljet
