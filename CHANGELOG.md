@@ -130,7 +130,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [0.2.5]: https://github.com/nicmart/Tree/releases/tag/v0.2.5
 [0.2.6]: https://github.com/nicmart/Tree/releases/tag/v0.2.6
 [0.2.7]: https://github.com/nicmart/Tree/releases/tag/v0.2.7
-[0.3.0]: https://github.com/nicmart/Tree/releases/tag/v0.3.0
+[0.3.0]: https://github.com/nicmart/Tree/releases/tag/0.3.0
 [0.3.1]: https://github.com/nicmart/Tree/releases/tag/0.3.1
 
 [fcfd14e...0.1.1]: https://github.com/nicmart/Tree/compare/fcfd14e...v0.1.1
