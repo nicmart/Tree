@@ -41,7 +41,7 @@ interface NodeBuilderInterface
      *
      * @param mixed $value
      *
-     * @return NodebuilderInterface The current instance
+     * @return NodeBuilderInterface The current instance
      */
     public function value($value);
 
@@ -57,11 +57,11 @@ interface NodeBuilderInterface
     /**
      * Add several leafs to the node.
      *
-     * @param $value, ... An arbitrary long list of values
+     * @param mixed ...$value An arbitrary long list of values
      *
      * @return NodeBuilderInterface The current instance
      */
-    public function leafs($value);
+    public function leafs($value /*,  $value2, ... */);
 
     /**
      * Add a child to the node enter in its scope.
