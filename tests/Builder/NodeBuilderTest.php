@@ -27,7 +27,7 @@ final class NodeBuilderTest extends Framework\TestCase
      */
     protected $builder;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->builder = new NodeBuilder();
     }
