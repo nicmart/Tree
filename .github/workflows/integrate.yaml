@@ -149,7 +149,7 @@ jobs:
 
     steps:
       - name: "Merge pull request"
-        uses: "actions/github-script@v3"
+        uses: "actions/github-script@v4.0.1"
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           script: |
