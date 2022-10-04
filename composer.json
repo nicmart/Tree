@@ -18,6 +18,7 @@
         "ergebnis/license": "^1.1.0",
         "ergebnis/php-cs-fixer-config": "^2.14.0",
         "phpunit/phpunit": "^8.5.30",
+        "psalm/plugin-phpunit": "~0.17.0",
         "vimeo/psalm": "^4.27.0"
     },
     "autoload": {
