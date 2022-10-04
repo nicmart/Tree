@@ -1,5 +1,5 @@
 .PHONY: it
-it: coding-standards tests ## Runs the coding-standards and tests target
+it: coding-standards static-code-analysis tests ## Runs the coding-standards, static-code-analysis and tests target
 
 .PHONY: coding-standards
 coding-standards: vendor ## Normalizes composer.json with ergebnis/composer-normalize and fixes code style issues with friendsofphp/php-cs-fixer
@@ -14,6 +14,18 @@ help: ## Displays this list of targets with descriptions
 .PHONY: tests
 tests: vendor ## Runs tests with phpunit/phpunit
 	vendor/bin/phpunit --configuration=phpunit.xml.dist
+
+.PHONY: static-code-analysis
+static-code-analysis: vendor ## Runs a static code analysis with vimeo/psalm
+	mkdir -p .build/psalm
+	vendor/bin/psalm --config=psalm.xml --clear-cache
+	vendor/bin/psalm --config=psalm.xml --show-info=false --stats --threads=4
+
+.PHONY: static-code-analysis-baseline
+static-code-analysis-baseline: vendor ## Generates a baseline for static code analysis with vimeo/psalm
+	mkdir -p .build/psalm
+	vendor/bin/psalm --config=psalm.xml --clear-cache
+	vendor/bin/psalm --config=psalm.xml --set-baseline=psalm-baseline.xml
 
 vendor: composer.json composer.lock
 	composer validate --strict

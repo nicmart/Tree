@@ -22,6 +22,30 @@ $ make coding-standards
 
 to automatically fix coding standard violations.
 
+## Static Code Analysis
+
+We are using [`vimeo/psalm`](https://github.com/vimeo/psalm) to statically analyze the code.
+
+Run
+
+```sh
+make static-code-analysis
+```
+
+to run a static code analysis.
+
+We are also using the baseline feature of [`vimeo/psalm`](https://psalm.dev/docs/running_psalm/dealing_with_code_issues/#using-a-baseline-file).
+
+Run
+
+```sh
+make static-code-analysis-baseline
+```
+
+to regenerate the baseline  [`../psalm-baseline.xml`](../psalm-baseline.xml).
+
+:exclamation: Ideally, the baseline should shrink over time.
+
 ## Tests
 
 We are using [`phpunit/phpunit`](https://github.com/sebastianbergmann/phpunit) to drive the development.
