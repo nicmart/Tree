@@ -136,16 +136,6 @@
       <code>$child3</code>
     </UnusedVariable>
   </file>
-  <file src="tests/Visitor/PostOrderVisitorTest.php">
-    <ArgumentTypeCoercion occurrences="1">
-      <code>'Tree\Visitor\Visitor'</code>
-    </ArgumentTypeCoercion>
-  </file>
-  <file src="tests/Visitor/PreOrderVisitorTest.php">
-    <ArgumentTypeCoercion occurrences="1">
-      <code>'Tree\Visitor\Visitor'</code>
-    </ArgumentTypeCoercion>
-  </file>
   <file src="tests/Visitor/YieldVisitorTest.php">
     <MixedMethodCall occurrences="2">
       <code>addChild</code>

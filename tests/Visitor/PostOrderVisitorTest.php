@@ -22,13 +22,6 @@ use Tree\Visitor\PostOrderVisitor;
  */
 final class PostOrderVisitorTest extends Framework\TestCase
 {
-    public function testImplementsInterface(): void
-    {
-        $visitor = new PostOrderVisitor();
-
-        self::assertInstanceOf('Tree\Visitor\Visitor', $visitor);
-    }
-
     /**
      * root.
      */

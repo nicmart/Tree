@@ -22,13 +22,6 @@ use Tree\Visitor\PreOrderVisitor;
  */
 final class PreOrderVisitorTest extends Framework\TestCase
 {
-    public function testImplementsInterface(): void
-    {
-        $visitor = new PreOrderVisitor();
-
-        self::assertInstanceOf('Tree\Visitor\Visitor', $visitor);
-    }
-
     /**
      * root.
      */
