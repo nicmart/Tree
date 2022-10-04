@@ -61,7 +61,7 @@ jobs:
 
             try {
               await github.rest.pulls.merge({
-                merge_method: process.env.MERGE_METHOD,
+                merge_method: "merge",
                 owner: context.repo.owner,
                 pull_number: process.env.PULL_REQUEST_NUMBER,
                 repo: context.repo.repo,
