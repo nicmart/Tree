@@ -21,9 +21,7 @@ trait NodeTrait
     private $value;
 
     /**
-     * parent.
-     *
-     * @var NodeInterface
+     * @var null|NodeInterface
      */
     private $parent;
 
@@ -106,7 +104,7 @@ trait NodeTrait
         $parents = [];
         $node = $this;
 
-        while ($parent = $node->getParent()) {
+        while (($parent = $node->getParent()) instanceof NodeInterface) {
             \array_unshift($parents, $parent);
             $node = $parent;
         }
@@ -166,7 +164,7 @@ trait NodeTrait
     {
         $node = $this;
 
-        while ($parent = $node->getParent()) {
+        while (($parent = $node->getParent()) instanceof NodeInterface) {
             $node = $parent;
         }
 

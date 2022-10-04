@@ -23,8 +23,10 @@ class Node implements NodeInterface
     {
         $this->setValue($value);
 
-        if (!empty($children)) {
-            $this->setChildren($children);
+        if ([] === $children) {
+            return;
         }
+
+        $this->setChildren($children);
     }
 }

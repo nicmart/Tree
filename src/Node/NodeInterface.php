@@ -87,7 +87,7 @@ interface NodeInterface
     /**
      * Return the parent node.
      *
-     * @return NodeInterface
+     * @return null|NodeInterface
      */
     public function getParent();
 
@@ -115,7 +115,7 @@ interface NodeInterface
     /**
      * Returns all neighboring nodes, including the current node.
      *
-     * @return Node[]
+     * @return NodeInterface[]
      */
     public function getNeighborsAndSelf();
 
