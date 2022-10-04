@@ -90,46 +90,11 @@
     <MissingClosureReturnType occurrences="1">
       <code>static function (Node $node) {</code>
     </MissingClosureReturnType>
-    <MissingReturnType occurrences="10">
-      <code>testConstructor</code>
-      <code>testConstructorCreatesEmptyNodeIfNoSpecified</code>
-      <code>testEnd</code>
-      <code>testLeaf</code>
-      <code>testLeafs</code>
-      <code>testNodeInstanceByValue</code>
-      <code>testSetNodeAndGetNode</code>
-      <code>testTree</code>
-      <code>testTreeAddNewNodeAsChildOfTheParentNode</code>
-      <code>testValue</code>
-    </MissingReturnType>
     <PossiblyNullReference occurrences="1">
       <code>leaf</code>
     </PossiblyNullReference>
   </file>
   <file src="tests/Node/NodeTest.php">
-    <MissingReturnType occurrences="21">
-      <code>testAddAndGetChildren</code>
-      <code>testAddChildSetParent</code>
-      <code>testGetAncestors</code>
-      <code>testGetAncestorsAndSelf</code>
-      <code>testGetDepth</code>
-      <code>testGetHeight</code>
-      <code>testGetNeighbors</code>
-      <code>testGetNeighborsAndSelf</code>
-      <code>testGetSize</code>
-      <code>testIsChild</code>
-      <code>testIsLeaf</code>
-      <code>testIsRoot</code>
-      <code>testRemoveAllChildren</code>
-      <code>testRemoveAllChildrenRemoveParentReferences</code>
-      <code>testRemoveChild</code>
-      <code>testRemoveChildRemoveParentReference</code>
-      <code>testRoot</code>
-      <code>testSetAndGetParent</code>
-      <code>testSetChildren</code>
-      <code>testSetChildrenSetParentsReferences</code>
-      <code>testSetValue</code>
-    </MissingReturnType>
     <MixedArgument occurrences="1">
       <code>(new Node('child'))-&gt;addChild($grandchild = new Node('grandchild'))</code>
     </MixedArgument>
@@ -175,31 +140,13 @@
     <ArgumentTypeCoercion occurrences="1">
       <code>'Tree\Visitor\Visitor'</code>
     </ArgumentTypeCoercion>
-    <MissingReturnType occurrences="5">
-      <code>testImplementsInterface</code>
-      <code>testWalkSubTree</code>
-      <code>testWalkTreeWithMoreNodes</code>
-      <code>testWalkTreeWithOneNode</code>
-      <code>testWalkTreeWithTwoNodes</code>
-    </MissingReturnType>
   </file>
   <file src="tests/Visitor/PreOrderVisitorTest.php">
     <ArgumentTypeCoercion occurrences="1">
       <code>'Tree\Visitor\Visitor'</code>
     </ArgumentTypeCoercion>
-    <MissingReturnType occurrences="5">
-      <code>testImplementsInterface</code>
-      <code>testWalkSubTree</code>
-      <code>testWalkTreeWithMoreNodes</code>
-      <code>testWalkTreeWithOneNode</code>
-      <code>testWalkTreeWithTwoNodes</code>
-    </MissingReturnType>
   </file>
   <file src="tests/Visitor/YieldVisitorTest.php">
-    <MissingReturnType occurrences="2">
-      <code>testGetYield</code>
-      <code>testTheYieldOfALeafNodeIsTheNodeItself</code>
-    </MissingReturnType>
     <MixedMethodCall occurrences="2">
       <code>addChild</code>
       <code>addChild</code>

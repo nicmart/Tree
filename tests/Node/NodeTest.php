@@ -21,7 +21,7 @@ use Tree\Node\Node;
  */
 final class NodeTest extends Framework\TestCase
 {
-    public function testSetValue()
+    public function testSetValue(): void
     {
         $node = new Node();
 
@@ -35,7 +35,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame($object, $node->getValue());
     }
 
-    public function testAddAndGetChildren()
+    public function testAddAndGetChildren(): void
     {
         $root = new Node();
         $root
@@ -46,7 +46,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame([$child1, $child2, $child3], $root->getChildren());
     }
 
-    public function testAddChildSetParent()
+    public function testAddChildSetParent(): void
     {
         $root = new Node();
         $root
@@ -57,7 +57,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame($root, $child2->getParent());
     }
 
-    public function testSetAndGetParent()
+    public function testSetAndGetParent(): void
     {
         $root = new Node();
         $child = new Node('foo');
@@ -67,7 +67,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame($root, $child->getParent());
     }
 
-    public function testSetChildren()
+    public function testSetChildren(): void
     {
         $children = [new Node('child1'), new Node('child2'), new Node('child3')];
 
@@ -78,7 +78,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame($children, $root->getChildren());
     }
 
-    public function testSetChildrenSetParentsReferences()
+    public function testSetChildrenSetParentsReferences(): void
     {
         $root = new Node();
         $root
@@ -89,7 +89,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame($root, $child2->getParent());
     }
 
-    public function testRemoveChild()
+    public function testRemoveChild(): void
     {
         $root = new Node();
         $root
@@ -101,7 +101,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame([$child1, $child3], $root->getChildren());
     }
 
-    public function testRemoveChildRemoveParentReference()
+    public function testRemoveChildRemoveParentReference(): void
     {
         $root = new Node();
         $root
@@ -111,7 +111,7 @@ final class NodeTest extends Framework\TestCase
         self::assertNull($child1->getParent());
     }
 
-    public function testRemoveAllChildrenRemoveParentReferences()
+    public function testRemoveAllChildrenRemoveParentReferences(): void
     {
         $root = new Node();
         $root
@@ -121,7 +121,7 @@ final class NodeTest extends Framework\TestCase
         self::assertNull($child1->getParent());
     }
 
-    public function testRemoveAllChildren()
+    public function testRemoveAllChildren(): void
     {
         $root = new Node();
         $root
@@ -133,7 +133,7 @@ final class NodeTest extends Framework\TestCase
         self::assertEmpty($root->getChildren());
     }
 
-    public function testGetAncestors()
+    public function testGetAncestors(): void
     {
         $root = new Node('r');
         $root->addChild($a = new Node('a'));
@@ -143,7 +143,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame([$root, $a, $b], $c->getAncestors());
     }
 
-    public function testGetAncestorsAndSelf()
+    public function testGetAncestorsAndSelf(): void
     {
         $root = new Node('r');
         $root->addChild($a = new Node('a'));
@@ -152,7 +152,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame([$root, $a, $b], $b->getAncestorsAndSelf());
     }
 
-    public function testGetNeighbors()
+    public function testGetNeighbors(): void
     {
         $root = new Node('r');
         $root
@@ -163,7 +163,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame([$b, $c], $a->getNeighbors());
     }
 
-    public function testGetNeighborsAndSelf()
+    public function testGetNeighborsAndSelf(): void
     {
         $root = new Node('r');
         $root
@@ -174,7 +174,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame([$a, $b, $c], $a->getNeighborsAndSelf());
     }
 
-    public function testIsLeaf()
+    public function testIsLeaf(): void
     {
         $root = new Node();
 
@@ -185,7 +185,7 @@ final class NodeTest extends Framework\TestCase
         self::assertFalse($root->isLeaf());
     }
 
-    public function testRoot()
+    public function testRoot(): void
     {
         $root = (new Node('root'))
             ->addChild(
@@ -195,7 +195,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame($root, $grandchild->root());
     }
 
-    public function testIsRoot()
+    public function testIsRoot(): void
     {
         $root = new Node('root');
         $root->addChild($child = new Node('child'));
@@ -204,7 +204,7 @@ final class NodeTest extends Framework\TestCase
         self::assertFalse($child->isRoot());
     }
 
-    public function testIsChild()
+    public function testIsChild(): void
     {
         $root = new Node('root');
         $root->addChild($child = new Node('child'));
@@ -213,7 +213,7 @@ final class NodeTest extends Framework\TestCase
         self::assertFalse($root->isChild());
     }
 
-    public function testGetDepth()
+    public function testGetDepth(): void
     {
         $root = new Node();
         $root
@@ -230,7 +230,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame(2, $child4->getDepth());
     }
 
-    public function testGetHeight()
+    public function testGetHeight(): void
     {
         $root = new Node();
         $root
@@ -247,7 +247,7 @@ final class NodeTest extends Framework\TestCase
         self::assertSame(1, $child3->getHeight());
     }
 
-    public function testGetSize()
+    public function testGetSize(): void
     {
         $root = new Node();
         $root

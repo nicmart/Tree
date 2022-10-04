@@ -32,21 +32,21 @@ final class NodeBuilderTest extends Framework\TestCase
         $this->builder = new NodeBuilder();
     }
 
-    public function testConstructorCreatesEmptyNodeIfNoSpecified()
+    public function testConstructorCreatesEmptyNodeIfNoSpecified(): void
     {
         $builder = new NodeBuilder();
 
         self::assertNull($builder->getNode()->getValue());
     }
 
-    public function testConstructor()
+    public function testConstructor(): void
     {
         $builder = new NodeBuilder($node = new Node('node'));
 
         self::assertSame($node, $builder->getNode());
     }
 
-    public function testSetNodeAndGetNode()
+    public function testSetNodeAndGetNode(): void
     {
         $this->builder->setNode($node1 = new Node('node1'));
         self::assertSame($node1, $this->builder->getNode());
@@ -55,7 +55,7 @@ final class NodeBuilderTest extends Framework\TestCase
         self::assertSame($node2, $this->builder->getNode());
     }
 
-    public function testLeaf()
+    public function testLeaf(): void
     {
         $this->builder->leaf('a')->leaf('b');
 
@@ -65,7 +65,7 @@ final class NodeBuilderTest extends Framework\TestCase
         self::assertSame('b', $children[1]->getValue());
     }
 
-    public function testLeafs()
+    public function testLeafs(): void
     {
         $this->builder->leafs('a', 'b');
 
@@ -75,7 +75,7 @@ final class NodeBuilderTest extends Framework\TestCase
         self::assertSame('b', $children[1]->getValue());
     }
 
-    public function testTreeAddNewNodeAsChildOfTheParentNode()
+    public function testTreeAddNewNodeAsChildOfTheParentNode(): void
     {
         $this->builder
             ->value('root')
@@ -91,14 +91,14 @@ final class NodeBuilderTest extends Framework\TestCase
         self::assertSame(['b', 'c'], $this->childrenValues($subtree->getChildren()));
     }
 
-    public function testTree()
+    public function testTree(): void
     {
         $this->builder->tree('a')->tree('b');
 
         self::assertSame('b', $this->builder->getNode()->getValue());
     }
 
-    public function testEnd()
+    public function testEnd(): void
     {
         $this->builder
             ->value('root')
@@ -116,14 +116,14 @@ final class NodeBuilderTest extends Framework\TestCase
         self::assertSame('root', $this->builder->getNode()->getValue());
     }
 
-    public function testValue()
+    public function testValue(): void
     {
         $this->builder->value('foo')->value('bar');
 
         self::assertSame('bar', $this->builder->getNode()->getValue());
     }
 
-    public function testNodeInstanceByValue()
+    public function testNodeInstanceByValue(): void
     {
         $node = $this->builder->nodeInstanceByValue('baz');
 

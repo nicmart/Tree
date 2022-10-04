@@ -31,7 +31,7 @@ final class YieldVisitorTest extends Framework\TestCase
      *               |
      *               E.
      */
-    public function testGetYield()
+    public function testGetYield(): void
     {
         $root = new Node('root');
         $root
@@ -49,7 +49,7 @@ final class YieldVisitorTest extends Framework\TestCase
         self::assertSame([$c, $e, $b], $yield);
     }
 
-    public function testTheYieldOfALeafNodeIsTheNodeItself()
+    public function testTheYieldOfALeafNodeIsTheNodeItself(): void
     {
         $node = new Node('node');
         $visitor = new YieldVisitor();

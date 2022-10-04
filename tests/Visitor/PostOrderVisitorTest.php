@@ -22,7 +22,7 @@ use Tree\Visitor\PostOrderVisitor;
  */
 final class PostOrderVisitorTest extends Framework\TestCase
 {
-    public function testImplementsInterface()
+    public function testImplementsInterface(): void
     {
         $visitor = new PostOrderVisitor();
 
@@ -32,7 +32,7 @@ final class PostOrderVisitorTest extends Framework\TestCase
     /**
      * root.
      */
-    public function testWalkTreeWithOneNode()
+    public function testWalkTreeWithOneNode(): void
     {
         $root = new Node('root');
 
@@ -50,7 +50,7 @@ final class PostOrderVisitorTest extends Framework\TestCase
      *  |
      *  a.
      */
-    public function testWalkTreeWithTwoNodes()
+    public function testWalkTreeWithTwoNodes(): void
     {
         $root = new Node('root');
 
@@ -75,7 +75,7 @@ final class PostOrderVisitorTest extends Framework\TestCase
      *  /| |
      * d e f.
      */
-    public function testWalkTreeWithMoreNodes()
+    public function testWalkTreeWithMoreNodes(): void
     {
         $root = new Node('root');
 
@@ -117,7 +117,7 @@ final class PostOrderVisitorTest extends Framework\TestCase
      *  /| |
      * d e f.
      */
-    public function testWalkSubTree()
+    public function testWalkSubTree(): void
     {
         $root = new Node('root');
 
