@@ -9,6 +9,61 @@ on: # yamllint disable-line rule:truthy
       - "master"
 
 jobs:
+  code-coverage:
+    name: "Code Coverage"
+
+    runs-on: "ubuntu-latest"
+
+    strategy:
+      matrix:
+        php-version:
+          - "7.2"
+
+        dependencies:
+          - "locked"
+
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v3.0.2"
+
+      - name: "Set up PHP"
+        uses: "shivammathur/setup-php@2.21.2"
+        with:
+          coverage: "xdebug"
+          extensions: "none, ctype, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
+          php-version: "${{ matrix.php-version }}"
+
+      - name: "Set up problem matchers for PHP"
+        run: "echo \"::add-matcher::${{ runner.tool_cache }}/php.json\""
+
+      - name: "Set up problem matchers for phpunit/phpunit"
+        run: "echo \"::add-matcher::${{ runner.tool_cache }}/phpunit.json\""
+
+      - name: "Determine composer cache directory"
+        uses: "ergebnis/.github/actions/composer/determine-cache-directory@1.7.0"
+
+      - name: "Cache dependencies installed with composer"
+        uses: "actions/cache@v3.0.10"
+        with:
+          path: "${{ env.COMPOSER_CACHE_DIR }}"
+          key: "php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-${{ hashFiles('composer.lock') }}"
+          restore-keys: "php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-"
+
+      - name: "Install ${{ matrix.dependencies }} dependencies with composer"
+        uses: "ergebnis/.github/actions/composer/install@1.7.0"
+        with:
+          dependencies: "${{ matrix.dependencies }}"
+
+      - name: "Collect code coverage with Xdebug and phpunit/phpunit"
+        env:
+          XDEBUG_MODE: "coverage"
+        run: "vendor/bin/phpunit --colors=always --configuration=phpunit.xml.dist --coverage-clover=.build/phpunit/logs/clover.xml"
+
+      - name: "Send code coverage report to codecov.io"
+        uses: "codecov/codecov-action@v3.1.1"
+        with:
+          files: ".build/phpunit/logs/clover.xml"
+
   coding-standards:
     name: "Coding Standards"
 

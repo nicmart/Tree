@@ -7,6 +7,7 @@
 [![Total Downloads](https://poser.pugx.org/nicmart/tree/downloads)](https://packagist.org/packages/nicmart/tree)
 [![License](https://poser.pugx.org/nicmart/tree/license)](https://packagist.org/packages/nicmart/tree)
 
+[![Code Coverage](https://codecov.io/gh/nicmart/tree/branch/master/graph/badge.svg)](https://codecov.io/gh/nicmart/tree)
 [![Type Coverage](https://shepherd.dev/github/nicmart/tree/coverage.svg)](https://shepherd.dev/github/nicmart/tree)
 
 In Tree you can find a basic but flexible tree data structure for php together with and an handful Builder class, that enables you to build tree in a fluent way.
