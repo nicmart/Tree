@@ -13,17 +13,9 @@ jobs:
 
     runs-on: "ubuntu-latest"
 
-    steps:
-      - name: "Determine tag"
-        id: "determine-tag"
-        run: "echo \"::set-output name=tag::${GITHUB_REF#refs/tags/}\""
 
+    steps:
       - name: "Create release"
-        uses: "actions/create-release@v1.1.4"
-        env:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+        uses: "ergebnis/.github/actions/github/release/create@1.7.0"
         with:
-          draft: false
-          prerelease: false
-          release_name: "${{ steps.determine-tag.outputs.tag }}"
-          tag_name: "${{ steps.determine-tag.outputs.tag }}"
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
