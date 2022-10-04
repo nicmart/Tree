@@ -98,7 +98,7 @@ class NodeBuilder implements NodeBuilderInterface
 
     private function pushNode(NodeInterface $node)
     {
-        \array_push($this->nodeStack, $node);
+        $this->nodeStack[] = $node;
 
         return $this;
     }

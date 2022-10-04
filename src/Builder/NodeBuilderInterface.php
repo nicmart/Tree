@@ -23,8 +23,6 @@ interface NodeBuilderInterface
     /**
      * Set the node the builder will manage.
      *
-     * @param NodeInterface $node
-     *
      * @return NodeBuilderInterface The current instance
      */
     public function setNode(NodeInterface $node);
