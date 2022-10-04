@@ -1,2 +1,255 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.27.0@faf106e717c37b8c81721845dba9de3d8deed8ff" />
+<files psalm-version="4.27.0@faf106e717c37b8c81721845dba9de3d8deed8ff">
+  <file src="src/Builder/NodeBuilder.php">
+    <MissingParamType occurrences="1">
+      <code>$value1</code>
+    </MissingParamType>
+    <MissingReturnType occurrences="3">
+      <code>emptyStack</code>
+      <code>popNode</code>
+      <code>pushNode</code>
+    </MissingReturnType>
+    <MixedAssignment occurrences="1">
+      <code>$value</code>
+    </MixedAssignment>
+    <MixedMethodCall occurrences="1">
+      <code>pushNode</code>
+    </MixedMethodCall>
+    <ParamNameMismatch occurrences="1">
+      <code>$value1</code>
+    </ParamNameMismatch>
+  </file>
+  <file src="src/Builder/NodeBuilderInterface.php">
+    <InvalidClass occurrences="1">
+      <code>NodebuilderInterface</code>
+    </InvalidClass>
+    <MissingParamType occurrences="1">
+      <code>$value</code>
+    </MissingParamType>
+  </file>
+  <file src="src/Node/Node.php">
+    <PropertyNotSetInConstructor occurrences="1">
+      <code>Node</code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="src/Node/NodeInterface.php">
+    <MissingReturnType occurrences="2">
+      <code>accept</code>
+      <code>setParent</code>
+    </MissingReturnType>
+  </file>
+  <file src="src/Node/NodeTrait.php">
+    <ArgumentTypeCoercion occurrences="1">
+      <code>$heights</code>
+    </ArgumentTypeCoercion>
+    <DocblockTypeContradiction occurrences="1">
+      <code>null === $this-&gt;getParent()</code>
+    </DocblockTypeContradiction>
+    <MissingParamType occurrences="1">
+      <code>$value</code>
+    </MissingParamType>
+    <MissingReturnType occurrences="3">
+      <code>accept</code>
+      <code>removeParentFromChildren</code>
+      <code>setParent</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="1">
+      <code>$child</code>
+    </MixedArgument>
+    <MixedAssignment occurrences="2">
+      <code>$child</code>
+      <code>$size</code>
+    </MixedAssignment>
+    <MixedInferredReturnType occurrences="1">
+      <code>int</code>
+    </MixedInferredReturnType>
+    <MixedReturnTypeCoercion occurrences="1">
+      <code>getAncestorsAndSelf</code>
+    </MixedReturnTypeCoercion>
+    <MoreSpecificReturnType occurrences="1">
+      <code>getNeighborsAndSelf</code>
+    </MoreSpecificReturnType>
+    <PossiblyNullPropertyAssignmentValue occurrences="1">
+      <code>$parent</code>
+    </PossiblyNullPropertyAssignmentValue>
+    <RedundantConditionGivenDocblockType occurrences="1">
+      <code>null !== $this-&gt;getParent()</code>
+    </RedundantConditionGivenDocblockType>
+    <UndefinedInterfaceMethod occurrences="1">
+      <code>getSize</code>
+    </UndefinedInterfaceMethod>
+  </file>
+  <file src="src/Visitor/PostOrderVisitor.php">
+    <MixedArgument occurrences="1">
+      <code>$child-&gt;accept($this)</code>
+    </MixedArgument>
+  </file>
+  <file src="src/Visitor/PreOrderVisitor.php">
+    <MixedArgument occurrences="1">
+      <code>$child-&gt;accept($this)</code>
+    </MixedArgument>
+  </file>
+  <file src="src/Visitor/YieldVisitor.php">
+    <MixedArgument occurrences="1">
+      <code>$child-&gt;accept($this)</code>
+    </MixedArgument>
+  </file>
+  <file src="tests/Builder/NodeBuilderTest.php">
+    <ArgumentTypeCoercion occurrences="1">
+      <code>'Tree\Node\Node'</code>
+    </ArgumentTypeCoercion>
+    <InvalidArgument occurrences="7">
+      <code>'a'</code>
+      <code>'a'</code>
+      <code>'a'</code>
+      <code>'b'</code>
+      <code>'b'</code>
+      <code>'b'</code>
+      <code>'c'</code>
+    </InvalidArgument>
+    <InvalidDocblock occurrences="1">
+      <code>array[Node]</code>
+    </InvalidDocblock>
+    <MissingClosureReturnType occurrences="1">
+      <code>static function (Node $node) {</code>
+    </MissingClosureReturnType>
+    <MissingReturnType occurrences="10">
+      <code>testConstructor</code>
+      <code>testConstructorCreatesEmptyNodeIfNoSpecified</code>
+      <code>testEnd</code>
+      <code>testLeaf</code>
+      <code>testLeafs</code>
+      <code>testNodeInstanceByValue</code>
+      <code>testSetNodeAndGetNode</code>
+      <code>testTree</code>
+      <code>testTreeAddNewNodeAsChildOfTheParentNode</code>
+      <code>testValue</code>
+    </MissingReturnType>
+    <PossiblyNullReference occurrences="1">
+      <code>leaf</code>
+    </PossiblyNullReference>
+    <PropertyNotSetInConstructor occurrences="3">
+      <code>$builder</code>
+      <code>NodeBuilderTest</code>
+      <code>NodeBuilderTest</code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="tests/Node/NodeTest.php">
+    <MissingReturnType occurrences="21">
+      <code>testAddAndGetChildren</code>
+      <code>testAddChildSetParent</code>
+      <code>testGetAncestors</code>
+      <code>testGetAncestorsAndSelf</code>
+      <code>testGetDepth</code>
+      <code>testGetHeight</code>
+      <code>testGetNeighbors</code>
+      <code>testGetNeighborsAndSelf</code>
+      <code>testGetSize</code>
+      <code>testIsChild</code>
+      <code>testIsLeaf</code>
+      <code>testIsRoot</code>
+      <code>testRemoveAllChildren</code>
+      <code>testRemoveAllChildrenRemoveParentReferences</code>
+      <code>testRemoveChild</code>
+      <code>testRemoveChildRemoveParentReference</code>
+      <code>testRoot</code>
+      <code>testSetAndGetParent</code>
+      <code>testSetChildren</code>
+      <code>testSetChildrenSetParentsReferences</code>
+      <code>testSetValue</code>
+    </MissingReturnType>
+    <MixedArgument occurrences="1">
+      <code>(new Node('child'))-&gt;addChild($grandchild = new Node('grandchild'))</code>
+    </MixedArgument>
+    <MixedAssignment occurrences="1">
+      <code>$root</code>
+    </MixedAssignment>
+    <MixedMethodCall occurrences="26">
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>addChild</code>
+      <code>removeAllChildren</code>
+      <code>removeAllChildren</code>
+      <code>removeChild</code>
+      <code>removeChild</code>
+    </MixedMethodCall>
+    <PropertyNotSetInConstructor occurrences="2">
+      <code>NodeTest</code>
+      <code>NodeTest</code>
+    </PropertyNotSetInConstructor>
+    <UnusedVariable occurrences="4">
+      <code>$child2</code>
+      <code>$child2</code>
+      <code>$child2</code>
+      <code>$child3</code>
+    </UnusedVariable>
+  </file>
+  <file src="tests/Visitor/PostOrderVisitorTest.php">
+    <ArgumentTypeCoercion occurrences="1">
+      <code>'Tree\Visitor\Visitor'</code>
+    </ArgumentTypeCoercion>
+    <MissingReturnType occurrences="5">
+      <code>testImplementsInterface</code>
+      <code>testWalkSubTree</code>
+      <code>testWalkTreeWithMoreNodes</code>
+      <code>testWalkTreeWithOneNode</code>
+      <code>testWalkTreeWithTwoNodes</code>
+    </MissingReturnType>
+    <PropertyNotSetInConstructor occurrences="2">
+      <code>PostOrderVisitorTest</code>
+      <code>PostOrderVisitorTest</code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="tests/Visitor/PreOrderVisitorTest.php">
+    <ArgumentTypeCoercion occurrences="1">
+      <code>'Tree\Visitor\Visitor'</code>
+    </ArgumentTypeCoercion>
+    <MissingReturnType occurrences="5">
+      <code>testImplementsInterface</code>
+      <code>testWalkSubTree</code>
+      <code>testWalkTreeWithMoreNodes</code>
+      <code>testWalkTreeWithOneNode</code>
+      <code>testWalkTreeWithTwoNodes</code>
+    </MissingReturnType>
+    <PropertyNotSetInConstructor occurrences="2">
+      <code>PreOrderVisitorTest</code>
+      <code>PreOrderVisitorTest</code>
+    </PropertyNotSetInConstructor>
+  </file>
+  <file src="tests/Visitor/YieldVisitorTest.php">
+    <MissingReturnType occurrences="2">
+      <code>testGetYield</code>
+      <code>testTheYieldOfALeafNodeIsTheNodeItself</code>
+    </MissingReturnType>
+    <MixedMethodCall occurrences="2">
+      <code>addChild</code>
+      <code>addChild</code>
+    </MixedMethodCall>
+    <PropertyNotSetInConstructor occurrences="2">
+      <code>YieldVisitorTest</code>
+      <code>YieldVisitorTest</code>
+    </PropertyNotSetInConstructor>
+    <UnusedVariable occurrences="1">
+      <code>$d</code>
+    </UnusedVariable>
+  </file>
+</files>
