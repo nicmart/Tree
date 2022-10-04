@@ -1,9 +1,9 @@
 {
     "name": "nicmart/tree",
-    "type": "library",
     "description": "A basic but flexible php tree data structure and a fluent tree builder implementation.",
-    "keywords": [],
     "license": "MIT",
+    "type": "library",
+    "keywords": [],
     "authors": [
         {
             "name": "Nicolò Martini",
@@ -14,19 +14,10 @@
         "php": "^7.2 || ^8.0"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.8.0",
+        "ergebnis/composer-normalize": "^2.19.0",
         "ergebnis/license": "^1.1.0",
         "ergebnis/php-cs-fixer-config": "^2.2.1",
         "phpunit/phpunit": "^8.5.30"
-    },
-    "config": {
-        "allow-plugins": {
-            "ergebnis/composer-normalize": true
-        },
-        "platform": {
-            "php": "7.2.34"
-        },
-        "sort-packages": true
     },
     "autoload": {
         "psr-4": {
@@ -37,5 +28,14 @@
         "psr-4": {
             "Tree\\Test\\": "tests/"
         }
+    },
+    "config": {
+        "allow-plugins": {
+            "ergebnis/composer-normalize": true
+        },
+        "platform": {
+            "php": "7.2.34"
+        },
+        "sort-packages": true
     }
 }

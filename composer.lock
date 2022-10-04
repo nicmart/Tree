@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5bfdfddd947bef910a5f5af5a262f7d6",
+    "content-hash": "5b1d5f9859cfc413735de018001d2d7d",
     "packages": [],
     "packages-dev": [
         {
@@ -362,43 +362,43 @@
         },
         {
             "name": "ergebnis/composer-normalize",
-            "version": "2.8.0",
+            "version": "2.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/composer-normalize.git",
-                "reference": "7ff01c87ae8e805d4aceeae5fc7a2c336293f3ad"
+                "reference": "ff00fd4dc084928b684b217041a87f7bd0eeddc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/composer-normalize/zipball/7ff01c87ae8e805d4aceeae5fc7a2c336293f3ad",
-                "reference": "7ff01c87ae8e805d4aceeae5fc7a2c336293f3ad",
+                "url": "https://api.github.com/repos/ergebnis/composer-normalize/zipball/ff00fd4dc084928b684b217041a87f7bd0eeddc5",
+                "reference": "ff00fd4dc084928b684b217041a87f7bd0eeddc5",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.1.0 || ^2.0.0",
-                "ergebnis/json-normalizer": "~0.13.0",
-                "ergebnis/json-printer": "^3.1.0",
-                "justinrainbow/json-schema": "^5.2.10",
+                "composer-plugin-api": "^2.0.0",
+                "ergebnis/json-normalizer": "^1.0.3",
+                "ergebnis/json-printer": "^3.1.1",
+                "justinrainbow/json-schema": "^5.2.11",
                 "localheinz/diff": "^1.1.1",
-                "php": "^7.1 || ^8.0"
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "composer/composer": "^1.10.8 || ^2.0.0",
-                "composer/package-versions-deprecated": "^1.11.99",
-                "ergebnis/phpstan-rules": "~0.15.1",
-                "ergebnis/test-util": "^1.0.0",
-                "jangregor/phpstan-prophecy": "~0.8.0",
-                "phpstan/extension-installer": "^1.0.4",
-                "phpstan/phpstan": "~0.12.40",
-                "phpstan/phpstan-deprecation-rules": "~0.12.5",
-                "phpstan/phpstan-phpunit": "~0.12.16",
-                "phpstan/phpstan-strict-rules": "~0.12.4",
-                "phpunit/phpunit": "^7.5.20",
-                "symfony/filesystem": "^4.4.11"
+                "composer/composer": "^2.2.1",
+                "ergebnis/license": "^1.1.0",
+                "ergebnis/php-cs-fixer-config": "^2.14.0",
+                "fakerphp/faker": "^1.17.0",
+                "phpunit/phpunit": "^8.5.22",
+                "psalm/plugin-phpunit": "~0.16.1",
+                "symfony/filesystem": "^5.4.0",
+                "vimeo/psalm": "^4.16.1"
             },
             "type": "composer-plugin",
             "extra": {
-                "class": "Ergebnis\\Composer\\Normalize\\NormalizePlugin"
+                "class": "Ergebnis\\Composer\\Normalize\\NormalizePlugin",
+                "composer-normalize": {
+                    "indent-size": 2,
+                    "indent-style": "space"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -433,43 +433,43 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-08-28T17:43:42+00:00"
+            "time": "2021-12-28T10:38:12+00:00"
         },
         {
             "name": "ergebnis/json-normalizer",
-            "version": "0.13.0",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/json-normalizer.git",
-                "reference": "a532e078c3d77d01f79925bb7507a9b52bf6f9e8"
+                "reference": "4a7f064ce34d5a2e382564565cdd433dbc5b9494"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/json-normalizer/zipball/a532e078c3d77d01f79925bb7507a9b52bf6f9e8",
-                "reference": "a532e078c3d77d01f79925bb7507a9b52bf6f9e8",
+                "url": "https://api.github.com/repos/ergebnis/json-normalizer/zipball/4a7f064ce34d5a2e382564565cdd433dbc5b9494",
+                "reference": "4a7f064ce34d5a2e382564565cdd433dbc5b9494",
                 "shasum": ""
             },
             "require": {
-                "ergebnis/json-printer": "^3.1.0",
+                "ergebnis/json-printer": "^3.1.1",
                 "ext-json": "*",
                 "justinrainbow/json-schema": "^5.2.10",
-                "php": "^7.1 || ^8.0"
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "ergebnis/license": "~1.0.0",
-                "ergebnis/php-cs-fixer-config": "^2.2.1",
-                "ergebnis/phpstan-rules": "~0.15.0",
-                "ergebnis/test-util": "~1.0.0",
-                "infection/infection": "~0.13.6",
-                "jangregor/phpstan-prophecy": "~0.8.0",
-                "phpstan/extension-installer": "^1.0.4",
-                "phpstan/phpstan": "~0.12.32",
-                "phpstan/phpstan-deprecation-rules": "~0.12.4",
-                "phpstan/phpstan-phpunit": "~0.12.8",
-                "phpstan/phpstan-strict-rules": "~0.12.2",
-                "phpunit/phpunit": "^7.5.20",
-                "psalm/plugin-phpunit": "~0.10.1",
-                "vimeo/psalm": "^3.12.2"
+                "ergebnis/license": "^1.1.0",
+                "ergebnis/php-cs-fixer-config": "^2.10.0",
+                "ergebnis/phpstan-rules": "~0.15.3",
+                "ergebnis/test-util": "^1.4.0",
+                "infection/infection": "~0.15.3",
+                "jangregor/phpstan-prophecy": "~0.8.1",
+                "phpstan/extension-installer": "^1.1.0",
+                "phpstan/phpstan": "~0.12.80",
+                "phpstan/phpstan-deprecation-rules": "~0.12.6",
+                "phpstan/phpstan-phpunit": "~0.12.17",
+                "phpstan/phpstan-strict-rules": "~0.12.9",
+                "phpunit/phpunit": "^8.5.14",
+                "psalm/plugin-phpunit": "~0.12.2",
+                "vimeo/psalm": "^3.18"
             },
             "type": "library",
             "autoload": {
@@ -499,61 +499,45 @@
             },
             "funding": [
                 {
-                    "url": "https://cottonbureau.com/people/andreas-moller",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://paypal.me/localheinz",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.amazon.de/hz/wishlist/ls/2NCHMSJ4BC1OW",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.buymeacoffee.com/localheinz",
-                    "type": "custom"
-                },
-                {
                     "url": "https://github.com/localheinz",
                     "type": "github"
                 }
             ],
-            "time": "2020-07-04T21:41:41+00:00"
+            "time": "2021-03-06T13:33:57+00:00"
         },
         {
             "name": "ergebnis/json-printer",
-            "version": "3.1.0",
+            "version": "3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/json-printer.git",
-                "reference": "776a5c85ce3c67d97c6af08a67c917adbdb4758e"
+                "reference": "e4190dadd9937a77d8afcaf2b6c42a528ab367d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/json-printer/zipball/776a5c85ce3c67d97c6af08a67c917adbdb4758e",
-                "reference": "776a5c85ce3c67d97c6af08a67c917adbdb4758e",
+                "url": "https://api.github.com/repos/ergebnis/json-printer/zipball/e4190dadd9937a77d8afcaf2b6c42a528ab367d6",
+                "reference": "e4190dadd9937a77d8afcaf2b6c42a528ab367d6",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "ext-mbstring": "*",
-                "php": "^7.1 || ^8.0"
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "ergebnis/license": "~1.0.0",
+                "ergebnis/license": "^1.0.0",
                 "ergebnis/php-cs-fixer-config": "^2.2.1",
-                "ergebnis/phpstan-rules": "~0.15.0",
-                "ergebnis/test-util": "~1.0.0",
-                "infection/infection": "~0.13.6",
+                "ergebnis/phpstan-rules": "~0.15.2",
+                "ergebnis/test-util": "^1.1.0",
+                "infection/infection": "~0.15.3",
                 "phpstan/extension-installer": "^1.0.4",
-                "phpstan/phpstan": "~0.12.32",
-                "phpstan/phpstan-deprecation-rules": "~0.12.4",
-                "phpstan/phpstan-phpunit": "~0.12.11",
-                "phpstan/phpstan-strict-rules": "~0.12.2",
-                "phpunit/phpunit": "^7.5.20",
-                "psalm/plugin-phpunit": "~0.10.1",
-                "vimeo/psalm": "^3.12.2"
+                "phpstan/phpstan": "~0.12.40",
+                "phpstan/phpstan-deprecation-rules": "~0.12.5",
+                "phpstan/phpstan-phpunit": "~0.12.16",
+                "phpstan/phpstan-strict-rules": "~0.12.4",
+                "phpunit/phpunit": "^8.5.8",
+                "psalm/plugin-phpunit": "~0.11.0",
+                "vimeo/psalm": "^3.14.2"
             },
             "type": "library",
             "autoload": {
@@ -584,27 +568,11 @@
             },
             "funding": [
                 {
-                    "url": "https://cottonbureau.com/people/andreas-moller",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://paypal.me/localheinz",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.amazon.de/hz/wishlist/ls/2NCHMSJ4BC1OW",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.buymeacoffee.com/localheinz",
-                    "type": "custom"
-                },
-                {
                     "url": "https://github.com/localheinz",
                     "type": "github"
                 }
             ],
-            "time": "2020-07-04T17:09:39+00:00"
+            "time": "2020-08-30T12:17:03+00:00"
         },
         {
             "name": "ergebnis/license",
@@ -859,16 +827,16 @@
         },
         {
             "name": "justinrainbow/json-schema",
-            "version": "5.2.10",
+            "version": "5.2.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/justinrainbow/json-schema.git",
-                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b"
+                "reference": "ad87d5a5ca981228e0e205c2bc7dfb8e24559b60"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
-                "reference": "2ba9c8c862ecd5510ed16c6340aa9f6eadb4f31b",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/ad87d5a5ca981228e0e205c2bc7dfb8e24559b60",
+                "reference": "ad87d5a5ca981228e0e205c2bc7dfb8e24559b60",
                 "shasum": ""
             },
             "require": {
@@ -923,9 +891,9 @@
             ],
             "support": {
                 "issues": "https://github.com/justinrainbow/json-schema/issues",
-                "source": "https://github.com/justinrainbow/json-schema/tree/5.2.10"
+                "source": "https://github.com/justinrainbow/json-schema/tree/5.2.12"
             },
-            "time": "2020-05-27T16:41:55+00:00"
+            "time": "2022-04-13T08:02:27+00:00"
         },
         {
             "name": "localheinz/diff",
