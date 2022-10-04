@@ -12,15 +12,14 @@
     processIsolation="false"
     stopOnFailure="false"
 >
-    <testsuites>
-        <testsuite name="Tree test suite">
-            <directory>./tests/</directory>
-        </testsuite>
-    </testsuites>
-
     <filter>
         <whitelist>
             <directory>./</directory>
         </whitelist>
     </filter>
+    <testsuites>
+        <testsuite name="Tree test suite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
 </phpunit>
