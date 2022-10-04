@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`0.3.1...master`][0.3.1...master].
 
+### Changed
+
+- Dropped support for PHP 7.1 ([#106]), by [@localheinz]
+
 ## [`0.3.1`][0.3.1]
 
 For a full diff see [`0.3.0...0.3.1`][0.3.0...0.3.1].
@@ -164,6 +168,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#58]: https://github.com/nicmart/Tree/pull/58
 [#59]: https://github.com/nicmart/Tree/pull/59
 [#79]: https://github.com/nicmart/Tree/pull/79
+[#106]: https://github.com/nicmart/Tree/pull/106
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
