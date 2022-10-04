@@ -5,6 +5,7 @@
     backupGlobals="false"
     backupStaticAttributes="false"
     bootstrap="vendor/autoload.php"
+    cacheResultFile=".build/phpunit/unit.cache"
     colors="true"
     convertErrorsToExceptions="true"
     convertNoticesToExceptions="true"
