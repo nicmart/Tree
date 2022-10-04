@@ -39,27 +39,19 @@ jobs:
         run: "composer validate --strict"
 
       - name: "Determine composer cache directory"
-        id: "determine-composer-cache-directory"
-        run: "echo \"::set-output name=directory::$(composer config cache-dir)\""
+        uses: "ergebnis/.github/actions/composer/determine-cache-directory@1.7.0"
 
       - name: "Cache dependencies installed with composer"
-        uses: "actions/cache@v3"
+        uses: "actions/cache@v3.0.9"
         with:
-          path: "${{ steps.determine-composer-cache-directory.outputs.directory }}"
+          path: "${{ env.COMPOSER_CACHE_DIR }}"
           key: "php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-${{ hashFiles('composer.lock') }}"
           restore-keys: "php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-"
 
-      - name: "Install lowest dependencies from composer.json"
-        if: "matrix.dependencies == 'lowest'"
-        run: "composer update --no-interaction --no-progress --prefer-lowest"
-
-      - name: "Install locked dependencies from composer.lock"
-        if: "matrix.dependencies == 'locked'"
-        run: "composer install --no-interaction --no-progress"
-
-      - name: "Install highest dependencies from composer.json"
-        if: "matrix.dependencies == 'highest'"
-        run: "composer update --no-interaction --no-progress"
+      - name: "Install ${{ matrix.dependencies }} dependencies with composer"
+        uses: "ergebnis/.github/actions/composer/install@1.7.0"
+        with:
+          dependencies: "${{ matrix.dependencies }}"
 
       - name: "Run ergebnis/composer-normalize"
         run: "composer normalize --dry-run"
@@ -107,27 +99,19 @@ jobs:
         run: "composer validate --strict"
 
       - name: "Determine composer cache directory"
-        id: "determine-composer-cache-directory"
-        run: "echo \"::set-output name=directory::$(composer config cache-dir)\""
+        uses: "ergebnis/.github/actions/composer/determine-cache-directory@1.7.0"
 
       - name: "Cache dependencies installed with composer"
-        uses: "actions/cache@v3"
+        uses: "actions/cache@v3.0.9"
         with:
-          path: "${{ steps.determine-composer-cache-directory.outputs.directory }}"
+          path: "${{ env.COMPOSER_CACHE_DIR }}"
           key: "php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-${{ hashFiles('composer.lock') }}"
           restore-keys: "php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-"
 
-      - name: "Install lowest dependencies from composer.json"
-        if: "matrix.dependencies == 'lowest'"
-        run: "composer update --no-interaction --no-progress --prefer-lowest"
-
-      - name: "Install locked dependencies from composer.lock"
-        if: "matrix.dependencies == 'locked'"
-        run: "composer install --no-interaction --no-progress"
-
-      - name: "Install highest dependencies from composer.json"
-        if: "matrix.dependencies == 'highest'"
-        run: "composer update --no-interaction --no-progress"
+      - name: "Install ${{ matrix.dependencies }} dependencies with composer"
+        uses: "ergebnis/.github/actions/composer/install@1.7.0"
+        with:
+          dependencies: "${{ matrix.dependencies }}"
 
       - name: "Create cache directory for vimeo/psalm"
         run: "mkdir -p .build/psalm"
@@ -169,27 +153,19 @@ jobs:
         run: "echo \"::add-matcher::${{ runner.tool_cache }}/phpunit.json\""
 
       - name: "Determine composer cache directory"
-        id: "determine-composer-cache-directory"
-        run: "echo \"::set-output name=directory::$(composer config cache-dir)\""
+        uses: "ergebnis/.github/actions/composer/determine-cache-directory@1.7.0"
 
       - name: "Cache dependencies installed with composer"
-        uses: "actions/cache@v3"
+        uses: "actions/cache@v3.0.9"
         with:
-          path: "${{ steps.determine-composer-cache-directory.outputs.directory }}"
+          path: "${{ env.COMPOSER_CACHE_DIR }}"
           key: "php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-${{ hashFiles('composer.lock') }}"
           restore-keys: "php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-"
 
-      - name: "Install lowest dependencies from composer.json"
-        if: "matrix.dependencies == 'lowest'"
-        run: "composer update --no-interaction --no-progress --prefer-lowest"
-
-      - name: "Install locked dependencies from composer.lock"
-        if: "matrix.dependencies == 'locked'"
-        run: "composer install --no-interaction --no-progress"
-
-      - name: "Install highest dependencies from composer.json"
-        if: "matrix.dependencies == 'highest'"
-        run: "composer update --no-interaction --no-progress"
+      - name: "Install ${{ matrix.dependencies }} dependencies with composer"
+        uses: "ergebnis/.github/actions/composer/install@1.7.0"
+        with:
+          dependencies: "${{ matrix.dependencies }}"
 
       - name: "Run tests with phpunit/phpunit"
         run: "vendor/bin/phpunit --configuration=phpunit.xml.dist"
