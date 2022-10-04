@@ -24,17 +24,48 @@ jobs:
       )
 
     steps:
-      - name: "Merge pull request"
-        uses: "actions/github-script@v3"
+      - name: "Determine pull request number"
+        uses: "actions/github-script@v6.3.1"
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           script: |
-            const pullRequest = context.payload.pull_request;
-            const repository = context.repo;
+            if (
+              context.eventName == 'pull_request' ||
+              context.eventName == 'pull_request_target'
+            ) {
+              core.exportVariable("PULL_REQUEST_NUMBER", context.payload.pull_request.number);
 
-            await github.pulls.merge({
-              merge_method: "merge",
-              owner: repository.owner,
-              pull_number: pullRequest.number,
-              repo: repository.repo,
-            })
+              return;
+            }
+
+            if (context.eventName == 'workflow_run') {
+              core.exportVariable("PULL_REQUEST_NUMBER", context.payload.workflow_run.pull_requests[0].number);
+
+              return;
+            }
+
+            core.setFailed(`Unable to determine the pull request number for event "${context.eventName}"`);
+
+      - name: "Merge pull request"
+        uses: "actions/github-script@v6.3.1"
+        env:
+          MERGE_METHOD: "${{ inputs.merge-method }}"
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+          script: |
+            if (!process.env.PULL_REQUEST_NUMBER) {
+              core.setFailed("The environment variable PULL_REQUEST_NUMBER is not defined.");
+
+              return;
+            }
+
+            try {
+              await github.rest.pulls.merge({
+                merge_method: process.env.MERGE_METHOD,
+                owner: context.repo.owner,
+                pull_number: process.env.PULL_REQUEST_NUMBER,
+                repo: context.repo.repo,
+              });
+            } catch (error) {
+              core.setFailed(error.message);
+            }      -
