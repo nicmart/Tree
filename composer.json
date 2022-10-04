@@ -14,7 +14,7 @@
         "php": "^7.2 || ^8.0"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.8.0",
+        "ergebnis/composer-normalize": "^2.19.0",
         "ergebnis/license": "^1.1.0",
         "ergebnis/php-cs-fixer-config": "^2.2.1",
         "phpunit/phpunit": "^8.5.30"
