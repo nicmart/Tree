@@ -36,8 +36,8 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
           script: |
-            const pullRequest = context.payload.pull_request
-            const repository = context.repo
+            const pullRequest = context.payload.pull_request;
+            const repository = context.repo;
 
             await github.pulls.merge({
               merge_method: "merge",
