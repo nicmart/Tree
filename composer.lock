@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e084cbf3ddaea28be1cf822a09df8845",
+    "content-hash": "5bfdfddd947bef910a5f5af5a262f7d6",
     "packages": [],
     "packages-dev": [
         {
@@ -608,38 +608,38 @@
         },
         {
             "name": "ergebnis/license",
-            "version": "1.0.0",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/license.git",
-                "reference": "d36cbe3a4ca62c9df902e4133f0a84307a75034a"
+                "reference": "7b3022e34d650cffa907c123946ec2332a0c8780"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/license/zipball/d36cbe3a4ca62c9df902e4133f0a84307a75034a",
-                "reference": "d36cbe3a4ca62c9df902e4133f0a84307a75034a",
+                "url": "https://api.github.com/repos/ergebnis/license/zipball/7b3022e34d650cffa907c123946ec2332a0c8780",
+                "reference": "7b3022e34d650cffa907c123946ec2332a0c8780",
                 "shasum": ""
             },
             "require": {
                 "ext-filter": "*",
-                "php": "^7.1"
+                "php": "^7.2 || ^8.0"
             },
             "require-dev": {
-                "ergebnis/composer-normalize": "^2.5.1",
-                "ergebnis/php-cs-fixer-config": "~2.1.2",
-                "ergebnis/phpstan-rules": "~0.14.4",
-                "ergebnis/test-util": "~1.0.0",
-                "infection/infection": "~0.13.6",
-                "jangregor/phpstan-prophecy": "~0.6.2",
+                "ergebnis/composer-normalize": "^2.7.1",
+                "ergebnis/php-cs-fixer-config": "^2.2.1",
+                "ergebnis/phpstan-rules": "~0.15.2",
+                "ergebnis/test-util": "^1.1.0",
+                "infection/infection": "~0.15.3",
+                "jangregor/phpstan-prophecy": "~0.8.0",
                 "phpstan/extension-installer": "^1.0.4",
-                "phpstan/phpstan": "~0.12.22",
-                "phpstan/phpstan-deprecation-rules": "~0.12.2",
-                "phpstan/phpstan-phpunit": "~0.12.8",
-                "phpstan/phpstan-strict-rules": "~0.12.2",
-                "phpunit/phpunit": "^7.5.20",
-                "psalm/plugin-phpunit": "~0.10.0",
-                "symfony/filesystem": "^4.4.8",
-                "vimeo/psalm": "^3.11.2"
+                "phpstan/phpstan": "~0.12.40",
+                "phpstan/phpstan-deprecation-rules": "~0.12.5",
+                "phpstan/phpstan-phpunit": "~0.12.16",
+                "phpstan/phpstan-strict-rules": "~0.12.4",
+                "phpunit/phpunit": "^8.5.8",
+                "psalm/plugin-phpunit": "~0.11.0",
+                "symfony/filesystem": "^4.4.11",
+                "vimeo/psalm": "^3.14.2"
             },
             "type": "library",
             "autoload": {
@@ -668,23 +668,11 @@
             },
             "funding": [
                 {
-                    "url": "https://paypal.me/localheinz",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.amazon.de/hz/wishlist/ls/2NCHMSJ4BC1OW",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://www.buymeacoffee.com/localheinz",
-                    "type": "custom"
-                },
-                {
                     "url": "https://github.com/localheinz",
                     "type": "github"
                 }
             ],
-            "time": "2020-05-04T17:36:52+00:00"
+            "time": "2020-08-30T11:41:26+00:00"
         },
         {
             "name": "ergebnis/php-cs-fixer-config",
