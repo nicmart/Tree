@@ -12,6 +12,10 @@ For a full diff see [`0.4.0...master`][0.4.0...master].
 
 - Added support for PHP 8.2 ([#135]), by [@localheinz]
 
+### Changed
+
+- Dropped support for PHP 7.2 ([#136]), by [@localheinz]
+
 ## [`0.4.0`][0.4.0]
 
 For a full diff see [`0.3.1...0.4.0`][0.3.1...0.4.0].
@@ -185,6 +189,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#105]: https://github.com/nicmart/Tree/pull/105
 [#106]: https://github.com/nicmart/Tree/pull/106
 [#125]: https://github.com/nicmart/Tree/pull/125
+[#136]: https://github.com/nicmart/Tree/pull/136
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
