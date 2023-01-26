@@ -16,6 +16,7 @@ For a full diff see [`0.4.0...master`][0.4.0...master].
 
 - Dropped support for PHP 7.2 ([#136]), by [@localheinz]
 - Dropped support for PHP 7.3 ([#137]), by [@localheinz]
+- Dropped support for PHP 7.4 ([#138]), by [@localheinz]
 
 ## [`0.4.0`][0.4.0]
 
@@ -192,6 +193,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#125]: https://github.com/nicmart/Tree/pull/125
 [#136]: https://github.com/nicmart/Tree/pull/136
 [#137]: https://github.com/nicmart/Tree/pull/137
+[#138]: https://github.com/nicmart/Tree/pull/138
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
