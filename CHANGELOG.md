@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`0.4.0...master`][0.4.0...master].
+For a full diff see [`0.5.0...master`][0.5.0...master].
+
+## [`0.5.0`][0.5.0]
+
+For a full diff see [`0.4.0...0.5.0`][0.4.0...0.5.0].
 
 ### Added
 
@@ -155,6 +159,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [0.3.0]: https://github.com/nicmart/Tree/releases/tag/0.3.0
 [0.3.1]: https://github.com/nicmart/Tree/releases/tag/0.3.1
 [0.4.0]: https://github.com/nicmart/Tree/releases/tag/0.4.0
+[0.5.0]: https://github.com/nicmart/Tree/releases/tag/0.5.0
 
 [fcfd14e...0.1.1]: https://github.com/nicmart/Tree/compare/fcfd14e...v0.1.1
 [0.1.1...0.1.2]: https://github.com/nicmart/Tree/compare/v0.1.1...v0.1.2
@@ -169,7 +174,8 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [0.2.7...0.3.0]: https://github.com/nicmart/Tree/compare/v0.2.7...0.3.0
 [0.3.0...0.3.1]: https://github.com/nicmart/Tree/compare/0.3.0...0.3.1
 [0.3.1...0.4.0]: https://github.com/nicmart/Tree/compare/0.3.1...0.4.0
-[0.4.0...master]: https://github.com/nicmart/Tree/compare/0.4.0...master
+[0.4.0...0.5.0]: https://github.com/nicmart/Tree/compare/0.4.0...0.5.0
+[0.5.0...master]: https://github.com/nicmart/Tree/compare/0.5.0...master
 
 [#3]: https://github.com/nicmart/Tree/issues/3
 [#4]: https://github.com/nicmart/Tree/issues/4
