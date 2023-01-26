@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`0.4.0...master`][0.4.0...master].
 
+### Added
+
+- Added support for PHP 8.2 ([#135]), by [@localheinz]
+
 ## [`0.4.0`][0.4.0]
 
 For a full diff see [`0.3.1...0.4.0`][0.3.1...0.4.0].
@@ -158,7 +162,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [0.2.6...0.2.7]: https://github.com/nicmart/Tree/compare/v0.2.6...v0.2.7
 [0.2.7...0.3.0]: https://github.com/nicmart/Tree/compare/v0.2.7...0.3.0
 [0.3.0...0.3.1]: https://github.com/nicmart/Tree/compare/0.3.0...0.3.1
-[0.3.1...master]: https://github.com/nicmart/Tree/compare/0.3.1...0.4.0
+[0.3.1...0.4.0]: https://github.com/nicmart/Tree/compare/0.3.1...0.4.0
 [0.4.0...master]: https://github.com/nicmart/Tree/compare/0.4.0...master
 
 [#3]: https://github.com/nicmart/Tree/issues/3
@@ -180,6 +184,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#79]: https://github.com/nicmart/Tree/pull/79
 [#105]: https://github.com/nicmart/Tree/pull/105
 [#106]: https://github.com/nicmart/Tree/pull/106
+[#125]: https://github.com/nicmart/Tree/pull/125
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
