@@ -3,7 +3,6 @@
   <file src="src/Builder/NodeBuilder.php">
     <MissingReturnType>
       <code>emptyStack</code>
-      <code>popNode</code>
       <code>pushNode</code>
     </MissingReturnType>
     <MixedAssignment>

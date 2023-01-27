@@ -103,8 +103,8 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    private function popNode()
+    private function popNode(): void
     {
-        return \array_pop($this->nodeStack);
+        \array_pop($this->nodeStack);
     }
 }
