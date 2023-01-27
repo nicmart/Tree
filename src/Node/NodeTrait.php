@@ -203,11 +203,6 @@ trait NodeTrait
         return \max($heights) + 1;
     }
 
-    /**
-     * Return the number of nodes in a tree.
-     *
-     * @return int
-     */
     public function getSize()
     {
         $size = 1;

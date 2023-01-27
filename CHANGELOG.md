@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`0.5.0...master`][0.5.0...master].
 
+### Changed
+
+- Added `getSize()` to `NodeInterface` ([#147]), by [@localheinz]
+
 ## [`0.5.0`][0.5.0]
 
 For a full diff see [`0.4.0...0.5.0`][0.4.0...0.5.0].
@@ -200,6 +204,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#136]: https://github.com/nicmart/Tree/pull/136
 [#137]: https://github.com/nicmart/Tree/pull/137
 [#138]: https://github.com/nicmart/Tree/pull/138
+[#147]: https://github.com/nicmart/Tree/pull/147
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
