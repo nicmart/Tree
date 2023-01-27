@@ -46,7 +46,7 @@ class NodeBuilder implements NodeBuilderInterface
     public function leaf($value = null)
     {
         $this->getNode()->addChild(
-            $this->nodeInstanceByValue($value)
+            $this->nodeInstanceByValue($value),
         );
 
         return $this;

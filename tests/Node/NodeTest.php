@@ -189,7 +189,7 @@ final class NodeTest extends Framework\TestCase
     {
         $root = (new Node('root'))
             ->addChild(
-                (new Node('child'))->addChild($grandchild = new Node('grandchild'))
+                (new Node('child'))->addChild($grandchild = new Node('grandchild')),
             );
 
         self::assertSame($root, $grandchild->root());

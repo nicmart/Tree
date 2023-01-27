@@ -127,8 +127,8 @@ trait NodeTrait
                 $neighbors,
                 static function ($item) use ($current) {
                     return $item !== $current;
-                }
-            )
+                },
+            ),
         );
     }
 

@@ -24,7 +24,7 @@ class PreOrderVisitor implements Visitor
         foreach ($node->getChildren() as $child) {
             $nodes = \array_merge(
                 $nodes,
-                $child->accept($this)
+                $child->accept($this),
             );
         }
 
