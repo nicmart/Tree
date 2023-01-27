@@ -10,7 +10,7 @@ code-coverage: vendor ## Collects coverage from running unit tests with phpunit/
 coding-standards: vendor ## Normalizes composer.json with ergebnis/composer-normalize and fixes code style issues with friendsofphp/php-cs-fixer
 	composer normalize
 	mkdir -p .build/php-cs-fixer
-	vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --diff --diff-format=udiff --verbose
+	vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --diff --verbose
 
 .PHONY: help
 help: ## Displays this list of targets with descriptions

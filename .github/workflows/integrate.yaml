@@ -122,7 +122,7 @@ jobs:
           restore-keys: "php-${{ matrix.php-version }}-php-cs-fixer-"
 
       - name: "Run friendsofphp/php-cs-fixer"
-        run: "vendor/bin/php-cs-fixer fix --ansi --config=.php-cs-fixer.php --diff --diff-format=udiff --dry-run --verbose"
+        run: "vendor/bin/php-cs-fixer fix --ansi --config=.php-cs-fixer.php --diff --dry-run --verbose"
 
   static-code-analysis:
     name: "Static Code Analysis"
