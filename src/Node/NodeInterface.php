@@ -137,6 +137,13 @@ interface NodeInterface
     public function isLeaf();
 
     /**
+     * Find the root of the node.
+     *
+     * @return NodeInterface
+     */
+    public function root();
+
+    /**
      * Return the distance from the current node to the root.
      *
      * @return int

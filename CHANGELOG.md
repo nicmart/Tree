@@ -11,6 +11,7 @@ For a full diff see [`0.5.0...master`][0.5.0...master].
 ### Changed
 
 - Added `getSize()` to `NodeInterface` ([#147]), by [@localheinz]
+- Added `root()` to `NodeInterface` ([#148]), by [@localheinz]
 
 ## [`0.5.0`][0.5.0]
 
@@ -205,6 +206,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#137]: https://github.com/nicmart/Tree/pull/137
 [#138]: https://github.com/nicmart/Tree/pull/138
 [#147]: https://github.com/nicmart/Tree/pull/147
+[#148]: https://github.com/nicmart/Tree/pull/148
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
