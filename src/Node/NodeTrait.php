@@ -151,11 +151,6 @@ trait NodeTrait
         return 0 === \count($this->children);
     }
 
-    /**
-     * Find the root of the node.
-     *
-     * @return NodeInterface
-     */
     public function root()
     {
         $node = $this;
