@@ -13,6 +13,9 @@ namespace Tree\Test\Unit\Node;
 
 use PHPUnit\Framework;
 use Tree\Node\Node;
+use Tree\Node\NodeInterface;
+use Tree\Test;
+use Tree\Visitor\Visitor;
 
 /**
  * @internal
@@ -21,6 +24,49 @@ use Tree\Node\Node;
  */
 final class NodeTest extends Framework\TestCase
 {
+    use Test\Util\Helper;
+
+    public function testDefaults(): void
+    {
+        $node = new Node();
+
+        self::assertSame([], $node->getChildren());
+        self::assertNull($node->getValue());
+    }
+
+    public function testConstructorSetsValue(): void
+    {
+        $value = self::faker()->sentence();
+
+        $node = new Node($value);
+
+        self::assertSame($value, $node->getValue());
+    }
+
+    public function testConstructorSetsChildren(): void
+    {
+        $children = [
+            new Node(),
+            new Node(),
+            new Node(),
+        ];
+
+        $node = new Node(
+            null,
+            $children,
+        );
+
+        self::assertSame($children, $node->getChildren());
+
+        $parents = \array_map(static function (NodeInterface $child): ?NodeInterface {
+            return $child->getParent();
+        }, $children);
+
+        $expected = \array_fill(0, \count($children), $node);
+
+        self::assertSame($expected, $parents);
+    }
+
     public function testSetValue(): void
     {
         $node = new Node();
@@ -269,5 +315,24 @@ final class NodeTest extends Framework\TestCase
         self::assertSame(4, $child4->getSize());
         self::assertSame(6, $child3->getSize());
         self::assertSame(1, $child2->getSize());
+    }
+
+    public function testAcceptLetsVisitorVisitNode(): void
+    {
+        $node = new Node();
+
+        $value = self::faker()->sentence();
+
+        $visitor = $this->createMock(Visitor::class);
+
+        $visitor
+            ->expects(self::once())
+            ->method('visit')
+            ->with(self::identicalTo($node))
+            ->willReturn($value);
+
+        $accepted = $node->accept($visitor);
+
+        self::assertSame($value, $accepted);
     }
 }
