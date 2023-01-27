@@ -59,7 +59,7 @@ interface NodeBuilderInterface
      *
      * @return NodeBuilderInterface The current instance
      */
-    public function leafs($value /*,  $value2, ... */);
+    public function leafs($value /* ,  $value2, ... */);
 
     /**
      * Add a child to the node enter in its scope.
