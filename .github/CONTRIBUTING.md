@@ -22,6 +22,18 @@ $ make coding-standards
 
 to automatically fix coding standard violations.
 
+## Dependency Analysis
+
+We are using [`maglnet/composer-require-checker`](https://github.com/maglnet/ComposerRequireChecker) to prevent the use of unknown symbols in production code.
+
+Run
+
+```sh
+make dependency-analysis
+```
+
+to run a dependency analysis.
+
 ## Static Code Analysis
 
 We are using [`vimeo/psalm`](https://github.com/vimeo/psalm) to statically analyze the code.

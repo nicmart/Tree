@@ -124,6 +124,57 @@ jobs:
       - name: "Run friendsofphp/php-cs-fixer"
         run: "vendor/bin/php-cs-fixer fix --ansi --config=.php-cs-fixer.php --diff --dry-run --verbose"
 
+  dependency-analysis:
+    name: "Dependency Analysis"
+
+    runs-on: "ubuntu-latest"
+
+    strategy:
+      matrix:
+        php-version:
+          - "8.0"
+
+        dependencies:
+          - "locked"
+
+    steps:
+      - name: "Checkout"
+        uses: "actions/checkout@v3.3.0"
+
+      - name: "Set up PHP"
+        uses: "shivammathur/setup-php@2.24.0"
+        with:
+          coverage: "none"
+          extensions: "none, ctype, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
+          php-version: "${{ matrix.php-version }}"
+          tools: "phive"
+
+      - name: "Set up problem matchers for PHP"
+        run: "echo \"::add-matcher::${{ runner.tool_cache }}/php.json\""
+
+      - name: "Determine composer cache directory"
+        uses: "ergebnis/.github/actions/composer/determine-cache-directory@1.8.0"
+
+      - name: "Cache dependencies installed with composer"
+        uses: "actions/cache@v3.2.3"
+        with:
+          path: "${{ env.COMPOSER_CACHE_DIR }}"
+          key: "php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-${{ hashFiles('composer.lock') }}"
+          restore-keys: "php-${{ matrix.php-version }}-composer-${{ matrix.dependencies }}-"
+
+      - name: "Install ${{ matrix.dependencies }} dependencies with composer"
+        uses: "ergebnis/.github/actions/composer/install@1.8.0"
+        with:
+          dependencies: "${{ matrix.dependencies }}"
+
+      - name: "Install dependencies with phive"
+        uses: "ergebnis/.github/actions/phive/install@1.8.0"
+        with:
+          trust-gpg-keys: "0x033E5F8D801A2F8D"
+
+      - name: "Run maglnet/composer-require-checker"
+        run: ".phive/composer-require-checker check --config-file=$(pwd)/composer-require-checker.json"
+
   static-code-analysis:
     name: "Static Code Analysis"
 
