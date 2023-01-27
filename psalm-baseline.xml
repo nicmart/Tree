@@ -52,11 +52,7 @@
     </MixedArgument>
     <MixedAssignment>
       <code>$child</code>
-      <code>$size</code>
     </MixedAssignment>
-    <MixedInferredReturnType>
-      <code>int</code>
-    </MixedInferredReturnType>
     <MixedReturnTypeCoercion>
       <code>getAncestorsAndSelf</code>
     </MixedReturnTypeCoercion>
@@ -65,9 +61,6 @@
       <code>getChildren</code>
       <code>getDepth</code>
     </PossiblyNullReference>
-    <UndefinedInterfaceMethod>
-      <code>getSize</code>
-    </UndefinedInterfaceMethod>
   </file>
   <file src="src/Visitor/PostOrderVisitor.php">
     <MixedArgument>
