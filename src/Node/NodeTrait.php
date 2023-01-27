@@ -19,7 +19,7 @@ trait NodeTrait
      * @var mixed
      */
     private $value;
-    private ?NodeInterface $parent;
+    private ?NodeInterface $parent = null;
 
     /**
      * @var NodeInterface[]
