@@ -15,7 +15,10 @@ use Tree\Node\NodeInterface;
 
 class PreOrderVisitor implements Visitor
 {
-    public function visit(NodeInterface $node)
+    /**
+     * @return array<int, NodeInterface> $node
+     */
+    public function visit(NodeInterface $node): array
     {
         $nodes = [
             $node,

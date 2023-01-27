@@ -20,8 +20,5 @@ use Tree\Node\NodeInterface;
  */
 interface Visitor
 {
-    /**
-     * @return mixed
-     */
-    public function visit(NodeInterface $node);
+    public function visit(NodeInterface $node): mixed;
 }

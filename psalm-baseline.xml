@@ -1,61 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <files psalm-version="5.6.0@e784128902dfe01d489c4123d69918a9f3c1eac5">
   <file src="src/Builder/NodeBuilder.php">
-    <MissingReturnType>
-      <code>emptyStack</code>
-      <code>pushNode</code>
-    </MissingReturnType>
     <MixedAssignment>
       <code>$value</code>
     </MixedAssignment>
-    <MixedMethodCall>
-      <code>pushNode</code>
-    </MixedMethodCall>
     <ParamNameMismatch>
       <code>$value1</code>
     </ParamNameMismatch>
   </file>
   <file src="src/Builder/NodeBuilderInterface.php">
     <PossiblyUnusedReturnValue>
-      <code>NodeBuilderInterface</code>
-      <code>NodeBuilderInterface</code>
+      <code>static</code>
+      <code>static</code>
     </PossiblyUnusedReturnValue>
   </file>
   <file src="src/Node/NodeInterface.php">
-    <MissingReturnType>
-      <code>accept</code>
-      <code>setParent</code>
-    </MissingReturnType>
-    <PossiblyUnusedMethod>
-      <code>removeAllChildren</code>
-      <code>removeChild</code>
-    </PossiblyUnusedMethod>
     <PossiblyUnusedReturnValue>
-      <code>NodeInterface</code>
       <code>mixed</code>
+      <code>static</code>
+      <code>static</code>
+      <code>static</code>
     </PossiblyUnusedReturnValue>
   </file>
   <file src="src/Node/NodeTrait.php">
     <ArgumentTypeCoercion>
       <code>$heights</code>
     </ArgumentTypeCoercion>
+    <LessSpecificImplementedReturnType>
+      <code>array</code>
+      <code>array</code>
+      <code>array</code>
+    </LessSpecificImplementedReturnType>
     <MissingParamType>
       <code>$value</code>
     </MissingParamType>
-    <MissingReturnType>
-      <code>accept</code>
-      <code>removeParentFromChildren</code>
-      <code>setParent</code>
-    </MissingReturnType>
     <MixedArgument>
       <code>$child</code>
     </MixedArgument>
     <MixedAssignment>
       <code>$child</code>
+      <code>$child</code>
+      <code>$child</code>
+      <code>$child</code>
+      <code>$heights[]</code>
+      <code>$size</code>
     </MixedAssignment>
-    <MixedReturnTypeCoercion>
-      <code>getAncestorsAndSelf</code>
-    </MixedReturnTypeCoercion>
+    <MixedInferredReturnType>
+      <code>int</code>
+      <code>int</code>
+    </MixedInferredReturnType>
+    <MixedMethodCall>
+      <code>getHeight</code>
+      <code>getSize</code>
+      <code>setParent</code>
+    </MixedMethodCall>
+    <MixedOperand>
+      <code>$child-&gt;getSize()</code>
+      <code>\max($heights)</code>
+    </MixedOperand>
+    <MoreSpecificReturnType>
+      <code>?static</code>
+    </MoreSpecificReturnType>
     <PossiblyNullReference>
       <code>getChildren</code>
       <code>getChildren</code>
@@ -66,16 +71,28 @@
     <MixedArgument>
       <code>$child-&gt;accept($this)</code>
     </MixedArgument>
+    <MixedReturnTypeCoercion>
+      <code>$nodes</code>
+      <code>array&lt;int, NodeInterface&gt;</code>
+    </MixedReturnTypeCoercion>
   </file>
   <file src="src/Visitor/PreOrderVisitor.php">
     <MixedArgument>
       <code>$child-&gt;accept($this)</code>
     </MixedArgument>
+    <MixedReturnTypeCoercion>
+      <code>$nodes</code>
+      <code>array&lt;int, NodeInterface&gt;</code>
+    </MixedReturnTypeCoercion>
   </file>
   <file src="src/Visitor/YieldVisitor.php">
     <MixedArgument>
       <code>$child-&gt;accept($this)</code>
     </MixedArgument>
+    <MixedReturnTypeCoercion>
+      <code>$yield</code>
+      <code>array&lt;int, NodeInterface&gt;</code>
+    </MixedReturnTypeCoercion>
   </file>
   <file src="test/Unit/Builder/NodeBuilderTest.php">
     <ArgumentTypeCoercion>
@@ -101,54 +118,8 @@
     </PossiblyNullReference>
   </file>
   <file src="test/Unit/Node/NodeTest.php">
-    <MixedArgument>
-      <code>(new Node('child'))-&gt;addChild($grandchild = new Node('grandchild'))</code>
-    </MixedArgument>
-    <MixedAssignment>
-      <code>$root</code>
-    </MixedAssignment>
-    <MixedMethodCall>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>addChild</code>
-      <code>removeAllChildren</code>
-      <code>removeAllChildren</code>
-      <code>removeChild</code>
-      <code>removeChild</code>
-    </MixedMethodCall>
-    <UnusedVariable>
-      <code>$child2</code>
-      <code>$child2</code>
-      <code>$child2</code>
-      <code>$child3</code>
-    </UnusedVariable>
-  </file>
-  <file src="test/Unit/Visitor/YieldVisitorTest.php">
-    <MixedMethodCall>
-      <code>addChild</code>
-      <code>addChild</code>
-    </MixedMethodCall>
-    <UnusedVariable>
-      <code>$d</code>
-    </UnusedVariable>
+    <TypeDoesNotContainType>
+      <code>assertSame</code>
+    </TypeDoesNotContainType>
   </file>
 </files>
