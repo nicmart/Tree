@@ -133,11 +133,6 @@ trait NodeTrait
         return $this->getParent()->getChildren();
     }
 
-    public function isLeaf()
-    {
-        return 0 === \count($this->children);
-    }
-
     /**
      * @return bool
      */
@@ -149,6 +144,11 @@ trait NodeTrait
     public function isChild()
     {
         return null !== $this->getParent();
+    }
+
+    public function isLeaf()
+    {
+        return 0 === \count($this->children);
     }
 
     /**
