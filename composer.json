@@ -8,6 +8,10 @@
         {
             "name": "Nicolò Martini",
             "email": "nicmartnic@gmail.com"
+        },
+        {
+            "name": "Andreas Möller",
+            "email": "am@localheinz.com"
         }
     ],
     "require": {
