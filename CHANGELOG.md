@@ -10,6 +10,7 @@ For a full diff see [`0.5.0...master`][0.5.0...master].
 
 ### Changed
 
+- Added return type declarations ([#113]), by [@localheinz]
 - Added `getSize()` to `NodeInterface` ([#147]), by [@localheinz]
 - Added `root()` to `NodeInterface` ([#148]), by [@localheinz]
 
@@ -201,6 +202,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#79]: https://github.com/nicmart/Tree/pull/79
 [#105]: https://github.com/nicmart/Tree/pull/105
 [#106]: https://github.com/nicmart/Tree/pull/106
+[#113]: https://github.com/nicmart/Tree/pull/113
 [#125]: https://github.com/nicmart/Tree/pull/125
 [#136]: https://github.com/nicmart/Tree/pull/136
 [#137]: https://github.com/nicmart/Tree/pull/137

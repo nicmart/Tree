@@ -29,7 +29,7 @@ class NodeBuilder implements NodeBuilderInterface
         $this->setNode($node ?: $this->nodeInstanceByValue());
     }
 
-    public function setNode(NodeInterface $node)
+    public function setNode(NodeInterface $node): static
     {
         $this
             ->emptyStack()
@@ -38,12 +38,12 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    public function getNode()
+    public function getNode(): NodeInterface
     {
         return $this->nodeStack[\count($this->nodeStack) - 1];
     }
 
-    public function leaf($value = null)
+    public function leaf($value = null): static
     {
         $this->getNode()->addChild(
             $this->nodeInstanceByValue($value),
@@ -52,7 +52,7 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    public function leafs($value1 /* ,  $value2, ... */)
+    public function leafs($value1 /* ,  $value2, ... */): static
     {
         foreach (\func_get_args() as $value) {
             $this->leaf($value);
@@ -61,7 +61,7 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    public function tree($value = null)
+    public function tree($value = null): static
     {
         $node = $this->nodeInstanceByValue($value);
         $this->getNode()->addChild($node);
@@ -70,33 +70,33 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    public function end()
+    public function end(): ?static
     {
         $this->popNode();
 
         return $this;
     }
 
-    public function nodeInstanceByValue($value = null)
+    public function nodeInstanceByValue($value = null): NodeInterface
     {
         return new Node($value);
     }
 
-    public function value($value)
+    public function value($value): static
     {
         $this->getNode()->setValue($value);
 
         return $this;
     }
 
-    private function emptyStack()
+    private function emptyStack(): static
     {
         $this->nodeStack = [];
 
         return $this;
     }
 
-    private function pushNode(NodeInterface $node)
+    private function pushNode(NodeInterface $node): static
     {
         $this->nodeStack[] = $node;
 

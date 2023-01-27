@@ -15,7 +15,10 @@ use Tree\Node\NodeInterface;
 
 class PostOrderVisitor implements Visitor
 {
-    public function visit(NodeInterface $node)
+    /**
+     * @return array<int, NodeInterface> $node
+     */
+    public function visit(NodeInterface $node): mixed
     {
         $nodes = [];
 

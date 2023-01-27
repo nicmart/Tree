@@ -15,7 +15,10 @@ use Tree\Node\NodeInterface;
 
 class YieldVisitor implements Visitor
 {
-    public function visit(NodeInterface $node)
+    /**
+     * @return array<int, NodeInterface>
+     */
+    public function visit(NodeInterface $node): mixed
     {
         if ($node->isLeaf()) {
             return [$node];
