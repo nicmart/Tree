@@ -77,7 +77,7 @@
       <code>$child-&gt;accept($this)</code>
     </MixedArgument>
   </file>
-  <file src="test/Builder/NodeBuilderTest.php">
+  <file src="test/Unit/Builder/NodeBuilderTest.php">
     <ArgumentTypeCoercion>
       <code>'Tree\Node\Node'</code>
     </ArgumentTypeCoercion>
@@ -100,7 +100,7 @@
       <code>leaf</code>
     </PossiblyNullReference>
   </file>
-  <file src="test/Node/NodeTest.php">
+  <file src="test/Unit/Node/NodeTest.php">
     <MixedArgument>
       <code>(new Node('child'))-&gt;addChild($grandchild = new Node('grandchild'))</code>
     </MixedArgument>
@@ -142,7 +142,7 @@
       <code>$child3</code>
     </UnusedVariable>
   </file>
-  <file src="test/Visitor/YieldVisitorTest.php">
+  <file src="test/Unit/Visitor/YieldVisitorTest.php">
     <MixedMethodCall>
       <code>addChild</code>
       <code>addChild</code>

@@ -9,7 +9,7 @@
  * @see https://github.com/nicmart/Tree
  */
 
-namespace Tree\Test\Builder;
+namespace Tree\Test\Unit\Builder;
 
 use PHPUnit\Framework;
 use Tree\Builder\NodeBuilder;

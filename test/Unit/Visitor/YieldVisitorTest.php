@@ -9,7 +9,7 @@
  * @see https://github.com/nicmart/Tree
  */
 
-namespace Tree\Test\Visitor;
+namespace Tree\Test\Unit\Visitor;
 
 use PHPUnit\Framework;
 use Tree\Node\Node;
