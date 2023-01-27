@@ -13,11 +13,11 @@
     processIsolation="false"
     stopOnFailure="false"
 >
-    <filter>
-        <whitelist>
+    <coverage>
+        <include>
             <directory>src/</directory>
-        </whitelist>
-    </filter>
+        </include>
+    </coverage>
     <testsuites>
         <testsuite name="Tree test suite">
             <directory>./tests/</directory>
