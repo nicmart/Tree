@@ -20,7 +20,7 @@
     </coverage>
     <testsuites>
         <testsuite name="Tree test suite">
-            <directory>./tests/</directory>
+            <directory>./test/</directory>
         </testsuite>
     </testsuites>
 </phpunit>

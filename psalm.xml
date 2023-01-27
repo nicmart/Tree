@@ -17,7 +17,7 @@
     </plugins>
     <projectFiles>
         <directory name="src/" />
-        <directory name="tests/" />
+        <directory name="test/" />
         <ignoreFiles>
             <directory name="vendor/" />
         </ignoreFiles>
