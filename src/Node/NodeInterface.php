@@ -39,16 +39,12 @@ interface NodeInterface
     /**
      * Add a child.
      *
-     * @param NodeInterface $child
-     *
      * @return mixed
      */
     public function addChild(self $child);
 
     /**
      * Remove a node from children.
-     *
-     * @param NodeInterface $child
      *
      * @return NodeInterface the current instance
      */

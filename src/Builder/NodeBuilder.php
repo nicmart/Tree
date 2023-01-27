@@ -52,7 +52,7 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    public function leafs($value1 /*,  $value2, ... */)
+    public function leafs($value1 /* ,  $value2, ... */)
     {
         foreach (\func_get_args() as $value) {
             $this->leaf($value);
