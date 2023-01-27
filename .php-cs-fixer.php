@@ -27,6 +27,7 @@ $license->save();
 $config = PhpCsFixer\Config\Factory::fromRuleSet(new PhpCsFixer\Config\RuleSet\Php74($license->header()), [
     'declare_strict_types' => false,
     'final_class' => false,
+    'phpdoc_to_property_type' => false,
     'void_return' => false,
 ]);
 
