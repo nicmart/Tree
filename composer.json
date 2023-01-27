@@ -33,7 +33,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Tree\\Test\\": "tests/"
+            "Tree\\Test\\": "test/"
         }
     },
     "config": {
