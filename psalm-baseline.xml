@@ -1,81 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="4.27.0@faf106e717c37b8c81721845dba9de3d8deed8ff">
+<files psalm-version="5.6.0@e784128902dfe01d489c4123d69918a9f3c1eac5">
   <file src="src/Builder/NodeBuilder.php">
-    <MissingReturnType occurrences="3">
+    <MissingReturnType>
       <code>emptyStack</code>
       <code>popNode</code>
       <code>pushNode</code>
     </MissingReturnType>
-    <MixedAssignment occurrences="1">
+    <MixedAssignment>
       <code>$value</code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="1">
+    <MixedMethodCall>
       <code>pushNode</code>
     </MixedMethodCall>
-    <ParamNameMismatch occurrences="1">
+    <ParamNameMismatch>
       <code>$value1</code>
     </ParamNameMismatch>
   </file>
   <file src="src/Node/NodeInterface.php">
-    <MissingReturnType occurrences="2">
+    <MissingReturnType>
       <code>accept</code>
       <code>setParent</code>
     </MissingReturnType>
   </file>
   <file src="src/Node/NodeTrait.php">
-    <ArgumentTypeCoercion occurrences="1">
+    <ArgumentTypeCoercion>
       <code>$heights</code>
     </ArgumentTypeCoercion>
-    <MissingParamType occurrences="1">
+    <MissingParamType>
       <code>$value</code>
     </MissingParamType>
-    <MissingReturnType occurrences="3">
+    <MissingReturnType>
       <code>accept</code>
       <code>removeParentFromChildren</code>
       <code>setParent</code>
     </MissingReturnType>
-    <MixedArgument occurrences="1">
+    <MixedArgument>
       <code>$child</code>
     </MixedArgument>
-    <MixedAssignment occurrences="2">
+    <MixedAssignment>
       <code>$child</code>
       <code>$size</code>
     </MixedAssignment>
-    <MixedInferredReturnType occurrences="1">
+    <MixedInferredReturnType>
       <code>int</code>
     </MixedInferredReturnType>
-    <MixedReturnTypeCoercion occurrences="1">
+    <MixedReturnTypeCoercion>
       <code>getAncestorsAndSelf</code>
     </MixedReturnTypeCoercion>
-    <PossiblyNullReference occurrences="3">
+    <PossiblyNullReference>
       <code>getChildren</code>
       <code>getChildren</code>
       <code>getDepth</code>
     </PossiblyNullReference>
-    <UndefinedInterfaceMethod occurrences="1">
+    <UndefinedInterfaceMethod>
       <code>getSize</code>
     </UndefinedInterfaceMethod>
   </file>
   <file src="src/Visitor/PostOrderVisitor.php">
-    <MixedArgument occurrences="1">
+    <MixedArgument>
       <code>$child-&gt;accept($this)</code>
     </MixedArgument>
   </file>
   <file src="src/Visitor/PreOrderVisitor.php">
-    <MixedArgument occurrences="1">
+    <MixedArgument>
       <code>$child-&gt;accept($this)</code>
     </MixedArgument>
   </file>
   <file src="src/Visitor/YieldVisitor.php">
-    <MixedArgument occurrences="1">
+    <MixedArgument>
       <code>$child-&gt;accept($this)</code>
     </MixedArgument>
   </file>
   <file src="tests/Builder/NodeBuilderTest.php">
-    <ArgumentTypeCoercion occurrences="1">
+    <ArgumentTypeCoercion>
       <code>'Tree\Node\Node'</code>
     </ArgumentTypeCoercion>
-    <InvalidArgument occurrences="7">
+    <InvalidArgument>
       <code>'a'</code>
       <code>'a'</code>
       <code>'a'</code>
@@ -84,24 +84,24 @@
       <code>'b'</code>
       <code>'c'</code>
     </InvalidArgument>
-    <InvalidDocblock occurrences="1">
+    <InvalidDocblock>
       <code>array[Node]</code>
     </InvalidDocblock>
-    <MissingClosureReturnType occurrences="1">
+    <MissingClosureReturnType>
       <code>static function (Node $node) {</code>
     </MissingClosureReturnType>
-    <PossiblyNullReference occurrences="1">
+    <PossiblyNullReference>
       <code>leaf</code>
     </PossiblyNullReference>
   </file>
   <file src="tests/Node/NodeTest.php">
-    <MixedArgument occurrences="1">
+    <MixedArgument>
       <code>(new Node('child'))-&gt;addChild($grandchild = new Node('grandchild'))</code>
     </MixedArgument>
-    <MixedAssignment occurrences="1">
+    <MixedAssignment>
       <code>$root</code>
     </MixedAssignment>
-    <MixedMethodCall occurrences="26">
+    <MixedMethodCall>
       <code>addChild</code>
       <code>addChild</code>
       <code>addChild</code>
@@ -129,7 +129,7 @@
       <code>removeChild</code>
       <code>removeChild</code>
     </MixedMethodCall>
-    <UnusedVariable occurrences="4">
+    <UnusedVariable>
       <code>$child2</code>
       <code>$child2</code>
       <code>$child2</code>
@@ -137,11 +137,11 @@
     </UnusedVariable>
   </file>
   <file src="tests/Visitor/YieldVisitorTest.php">
-    <MixedMethodCall occurrences="2">
+    <MixedMethodCall>
       <code>addChild</code>
       <code>addChild</code>
     </MixedMethodCall>
-    <UnusedVariable occurrences="1">
+    <UnusedVariable>
       <code>$d</code>
     </UnusedVariable>
   </file>
