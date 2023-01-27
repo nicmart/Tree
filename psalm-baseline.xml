@@ -16,11 +16,25 @@
       <code>$value1</code>
     </ParamNameMismatch>
   </file>
+  <file src="src/Builder/NodeBuilderInterface.php">
+    <PossiblyUnusedReturnValue>
+      <code>NodeBuilderInterface</code>
+      <code>NodeBuilderInterface</code>
+    </PossiblyUnusedReturnValue>
+  </file>
   <file src="src/Node/NodeInterface.php">
     <MissingReturnType>
       <code>accept</code>
       <code>setParent</code>
     </MissingReturnType>
+    <PossiblyUnusedMethod>
+      <code>removeAllChildren</code>
+      <code>removeChild</code>
+    </PossiblyUnusedMethod>
+    <PossiblyUnusedReturnValue>
+      <code>NodeInterface</code>
+      <code>mixed</code>
+    </PossiblyUnusedReturnValue>
   </file>
   <file src="src/Node/NodeTrait.php">
     <ArgumentTypeCoercion>
