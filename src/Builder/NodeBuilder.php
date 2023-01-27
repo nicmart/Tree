@@ -22,7 +22,7 @@ class NodeBuilder implements NodeBuilderInterface
     /**
      * @var NodeInterface[]
      */
-    private $nodeStack = [];
+    private array $nodeStack = [];
 
     public function __construct(?NodeInterface $node = null)
     {

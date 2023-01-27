@@ -22,10 +22,7 @@ use Tree\Node\Node;
  */
 final class NodeBuilderTest extends Framework\TestCase
 {
-    /**
-     * @var NodeBuilder
-     */
-    protected $builder;
+    protected NodeBuilder $builder;
 
     protected function setUp(): void
     {

@@ -19,16 +19,12 @@ trait NodeTrait
      * @var mixed
      */
     private $value;
-
-    /**
-     * @var null|NodeInterface
-     */
-    private $parent;
+    private ?NodeInterface $parent;
 
     /**
      * @var NodeInterface[]
      */
-    private $children = [];
+    private array $children = [];
 
     public function setValue($value)
     {
