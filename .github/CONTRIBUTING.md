@@ -34,6 +34,18 @@ make dependency-analysis
 
 to run a dependency analysis.
 
+## Mutation Tests
+
+We are using [`infection/infection`](https://github.com/infection/infection) to ensure a minimum quality of the tests.
+
+Enable `Xdebug` and run
+
+```sh
+make mutation-tests
+```
+
+to run mutation tests.
+
 ## Static Code Analysis
 
 We are using [`vimeo/psalm`](https://github.com/vimeo/psalm) to statically analyze the code.

@@ -6,6 +6,7 @@
 /.gitignore                     export-ignore
 /.php-cs-fixer.php              export-ignore
 /composer-require-checker.json  export-ignore
+/infection.json                 export-ignore
 /Makefile                       export-ignore
 /phpunit.xml.dist               export-ignore
 /psalm-baseline.xml             export-ignore
