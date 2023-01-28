@@ -2,4 +2,3 @@
 /.phive/
 /vendor/
 !/.phive/phars.xml
-/phpunit.xml
