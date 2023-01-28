@@ -65,8 +65,6 @@ interface NodeInterface
 
     /**
      * Set the parent node.
-     *
-     * @param NodeInterface $parent
      */
     public function setParent(?self $parent = null): void;
 

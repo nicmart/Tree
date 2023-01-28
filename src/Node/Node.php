@@ -16,8 +16,8 @@ class Node implements NodeInterface
     use NodeTrait;
 
     /**
-     * @param mixed           $value
-     * @param NodeInterface[] $children
+     * @param mixed                     $value
+     * @param array<int, NodeInterface> $children
      */
     public function __construct(
         mixed $value = null,

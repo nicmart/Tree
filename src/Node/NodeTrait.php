@@ -19,7 +19,7 @@ trait NodeTrait
     private ?NodeInterface $parent = null;
 
     /**
-     * @var NodeInterface[]
+     * @var array<int, NodeInterface>
      */
     private array $children = [];
 

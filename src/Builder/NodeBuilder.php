@@ -20,7 +20,7 @@ use Tree\Node\NodeInterface;
 class NodeBuilder implements NodeBuilderInterface
 {
     /**
-     * @var NodeInterface[]
+     * @var array<int, NodeInterface>
      */
     private array $nodeStack = [];
 
