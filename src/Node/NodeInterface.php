@@ -133,10 +133,8 @@ interface NodeInterface
 
     /**
      * Return the number of nodes in a tree.
-     *
-     * @return int
      */
-    public function getSize();
+    public function getSize(): int;
 
     /**
      * Accept method for the visitor pattern (see http://en.wikipedia.org/wiki/Visitor_pattern).
