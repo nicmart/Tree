@@ -6,7 +6,7 @@
   "minCoveredMsi": 100,
   "minMsi": 100,
   "phpUnit": {
-    "configDir": "."
+    "configDir": "test/Unit/"
   },
   "source": {
     "directories": [

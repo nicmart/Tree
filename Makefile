@@ -4,7 +4,7 @@ it: coding-standards static-code-analysis tests ## Runs the coding-standards, st
 .PHONY: code-coverage
 code-coverage: vendor ## Collects coverage from running unit tests with phpunit/phpunit
 	mkdir -p .build/phpunit
-	vendor/bin/phpunit --configuration=phpunit.xml --coverage-text
+	vendor/bin/phpunit --configuration=test/Unit/phpunit.xml --coverage-text
 
 .PHONY: coding-standards
 coding-standards: vendor ## Normalizes composer.json with ergebnis/composer-normalize and fixes code style issues with friendsofphp/php-cs-fixer
@@ -32,7 +32,7 @@ phive: .phive## Installs dependencies with phive
 
 .PHONY: tests
 tests: vendor ## Runs tests with phpunit/phpunit
-	vendor/bin/phpunit --configuration=phpunit.xml
+	vendor/bin/phpunit --configuration=test/Unit/phpunit.xml
 
 .PHONY: static-code-analysis
 static-code-analysis: vendor ## Runs a static code analysis with vimeo/psalm
