@@ -135,7 +135,7 @@ trait NodeTrait
             ];
         }
 
-        return $this->getParent()->getChildren();
+        return $this->parent->getChildren();
     }
 
     public function isRoot(): bool

@@ -59,7 +59,6 @@
       <code>?static</code>
     </MoreSpecificReturnType>
     <PossiblyNullReference>
-      <code>getChildren</code>
       <code>getDepth</code>
     </PossiblyNullReference>
   </file>
