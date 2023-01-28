@@ -145,7 +145,7 @@ trait NodeTrait
 
     public function isChild(): bool
     {
-        return null !== $this->getParent();
+        return null !== $this->parent;
     }
 
     public function isLeaf(): bool
