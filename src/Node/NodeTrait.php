@@ -115,6 +115,10 @@ trait NodeTrait
 
     public function getNeighbors(): array
     {
+        if (null === $this->parent) {
+            return [];
+        }
+
         $neighbors = $this->getParent()->getChildren();
         $current = $this;
 
