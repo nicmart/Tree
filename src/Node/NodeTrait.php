@@ -129,6 +129,12 @@ trait NodeTrait
 
     public function getNeighborsAndSelf(): array
     {
+        if (null === $this->parent) {
+            return [
+                $this,
+            ];
+        }
+
         return $this->getParent()->getChildren();
     }
 

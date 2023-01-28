@@ -15,6 +15,7 @@ For a full diff see [`0.6.0...master`][0.6.0...master].
 - Added parameter type declarations ([#151]), by [@localheinz]
 - Added property type declarations ([#152]), by [@localheinz]
 - Returned empty array from `Node::getNeigbors()` when node is root ([#153]), by [@localheinz]
+- Returned array with node only from `Node::getNeigborsAndSelf()` when node is root ([#154]), by [@localheinz]
 
 ## [`0.6.0`][0.6.0]
 
@@ -228,6 +229,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#151]: https://github.com/nicmart/Tree/pull/151
 [#152]: https://github.com/nicmart/Tree/pull/152
 [#153]: https://github.com/nicmart/Tree/pull/153
+[#154]: https://github.com/nicmart/Tree/pull/154
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
