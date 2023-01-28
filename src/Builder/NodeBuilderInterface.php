@@ -32,31 +32,23 @@ interface NodeBuilderInterface
 
     /**
      * Set the value of the underlaying node.
-     *
-     * @param mixed $value
      */
-    public function value($value): static;
+    public function value(mixed $value): static;
 
     /**
      * Add a leaf to the node.
-     *
-     * @param mixed $value The value of the leaf node
      */
-    public function leaf($value = null): static;
+    public function leaf(mixed $value = null): static;
 
     /**
      * Add several leafs to the node.
-     *
-     * @param mixed ...$value An arbitrary long list of values
      */
-    public function leafs($value /* ,  $value2, ... */): static;
+    public function leafs(mixed $value /* ,  $value2, ... */): static;
 
     /**
      * Add a child to the node enter in its scope.
-     *
-     * @param null $value
      */
-    public function tree($value = null): static;
+    public function tree(mixed $value = null): static;
 
     /**
      * Goes up to the parent node context.
@@ -66,8 +58,6 @@ interface NodeBuilderInterface
     /**
      * Return a node instance set with the given value. Implementation can follow their own logic
      * in choosing the NodeInterface implmentation taking into account the value.
-     *
-     * @param mixed $value
      */
-    public function nodeInstanceByValue($value = null): NodeInterface;
+    public function nodeInstanceByValue(mixed $value = null): NodeInterface;
 }

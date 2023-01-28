@@ -26,7 +26,7 @@ trait NodeTrait
      */
     private array $children = [];
 
-    public function setValue($value): static
+    public function setValue(mixed $value): static
     {
         $this->value = $value;
 

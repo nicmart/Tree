@@ -20,7 +20,7 @@ class Node implements NodeInterface
      * @param NodeInterface[] $children
      */
     public function __construct(
-        $value = null,
+        mixed $value = null,
         array $children = [],
     ) {
         $this->setValue($value);

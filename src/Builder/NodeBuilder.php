@@ -43,7 +43,7 @@ class NodeBuilder implements NodeBuilderInterface
         return $this->nodeStack[\count($this->nodeStack) - 1];
     }
 
-    public function leaf($value = null): static
+    public function leaf(mixed $value = null): static
     {
         $this->getNode()->addChild(
             $this->nodeInstanceByValue($value),
@@ -52,7 +52,7 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    public function leafs($value1 /* ,  $value2, ... */): static
+    public function leafs(mixed $value1 /* ,  $value2, ... */): static
     {
         foreach (\func_get_args() as $value) {
             $this->leaf($value);
@@ -61,7 +61,7 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    public function tree($value = null): static
+    public function tree(mixed $value = null): static
     {
         $node = $this->nodeInstanceByValue($value);
         $this->getNode()->addChild($node);
@@ -77,12 +77,12 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    public function nodeInstanceByValue($value = null): NodeInterface
+    public function nodeInstanceByValue(mixed $value = null): NodeInterface
     {
         return new Node($value);
     }
 
-    public function value($value): static
+    public function value(mixed $value): static
     {
         $this->getNode()->setValue($value);
 
