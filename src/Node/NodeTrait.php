@@ -122,14 +122,9 @@ trait NodeTrait
         $neighbors = $this->parent->getChildren();
         $current = $this;
 
-        return \array_values(
-            \array_filter(
-                $neighbors,
-                static function (NodeInterface $item) use ($current): bool {
-                    return $item !== $current;
-                },
-            ),
-        );
+        return \array_values(\array_filter($neighbors, static function (NodeInterface $item) use ($current): bool {
+            return $item !== $current;
+        }));
     }
 
     public function getNeighborsAndSelf(): array
