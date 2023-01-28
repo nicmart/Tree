@@ -60,7 +60,6 @@
     </MoreSpecificReturnType>
     <PossiblyNullReference>
       <code>getChildren</code>
-      <code>getChildren</code>
       <code>getDepth</code>
     </PossiblyNullReference>
   </file>

@@ -119,7 +119,7 @@ trait NodeTrait
             return [];
         }
 
-        $neighbors = $this->getParent()->getChildren();
+        $neighbors = $this->parent->getChildren();
         $current = $this;
 
         return \array_values(
