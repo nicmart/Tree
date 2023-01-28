@@ -125,7 +125,7 @@ trait NodeTrait
         return \array_values(
             \array_filter(
                 $neighbors,
-                static function ($item) use ($current): bool {
+                static function (NodeInterface $item) use ($current): bool {
                     return $item !== $current;
                 },
             ),
