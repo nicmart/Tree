@@ -150,7 +150,7 @@ trait NodeTrait
 
     public function isLeaf(): bool
     {
-        return 0 === \count($this->children);
+        return [] === $this->children;
     }
 
     public function root(): static
