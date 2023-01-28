@@ -72,7 +72,10 @@ trait NodeTrait
 
     public function setChildren(array $children): static
     {
-        $this->removeParentFromChildren();
+        foreach ($this->getChildren() as $child) {
+            $child->setParent(null);
+        }
+
         $this->children = [];
 
         foreach ($children as $child) {
@@ -202,12 +205,5 @@ trait NodeTrait
     public function accept(Visitor $visitor): mixed
     {
         return $visitor->visit($this);
-    }
-
-    private function removeParentFromChildren(): void
-    {
-        foreach ($this->getChildren() as $child) {
-            $child->setParent(null);
-        }
     }
 }
