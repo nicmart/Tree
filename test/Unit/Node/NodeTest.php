@@ -216,6 +216,17 @@ final class NodeTest extends Framework\TestCase
         self::assertSame([$b, $c], $a->getNeighbors());
     }
 
+    public function testGetNeighborsAndSelfReturnsArrayWithNodeWhenNodeDoesNotHaveParent(): void
+    {
+        $node = new Node(self::faker()->sentence());
+
+        $expected = [
+            $node,
+        ];
+
+        self::assertSame($expected, $node->getNeighborsAndSelf());
+    }
+
     public function testGetNeighborsAndSelf(): void
     {
         $root = new Node('r');
