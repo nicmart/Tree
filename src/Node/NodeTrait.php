@@ -15,10 +15,7 @@ use Tree\Visitor\Visitor;
 
 trait NodeTrait
 {
-    /**
-     * @var mixed
-     */
-    private $value;
+    private mixed $value = null;
     private ?NodeInterface $parent = null;
 
     /**
