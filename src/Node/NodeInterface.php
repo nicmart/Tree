@@ -22,10 +22,8 @@ interface NodeInterface
 {
     /**
      * Set the value of the current node.
-     *
-     * @param mixed $value
      */
-    public function setValue($value): static;
+    public function setValue(mixed $value): static;
 
     /**
      * Get the current node value.

@@ -31,9 +31,6 @@
       <code>array</code>
       <code>array</code>
     </LessSpecificImplementedReturnType>
-    <MissingParamType>
-      <code>$value</code>
-    </MissingParamType>
     <MixedArgument>
       <code>$child</code>
     </MixedArgument>
@@ -98,15 +95,6 @@
     <ArgumentTypeCoercion>
       <code>'Tree\Node\Node'</code>
     </ArgumentTypeCoercion>
-    <InvalidArgument>
-      <code>'a'</code>
-      <code>'a'</code>
-      <code>'a'</code>
-      <code>'b'</code>
-      <code>'b'</code>
-      <code>'b'</code>
-      <code>'c'</code>
-    </InvalidArgument>
     <InvalidDocblock>
       <code>array[Node]</code>
     </InvalidDocblock>
