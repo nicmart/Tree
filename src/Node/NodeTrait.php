@@ -140,7 +140,7 @@ trait NodeTrait
 
     public function isRoot(): bool
     {
-        return null === $this->getParent();
+        return null === $this->parent;
     }
 
     public function isChild(): bool
