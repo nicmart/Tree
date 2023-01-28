@@ -119,7 +119,7 @@ interface NodeInterface
     /**
      * Find the root of the node.
      */
-    public function root(): self;
+    public function root(): static;
 
     /**
      * Return the distance from the current node to the root.

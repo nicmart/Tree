@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`0.6.0...master`][0.6.0...master].
 
+### Fixed
+
+- Changed return type declaration of `NodeInterface::root()` from `self` to `static` ([#149]), by [@localheinz]
+
 ## [`0.6.0`][0.6.0]
 
 For a full diff see [0.5.0...0.6.0`][0.5.0...0.6.0].
@@ -215,6 +219,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#138]: https://github.com/nicmart/Tree/pull/138
 [#147]: https://github.com/nicmart/Tree/pull/147
 [#148]: https://github.com/nicmart/Tree/pull/148
+[#149]: https://github.com/nicmart/Tree/pull/149
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
