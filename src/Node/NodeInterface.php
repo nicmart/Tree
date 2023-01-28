@@ -50,14 +50,14 @@ interface NodeInterface
     /**
      * Return the array of children.
      *
-     * @return NodeInterface[]
+     * @return array<int, NodeInterface>
      */
     public function getChildren(): array;
 
     /**
      * Replace the children set with the given one.
      *
-     * @param NodeInterface[] $children
+     * @param array<int, NodeInterface> $children
      *
      * @return mixed
      */
@@ -81,7 +81,7 @@ interface NodeInterface
     /**
      * Retrieves all ancestors of node as well as the node itself.
      *
-     * @return Node[]
+     * @return array<int, Node>
      */
     public function getAncestorsAndSelf(): array;
 
@@ -93,7 +93,7 @@ interface NodeInterface
     /**
      * Returns all neighboring nodes, including the current node.
      *
-     * @return NodeInterface[]
+     * @return array<int, NodeInterface>
      */
     public function getNeighborsAndSelf(): array;
 
