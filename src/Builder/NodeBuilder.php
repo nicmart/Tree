@@ -52,9 +52,9 @@ class NodeBuilder implements NodeBuilderInterface
         return $this;
     }
 
-    public function leafs(mixed $value1 /* ,  $value2, ... */): static
+    public function leafs(mixed ...$values): static
     {
-        foreach (\func_get_args() as $value) {
+        foreach ($values as $value) {
             $this->leaf($value);
         }
 

@@ -43,7 +43,7 @@ interface NodeBuilderInterface
     /**
      * Add several leafs to the node.
      */
-    public function leafs(mixed $value /* ,  $value2, ... */): static;
+    public function leafs(mixed ...$values): static;
 
     /**
      * Add a child to the node enter in its scope.
