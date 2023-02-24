@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`0.7.0...master`][0.7.0...master].
 
+### Changed
+
+- Made use of variadic parameters in `NodeBuilderInterface::leafs()` and `NodeBuilder::leafs()` ([#168]), by [@localheinz]
+
 ## [`0.7.0`][0.7.0]
 
 For a full diff see [0.6.0...0.7.0`][0.6.0...0.7.0].
@@ -239,6 +243,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#152]: https://github.com/nicmart/Tree/pull/152
 [#153]: https://github.com/nicmart/Tree/pull/153
 [#154]: https://github.com/nicmart/Tree/pull/154
+[#168]: https://github.com/nicmart/Tree/pull/168
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki

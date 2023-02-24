@@ -4,9 +4,6 @@
     <MixedAssignment>
       <code>$value</code>
     </MixedAssignment>
-    <ParamNameMismatch>
-      <code>$value1</code>
-    </ParamNameMismatch>
   </file>
   <file src="src/Builder/NodeBuilderInterface.php">
     <PossiblyUnusedReturnValue>
