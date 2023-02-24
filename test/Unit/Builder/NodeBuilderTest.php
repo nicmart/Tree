@@ -22,13 +22,6 @@ use Tree\Node\Node;
  */
 final class NodeBuilderTest extends Framework\TestCase
 {
-    protected NodeBuilder $builder;
-
-    protected function setUp(): void
-    {
-        $this->builder = new NodeBuilder();
-    }
-
     public function testConstructorCreatesEmptyNodeIfNoSpecified(): void
     {
         $builder = new NodeBuilder();
@@ -45,18 +38,22 @@ final class NodeBuilderTest extends Framework\TestCase
 
     public function testSetNodeAndGetNode(): void
     {
-        $this->builder->setNode($node1 = new Node('node1'));
-        self::assertSame($node1, $this->builder->getNode());
+        $builder = new NodeBuilder();
 
-        $this->builder->setNode($node2 = new Node('node2'));
-        self::assertSame($node2, $this->builder->getNode());
+        $builder->setNode($node1 = new Node('node1'));
+        self::assertSame($node1, $builder->getNode());
+
+        $builder->setNode($node2 = new Node('node2'));
+        self::assertSame($node2, $builder->getNode());
     }
 
     public function testLeaf(): void
     {
-        $this->builder->leaf('a')->leaf('b');
+        $builder = new NodeBuilder();
 
-        $children = $this->builder->getNode()->getChildren();
+        $builder->leaf('a')->leaf('b');
+
+        $children = $builder->getNode()->getChildren();
 
         self::assertSame('a', $children[0]->getValue());
         self::assertSame('b', $children[1]->getValue());
@@ -64,9 +61,11 @@ final class NodeBuilderTest extends Framework\TestCase
 
     public function testLeafs(): void
     {
-        $this->builder->leafs('a', 'b');
+        $builder = new NodeBuilder();
 
-        $children = $this->builder->getNode()->getChildren();
+        $builder->leafs('a', 'b');
+
+        $children = $builder->getNode()->getChildren();
 
         self::assertSame('a', $children[0]->getValue());
         self::assertSame('b', $children[1]->getValue());
@@ -74,14 +73,16 @@ final class NodeBuilderTest extends Framework\TestCase
 
     public function testTreeAddNewNodeAsChildOfTheParentNode(): void
     {
-        $this->builder
+        $builder = new NodeBuilder();
+
+        $builder
             ->value('root')
             ->tree('a')
             ->tree('b')->end()
             ->leaf('c')
             ->end();
 
-        $node = $this->builder->getNode();
+        $node = $builder->getNode();
         self::assertSame(['a'], $this->childrenValues($node->getChildren()));
 
         $subtree = $node->getChildren()[0];
@@ -90,39 +91,47 @@ final class NodeBuilderTest extends Framework\TestCase
 
     public function testTree(): void
     {
-        $this->builder->tree('a')->tree('b');
+        $builder = new NodeBuilder();
 
-        self::assertSame('b', $this->builder->getNode()->getValue());
+        $builder->tree('a')->tree('b');
+
+        self::assertSame('b', $builder->getNode()->getValue());
     }
 
     public function testEnd(): void
     {
-        $this->builder
+        $builder = new NodeBuilder();
+
+        $builder
             ->value('root')
             ->tree('a')
             ->tree('b')
             ->tree('c')
             ->end();
 
-        self::assertSame('b', $this->builder->getNode()->getValue());
+        self::assertSame('b', $builder->getNode()->getValue());
 
-        $this->builder->end();
-        self::assertSame('a', $this->builder->getNode()->getValue());
+        $builder->end();
+        self::assertSame('a', $builder->getNode()->getValue());
 
-        $this->builder->end();
-        self::assertSame('root', $this->builder->getNode()->getValue());
+        $builder->end();
+        self::assertSame('root', $builder->getNode()->getValue());
     }
 
     public function testValue(): void
     {
-        $this->builder->value('foo')->value('bar');
+        $builder = new NodeBuilder();
 
-        self::assertSame('bar', $this->builder->getNode()->getValue());
+        $builder->value('foo')->value('bar');
+
+        self::assertSame('bar', $builder->getNode()->getValue());
     }
 
     public function testNodeInstanceByValue(): void
     {
-        $node = $this->builder->nodeInstanceByValue('baz');
+        $builder = new NodeBuilder();
+
+        $node = $builder->nodeInstanceByValue('baz');
 
         self::assertSame('baz', $node->getValue());
         self::assertInstanceOf('Tree\Node\Node', $node);
