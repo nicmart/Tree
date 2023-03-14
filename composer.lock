@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa04213a2dbbf31608846132c760d37d",
+    "content-hash": "dbfeee63e54bf3559b61d5ff9d61f0b1",
     "packages": [],
     "packages-dev": [
         {
@@ -1307,21 +1307,21 @@
         },
         {
             "name": "ergebnis/php-cs-fixer-config",
-            "version": "5.3.2",
+            "version": "5.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/php-cs-fixer-config.git",
-                "reference": "04f50768ae098fc9b8f94d775ec7553f12c9acc6"
+                "reference": "48002df6005e6de66ea2ff22e390e11f7353f9aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/php-cs-fixer-config/zipball/04f50768ae098fc9b8f94d775ec7553f12c9acc6",
-                "reference": "04f50768ae098fc9b8f94d775ec7553f12c9acc6",
+                "url": "https://api.github.com/repos/ergebnis/php-cs-fixer-config/zipball/48002df6005e6de66ea2ff22e390e11f7353f9aa",
+                "reference": "48002df6005e6de66ea2ff22e390e11f7353f9aa",
                 "shasum": ""
             },
             "require": {
                 "ext-filter": "*",
-                "friendsofphp/php-cs-fixer": "~3.15.0",
+                "friendsofphp/php-cs-fixer": "~3.15.1",
                 "php": "~8.0.0 || ~8.1.0 || ~8.2.0"
             },
             "require-dev": {
@@ -1364,7 +1364,7 @@
                 "issues": "https://github.com/ergebnis/php-cs-fixer-config/issues",
                 "source": "https://github.com/ergebnis/php-cs-fixer-config"
             },
-            "time": "2023-03-13T08:25:26+00:00"
+            "time": "2023-03-14T10:59:08+00:00"
         },
         {
             "name": "fakerphp/faker",
@@ -1598,16 +1598,16 @@
         },
         {
             "name": "friendsofphp/php-cs-fixer",
-            "version": "v3.15.0",
+            "version": "v3.15.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer.git",
-                "reference": "7306744c63e9cc1337894252b4eec4920c38b053"
+                "reference": "d48755372a113bddb99f749e34805d83f3acfe04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/7306744c63e9cc1337894252b4eec4920c38b053",
-                "reference": "7306744c63e9cc1337894252b4eec4920c38b053",
+                "url": "https://api.github.com/repos/PHP-CS-Fixer/PHP-CS-Fixer/zipball/d48755372a113bddb99f749e34805d83f3acfe04",
+                "reference": "d48755372a113bddb99f749e34805d83f3acfe04",
                 "shasum": ""
             },
             "require": {
@@ -1682,7 +1682,7 @@
             ],
             "support": {
                 "issues": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/issues",
-                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.15.0"
+                "source": "https://github.com/PHP-CS-Fixer/PHP-CS-Fixer/tree/v3.15.1"
             },
             "funding": [
                 {
@@ -1690,7 +1690,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-03-12T22:44:55+00:00"
+            "time": "2023-03-13T23:26:30+00:00"
         },
         {
             "name": "infection/abstract-testframework-adapter",
