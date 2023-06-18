@@ -27,6 +27,8 @@ interface NodeBuilderInterface
 
     /**
      * Get the node the builder manages.
+     *
+     * @throws \LogicException
      */
     public function getNode(): NodeInterface;
 
