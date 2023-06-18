@@ -40,7 +40,13 @@ class NodeBuilder implements NodeBuilderInterface
 
     public function getNode(): NodeInterface
     {
-        return $this->nodeStack[\count($this->nodeStack) - 1];
+        $count = \count($this->nodeStack);
+
+        if (0 === $count) {
+            throw new \LogicException('The node builder currently does not manage any nodes.');
+        }
+
+        return $this->nodeStack[$count - 1];
     }
 
     public function leaf(mixed $value = null): static

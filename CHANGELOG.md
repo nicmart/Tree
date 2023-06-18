@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`0.7.1...master`][0.7.1...master].
 
+### Fixed
+
+- Started throwing a `LogicException` when attempting to get a `Node` from an empty `NodeBuilder` ([#209]), by [@localheinz]
+
 ## [`0.7.1`][0.7.1]
 
 For a full diff see [0.7.0...0.7.1`][0.7.0...0.7.1].
@@ -250,6 +254,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#153]: https://github.com/nicmart/Tree/pull/153
 [#154]: https://github.com/nicmart/Tree/pull/154
 [#168]: https://github.com/nicmart/Tree/pull/168
+[#209]: https://github.com/nicmart/Tree/pull/209
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
