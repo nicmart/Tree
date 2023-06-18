@@ -47,6 +47,18 @@ final class NodeBuilderTest extends Framework\TestCase
         self::assertSame($node2, $builder->getNode());
     }
 
+    public function testGetNodeThrowsLogicExceptionWhenNodeBuilderDoesNotManageAnyNodes(): void
+    {
+        $builder = new NodeBuilder();
+
+        $builder->end();
+
+        $this->expectException(\LogicException::class);
+        $this->expectExceptionMessage('The node builder currently does not manage any nodes.');
+
+        $builder->getNode();
+    }
+
     public function testLeaf(): void
     {
         $builder = new NodeBuilder();
