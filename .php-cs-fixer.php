@@ -24,11 +24,15 @@ $license = License\Type\MIT::markdown(
 
 $license->save();
 
-$config = PhpCsFixer\Config\Factory::fromRuleSet(new PhpCsFixer\Config\RuleSet\Php80($license->header()), [
-    'declare_strict_types' => false,
-    'final_class' => false,
-    'void_return' => false,
-]);
+$ruleSet = PhpCsFixer\Config\RuleSet\Php80::create()
+    ->withHeader($license->header())
+    ->withRules(PhpCsFixer\Config\Rules::fromArray([
+        'declare_strict_types' => false,
+        'final_class' => false,
+        'void_return' => false,
+    ]));
+
+$config = PhpCsFixer\Config\Factory::fromRuleSet($ruleSet);
 
 $config->getFinder()
     ->ignoreDotFiles(false)
