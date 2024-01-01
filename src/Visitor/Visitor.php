@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Copyright (c) 2013-2023 Nicolò Martini
+ * Copyright (c) 2013-2024 Nicolò Martini
  *
  * For the full copyright and license information, please view
  * the LICENSE.md file that was distributed with this source code.

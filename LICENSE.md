@@ -1,6 +1,6 @@
 # The MIT License (MIT)
 
-Copyright (c) 2013-2023 Nicolò Martini
+Copyright (c) 2013-2024 Nicolò Martini
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 documentation files (the _Software_), to deal in the Software without restriction, including without limitation the
