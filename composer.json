@@ -21,7 +21,7 @@
         "ergebnis/composer-normalize": "^2.31.0",
         "ergebnis/license": "^2.4.0",
         "ergebnis/php-cs-fixer-config": "^6.17.0",
-        "fakerphp/faker": "^1.23.0",
+        "fakerphp/faker": "^1.23.1",
         "infection/infection": "~0.26.19",
         "phpunit/phpunit": "^9.6.15",
         "psalm/plugin-phpunit": "~0.18.4",
