@@ -16,7 +16,7 @@ $license = License\Type\MIT::markdown(
     __DIR__ . '/LICENSE.md',
     License\Range::since(
         License\Year::fromString('2013'),
-        new \DateTimeZone('UTC'),
+        new DateTimeZone('UTC'),
     ),
     License\Holder::fromString('Nicolò Martini'),
     License\Url::fromString('https://github.com/nicmart/Tree'),
