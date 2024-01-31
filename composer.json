@@ -18,7 +18,7 @@
         "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.31.0",
+        "ergebnis/composer-normalize": "^2.42.0",
         "ergebnis/license": "^2.4.0",
         "ergebnis/php-cs-fixer-config": "^6.20.0",
         "fakerphp/faker": "^1.23.1",
