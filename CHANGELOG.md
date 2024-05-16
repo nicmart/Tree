@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`0.10.0...master`][0.10.0...master].
 
+### Added
+
+- Added template/generic annotations for node values ([#333]), by [@smoench]
+
 ## [`0.10.0`][0.10.0]
 
 For a full diff see [0.9.0...0.10.0`][0.9.0...0.10.0].
@@ -303,3 +307,4 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [@mdwheele]: https://github.com/mdwheele
 [@nicmart]: https://github.com/nicmart
 [@pascalbaljet]: https://github.com/pascalbaljet
+[@smoench]: https://github.com/smoench
