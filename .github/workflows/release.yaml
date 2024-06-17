@@ -16,6 +16,6 @@ jobs:
 
     steps:
       - name: "Create release"
-        uses: "ergebnis/.github/actions/github/release/create@1.9.1"
+        uses: "ergebnis/.github/actions/github/release/create@1.9.2"
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
