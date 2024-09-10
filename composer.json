@@ -25,7 +25,7 @@
         "infection/infection": "~0.26.19",
         "phpunit/phpunit": "^9.6.19",
         "psalm/plugin-phpunit": "~0.19.0",
-        "vimeo/psalm": "^5.26.0"
+        "vimeo/psalm": "^5.26.1"
     },
     "autoload": {
         "psr-4": {
