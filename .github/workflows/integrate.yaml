@@ -24,7 +24,7 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: "actions/checkout@v4.1.7"
+        uses: "actions/checkout@v4.2.0"
 
       - name: "Set up PHP"
         uses: "shivammathur/setup-php@2.31.1"
@@ -79,7 +79,7 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: "actions/checkout@v4.1.7"
+        uses: "actions/checkout@v4.2.0"
 
       - name: "Set up PHP"
         uses: "shivammathur/setup-php@2.31.1"
@@ -139,7 +139,7 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: "actions/checkout@v4.1.7"
+        uses: "actions/checkout@v4.2.0"
 
       - name: "Set up PHP"
         uses: "shivammathur/setup-php@2.31.1"
@@ -190,7 +190,7 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: "actions/checkout@v4.1.7"
+        uses: "actions/checkout@v4.2.0"
 
       - name: "Set up PHP"
         uses: "shivammathur/setup-php@2.31.1"
@@ -237,7 +237,7 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: "actions/checkout@v4.1.7"
+        uses: "actions/checkout@v4.2.0"
 
       - name: "Set up PHP"
         uses: "shivammathur/setup-php@2.31.1"
@@ -290,7 +290,7 @@ jobs:
 
     steps:
       - name: "Checkout"
-        uses: "actions/checkout@v4.1.7"
+        uses: "actions/checkout@v4.2.0"
 
       - name: "Set up PHP"
         uses: "shivammathur/setup-php@2.31.1"
