@@ -12,6 +12,7 @@
     convertWarningsToExceptions="true"
     processIsolation="false"
     stopOnFailure="false"
+    verbose="true"
 >
     <coverage>
         <include>
