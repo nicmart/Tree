@@ -3,7 +3,6 @@
     "description": "A basic but flexible php tree data structure and a fluent tree builder implementation.",
     "license": "MIT",
     "type": "library",
-    "keywords": [],
     "authors": [
         {
             "name": "Nicolò Martini",
@@ -18,7 +17,7 @@
         "php": "~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0 || ~8.4.0"
     },
     "require-dev": {
-        "ergebnis/composer-normalize": "^2.45.0",
+        "ergebnis/composer-normalize": "^2.47.0",
         "ergebnis/license": "^2.6.0",
         "ergebnis/php-cs-fixer-config": "^6.28.1",
         "fakerphp/faker": "^1.24.1",
