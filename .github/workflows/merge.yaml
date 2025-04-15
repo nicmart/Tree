@@ -25,6 +25,6 @@ jobs:
 
     steps:
       - name: "Merge pull request"
-        uses: "ergebnis/.github/actions/github/pull-request/merge@1.9.2"
+        uses: "ergebnis/.github/actions/github/pull-request/merge@1.9.3"
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
