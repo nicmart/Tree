@@ -30,6 +30,7 @@ $ruleSet = PhpCsFixer\Config\RuleSet\Php80::create()
         'declare_strict_types' => false,
         'final_class' => false,
         'void_return' => false,
+        'phpdoc_to_property_type' => false, // when turned on it breaks generics phpdoc types
     ]));
 
 $config = PhpCsFixer\Config\Factory::fromRuleSet($ruleSet);
