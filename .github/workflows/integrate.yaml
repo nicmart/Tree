@@ -30,7 +30,7 @@ jobs:
         uses: "shivammathur/setup-php@2.35.5"
         with:
           coverage: "xdebug"
-          extensions: "none, ctype, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
+          extensions: "none, ctype, dom, iconv, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
           php-version: "${{ matrix.php-version }}"
 
       - name: "Set up problem matchers for PHP"
@@ -145,7 +145,7 @@ jobs:
         uses: "shivammathur/setup-php@2.35.5"
         with:
           coverage: "none"
-          extensions: "none, ctype, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
+          extensions: "none, ctype, dom, iconv, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
           php-version: "${{ matrix.php-version }}"
           tools: "phive"
 
@@ -196,7 +196,7 @@ jobs:
         uses: "shivammathur/setup-php@2.35.5"
         with:
           coverage: "xdebug"
-          extensions: "none, ctype, dom, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
+          extensions: "none, ctype, dom, iconv, json, mbstring, phar, simplexml, tokenizer, xml, xmlwriter"
           php-version: "${{ matrix.php-version }}"
 
       - name: "Set up problem matchers for PHP"
