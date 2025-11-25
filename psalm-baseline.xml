@@ -1,62 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<files psalm-version="5.12.0@f90118cdeacd0088e7215e64c0c99ceca819e176">
+<files psalm-version="5.26.1@d747f6500b38ac4f7dfc5edbcae6e4b637d7add0">
   <file src="src/Builder/NodeBuilder.php">
     <MixedAssignment>
-      <code>$value</code>
+      <code><![CDATA[$value]]></code>
     </MixedAssignment>
   </file>
   <file src="src/Builder/NodeBuilderInterface.php">
     <PossiblyUnusedReturnValue>
-      <code>static</code>
-      <code>static</code>
+      <code><![CDATA[static]]></code>
+      <code><![CDATA[static]]></code>
     </PossiblyUnusedReturnValue>
+  </file>
+  <file src="src/Node/Node.php">
+    <PropertyNotSetInConstructor>
+      <code><![CDATA[Node]]></code>
+    </PropertyNotSetInConstructor>
   </file>
   <file src="src/Node/NodeInterface.php">
     <PossiblyUnusedReturnValue>
-      <code>mixed</code>
-      <code>static</code>
-      <code>static</code>
-      <code>static</code>
+      <code><![CDATA[static]]></code>
+      <code><![CDATA[static]]></code>
+      <code><![CDATA[static]]></code>
+      <code><![CDATA[static]]></code>
     </PossiblyUnusedReturnValue>
   </file>
   <file src="src/Node/NodeTrait.php">
     <ArgumentTypeCoercion>
-      <code>$heights</code>
+      <code><![CDATA[$heights]]></code>
     </ArgumentTypeCoercion>
     <LessSpecificImplementedReturnType>
-      <code>array</code>
-      <code>array</code>
-      <code>array</code>
+      <code><![CDATA[array]]></code>
+      <code><![CDATA[array]]></code>
+      <code><![CDATA[array]]></code>
     </LessSpecificImplementedReturnType>
     <MixedArgument>
-      <code>$child</code>
+      <code><![CDATA[$child]]></code>
     </MixedArgument>
     <MixedAssignment>
-      <code>$child</code>
-      <code>$child</code>
-      <code>$child</code>
-      <code>$child</code>
-      <code>$heights[]</code>
-      <code>$size</code>
+      <code><![CDATA[$child]]></code>
+      <code><![CDATA[$child]]></code>
+      <code><![CDATA[$child]]></code>
+      <code><![CDATA[$child]]></code>
+      <code><![CDATA[$heights[]]]></code>
+      <code><![CDATA[$size]]></code>
     </MixedAssignment>
     <MixedInferredReturnType>
-      <code>int</code>
-      <code>int</code>
+      <code><![CDATA[int]]></code>
+      <code><![CDATA[int]]></code>
     </MixedInferredReturnType>
     <MixedMethodCall>
-      <code>getHeight</code>
-      <code>getSize</code>
-      <code>setParent</code>
+      <code><![CDATA[getHeight]]></code>
+      <code><![CDATA[getSize]]></code>
+      <code><![CDATA[setParent]]></code>
     </MixedMethodCall>
     <MixedOperand>
       <code><![CDATA[$child->getSize()]]></code>
-      <code>\max($heights)</code>
+      <code><![CDATA[\max($heights)]]></code>
     </MixedOperand>
-    <MoreSpecificReturnType>
-      <code>?static</code>
-    </MoreSpecificReturnType>
     <PossiblyNullReference>
-      <code>getDepth</code>
+      <code><![CDATA[getDepth]]></code>
     </PossiblyNullReference>
   </file>
   <file src="src/Visitor/PostOrderVisitor.php">
@@ -64,7 +66,7 @@
       <code><![CDATA[$child->accept($this)]]></code>
     </MixedArgument>
     <MixedReturnTypeCoercion>
-      <code>$nodes</code>
+      <code><![CDATA[$nodes]]></code>
       <code><![CDATA[array<int, NodeInterface>]]></code>
     </MixedReturnTypeCoercion>
   </file>
@@ -73,7 +75,7 @@
       <code><![CDATA[$child->accept($this)]]></code>
     </MixedArgument>
     <MixedReturnTypeCoercion>
-      <code>$nodes</code>
+      <code><![CDATA[$nodes]]></code>
       <code><![CDATA[array<int, NodeInterface>]]></code>
     </MixedReturnTypeCoercion>
   </file>
@@ -82,7 +84,7 @@
       <code><![CDATA[$child->accept($this)]]></code>
     </MixedArgument>
     <MixedReturnTypeCoercion>
-      <code>$yield</code>
+      <code><![CDATA[$yield]]></code>
       <code><![CDATA[array<int, NodeInterface>]]></code>
     </MixedReturnTypeCoercion>
   </file>
@@ -91,18 +93,10 @@
       <code><![CDATA['Tree\Node\Node']]></code>
     </ArgumentTypeCoercion>
     <InvalidDocblock>
-      <code>array[Node]</code>
+      <code><![CDATA[array[Node]]]></code>
     </InvalidDocblock>
-    <MissingClosureReturnType>
-      <code>static function (Node $node) {</code>
-    </MissingClosureReturnType>
     <PossiblyNullReference>
-      <code>leaf</code>
+      <code><![CDATA[leaf]]></code>
     </PossiblyNullReference>
-  </file>
-  <file src="test/Unit/Node/NodeTest.php">
-    <TypeDoesNotContainType>
-      <code>assertSame</code>
-    </TypeDoesNotContainType>
   </file>
 </files>

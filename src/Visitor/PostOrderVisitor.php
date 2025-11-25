@@ -18,7 +18,7 @@ class PostOrderVisitor implements Visitor
     /**
      * @return array<int, NodeInterface> $node
      */
-    public function visit(NodeInterface $node): mixed
+    public function visit(NodeInterface $node): array
     {
         $nodes = [];
 

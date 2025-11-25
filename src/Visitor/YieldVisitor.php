@@ -18,7 +18,7 @@ class YieldVisitor implements Visitor
     /**
      * @return array<int, NodeInterface>
      */
-    public function visit(NodeInterface $node): mixed
+    public function visit(NodeInterface $node): array
     {
         if ($node->isLeaf()) {
             return [$node];

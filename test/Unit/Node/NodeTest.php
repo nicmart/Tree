@@ -69,6 +69,7 @@ final class NodeTest extends Framework\TestCase
 
     public function testSetValue(): void
     {
+        /** @var Node<\stdClass|string> $node */
         $node = new Node();
 
         $node->setValue('string value');
