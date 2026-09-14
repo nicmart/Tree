@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 For a full diff see [`0.10.1...master`][0.10.1...master].
 
+### Added
+
+- Added support for PHP 8.6 ([#405]), by [@localheinz]
+
 ## [`0.10.1`][0.10.1]
 
 For a full diff see [0.9.0...0.10.0`][0.10.0...0.10.1].
@@ -304,6 +308,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#236]: https://github.com/nicmart/Tree/pull/236
 [#331]: https://github.com/nicmart/Tree/pull/331
 [#370]: https://github.com/nicmart/Tree/pull/370
+[#405]: https://github.com/nicmart/Tree/pull/405
 
 [@asalazar-pley]: https://github.com/asalazar-pley
 [@Djuki]: https://github.com/Djuki
