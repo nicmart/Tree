@@ -6,7 +6,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## Unreleased
 
-For a full diff see [`0.10.1...master`][0.10.1...master].
+For a full diff see [`0.11.0...master`][0.11.0...master].
+
+## [`0.11.0`][0.11.0]
+
+For a full diff see [`0.10.1...0.11.0`][0.10.1...0.11.0].
 
 ### Added
 
@@ -14,7 +18,7 @@ For a full diff see [`0.10.1...master`][0.10.1...master].
 
 ## [`0.10.1`][0.10.1]
 
-For a full diff see [0.9.0...0.10.0`][0.10.0...0.10.1].
+For a full diff see [`0.10.0...0.10.1`][0.10.0...0.10.1].
 
 ### Added
 
@@ -22,7 +26,7 @@ For a full diff see [0.9.0...0.10.0`][0.10.0...0.10.1].
 
 ## [`0.10.0`][0.10.0]
 
-For a full diff see [0.9.0...0.10.0`][0.9.0...0.10.0].
+For a full diff see [`0.9.0...0.10.0`][0.9.0...0.10.0].
 
 ### Added
 
@@ -246,6 +250,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [0.9.0]: https://github.com/nicmart/Tree/releases/tag/0.9.0
 [0.10.0]: https://github.com/nicmart/Tree/releases/tag/0.10.0
 [0.10.1]: https://github.com/nicmart/Tree/releases/tag/0.10.1
+[0.11.0]: https://github.com/nicmart/Tree/releases/tag/0.11.0
 
 [fcfd14e...0.1.1]: https://github.com/nicmart/Tree/compare/fcfd14e...v0.1.1
 [0.1.1...0.1.2]: https://github.com/nicmart/Tree/compare/v0.1.1...v0.1.2
@@ -269,7 +274,8 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [0.8.0...0.9.0]: https://github.com/nicmart/Tree/compare/0.8.0...0.9.0
 [0.9.0...0.10.0]: https://github.com/nicmart/Tree/compare/0.9.0...0.10.0
 [0.10.0...0.10.1]: https://github.com/nicmart/Tree/compare/0.10.0...0.10.1
-[0.10.1...master]: https://github.com/nicmart/Tree/compare/0.10.1...master
+[0.10.1...0.11.0]: https://github.com/nicmart/Tree/compare/0.10.1...0.11.0
+[0.11.0...master]: https://github.com/nicmart/Tree/compare/0.11.0...master
 
 [#3]: https://github.com/nicmart/Tree/issues/3
 [#4]: https://github.com/nicmart/Tree/issues/4
@@ -292,6 +298,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#106]: https://github.com/nicmart/Tree/pull/106
 [#113]: https://github.com/nicmart/Tree/pull/113
 [#125]: https://github.com/nicmart/Tree/pull/125
+[#135]: https://github.com/nicmart/Tree/pull/135
 [#136]: https://github.com/nicmart/Tree/pull/136
 [#137]: https://github.com/nicmart/Tree/pull/137
 [#138]: https://github.com/nicmart/Tree/pull/138
@@ -307,6 +314,7 @@ For a full diff see [`fcfd14e...v0.1.1`][fcfd14e...0.1.1].
 [#209]: https://github.com/nicmart/Tree/pull/209
 [#236]: https://github.com/nicmart/Tree/pull/236
 [#331]: https://github.com/nicmart/Tree/pull/331
+[#333]: https://github.com/nicmart/Tree/pull/333
 [#370]: https://github.com/nicmart/Tree/pull/370
 [#405]: https://github.com/nicmart/Tree/pull/405
 
